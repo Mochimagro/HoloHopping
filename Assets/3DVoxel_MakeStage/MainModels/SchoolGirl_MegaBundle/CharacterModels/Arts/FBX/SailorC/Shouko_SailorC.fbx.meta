@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 111dab3fedcee4045ad1781444e5f99f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armature_Shouko_SailorC
+    100002: armIK.L
+    100004: armIK.L_end
+    100006: armIK.R
+    100008: armIK.R_end
+    100010: armPole.L
+    100012: armPole.L_end
+    100014: armPole.R
+    100016: armPole.R_end
+    100018: Body_Shouko_SailorC
+    100020: chest
+    100022: foot.L
+    100024: foot.R
+    100026: footIK.L
+    100028: footIK.L_end
+    100030: footIK.R
+    100032: footIK.R_end
+    100034: forearm.L
+    100036: forearm.R
+    100038: hair_L
+    100040: hair_L.001
+    100042: hair_L.002
+    100044: hair_L.003
+    100046: hair_L.004
+    100048: hair_L.004_end
+    100050: hair_R
+    100052: hair_R.001
+    100054: hair_R.002
+    100056: hair_R.003
+    100058: hair_R.004
+    100060: hair_R.004_end
+    100062: hand.L
+    100064: hand.L_end
+    100066: hand.R
+    100068: hand.R_end
+    100070: head
+    100072: heel.02.L
+    100074: heel.02.L_end
+    100076: heel.02.R
+    100078: heel.02.R_end
+    100080: heel.L
+    100082: heel.R
+    100084: hips
+    100086: LegPole.L
+    100088: LegPole.L_end
+    100090: LegPole.R
+    100092: LegPole.R_end
+    100094: neck
+    100096: shin.L
+    100098: shin.R
+    100100: //RootNode
+    100102: shoulder.L
+    100104: shoulder.R
+    100106: spine
+    100108: thigh.L
+    100110: thigh.R
+    100112: toe.L
+    100114: toe.L_end
+    100116: toe.R
+    100118: toe.R_end
+    100120: upper_arm.L
+    100122: upper_arm.R
+    400000: armature_Shouko_SailorC
+    400002: armIK.L
+    400004: armIK.L_end
+    400006: armIK.R
+    400008: armIK.R_end
+    400010: armPole.L
+    400012: armPole.L_end
+    400014: armPole.R
+    400016: armPole.R_end
+    400018: Body_Shouko_SailorC
+    400020: chest
+    400022: foot.L
+    400024: foot.R
+    400026: footIK.L
+    400028: footIK.L_end
+    400030: footIK.R
+    400032: footIK.R_end
+    400034: forearm.L
+    400036: forearm.R
+    400038: hair_L
+    400040: hair_L.001
+    400042: hair_L.002
+    400044: hair_L.003
+    400046: hair_L.004
+    400048: hair_L.004_end
+    400050: hair_R
+    400052: hair_R.001
+    400054: hair_R.002
+    400056: hair_R.003
+    400058: hair_R.004
+    400060: hair_R.004_end
+    400062: hand.L
+    400064: hand.L_end
+    400066: hand.R
+    400068: hand.R_end
+    400070: head
+    400072: heel.02.L
+    400074: heel.02.L_end
+    400076: heel.02.R
+    400078: heel.02.R_end
+    400080: heel.L
+    400082: heel.R
+    400084: hips
+    400086: LegPole.L
+    400088: LegPole.L_end
+    400090: LegPole.R
+    400092: LegPole.R_end
+    400094: neck
+    400096: shin.L
+    400098: shin.R
+    400100: //RootNode
+    400102: shoulder.L
+    400104: shoulder.R
+    400106: spine
+    400108: thigh.L
+    400110: thigh.R
+    400112: toe.L
+    400114: toe.L_end
+    400116: toe.R
+    400118: toe.R_end
+    400120: upper_arm.L
+    400122: upper_arm.R
+    2100000: Body_SailorC_Shouko
+    2100002: eyeBlack
+    2100004: eyeColor_L
+    2100006: eyeColor_R
+    2100008: Body_Shouko_SailorC
+    4300000: Body_Shouko_SailorC
+    9500000: //RootNode
+    13700000: Body_Shouko_SailorC
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_SailorC_Shouko
+    second: {fileID: 2100000, guid: cac1e0799a0b5bb49b3a545afafeed3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_Shouko_SailorC
+    second: {fileID: 2100000, guid: 9331ec1acb219424b9002ea039be8bdf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeBlack
+    second: {fileID: 2100000, guid: 67c9b9a48a6d856458508534b6a872c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_L
+    second: {fileID: 2100000, guid: fbb1f3df608f1e44c8f68a0210b06b93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_R
+    second: {fileID: 2100000, guid: 274e0992cbb9cfe40a31332c4c94a1f5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

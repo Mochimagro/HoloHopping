@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 26e0688e5f040d847aca4fe7af01e576
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: blackbord-A
+    100002: blackbord-B
+    100004: blackbord-C
+    100006: blackbord-D
+    100008: //RootNode
+    100010: clock
+    100012: curtain-A
+    100014: curtain-B
+    100016: door
+    100018: floor
+    100020: paperbord
+    100022: rockerBox
+    100024: rockerDoor
+    100026: speaker
+    100028: stage-A
+    100030: stage-B
+    100032: studentsChair
+    100034: studentsDesk
+    100036: teachersDesk
+    100038: wall-doorA
+    100040: wall-doorB
+    100042: wall-flat
+    100044: wall-groundside-A
+    100046: wall-groundside-B
+    100048: window-A
+    100050: window-B
+    100052: window-C
+    100054: window-D
+    100056: woodRocker-A
+    100058: woodRocker-B
+    400000: blackbord-A
+    400002: blackbord-B
+    400004: blackbord-C
+    400006: blackbord-D
+    400008: //RootNode
+    400010: clock
+    400012: curtain-A
+    400014: curtain-B
+    400016: door
+    400018: floor
+    400020: paperbord
+    400022: rockerBox
+    400024: rockerDoor
+    400026: speaker
+    400028: stage-A
+    400030: stage-B
+    400032: studentsChair
+    400034: studentsDesk
+    400036: teachersDesk
+    400038: wall-doorA
+    400040: wall-doorB
+    400042: wall-flat
+    400044: wall-groundside-A
+    400046: wall-groundside-B
+    400048: window-A
+    400050: window-B
+    400052: window-C
+    400054: window-D
+    400056: woodRocker-A
+    400058: woodRocker-B
+    2100000: blackbord-B
+    2100002: floor
+    2100004: woodRocker-B
+    2100006: curtain-A
+    2100008: blackbord-C
+    2100010: blackbord-D
+    2100012: rockerBox
+    2100014: rockerDoor
+    2100016: window-D
+    2100018: window-C
+    2100020: window-A
+    2100022: window-B
+    2100024: wall-doorB
+    2100026: wall-doorA
+    2100028: wall-groundside-A
+    2100030: wall-groundside-B
+    2100032: wall-flat
+    2100034: woodRocker-A
+    2100036: door
+    2100038: curtain-B
+    2100040: stage-B
+    2100042: paperbord
+    2100044: speaker
+    2100046: clock
+    2100048: stage-A
+    2100050: teachersDesk
+    2100052: studentsChair
+    2100054: blackbord-A
+    2100056: studentsDesk
+    2100058: door.002
+    2100060: door-window.001
+    2100062: window-A-frame.001
+    2100064: window-A.002
+    2100066: window-B.002
+    2100068: window-B-frame.001
+    2100070: window-C.002
+    2100072: window-C-frame.001
+    2100074: window-D.002
+    2100076: window-D-frame.001
+    2100078: door-window
+    2100080: window-A-frame
+    2100082: window-B-frame
+    2100084: window-C-frame
+    2100086: window-D-frame
+    2300000: blackbord-A
+    2300002: blackbord-B
+    2300004: blackbord-C
+    2300006: blackbord-D
+    2300008: clock
+    2300010: curtain-A
+    2300012: curtain-B
+    2300014: door
+    2300016: floor
+    2300018: paperbord
+    2300020: rockerBox
+    2300022: rockerDoor
+    2300024: speaker
+    2300026: stage-A
+    2300028: stage-B
+    2300030: studentsChair
+    2300032: studentsDesk
+    2300034: teachersDesk
+    2300036: wall-doorA
+    2300038: wall-doorB
+    2300040: wall-flat
+    2300042: wall-groundside-A
+    2300044: wall-groundside-B
+    2300046: window-A
+    2300048: window-B
+    2300050: window-C
+    2300052: window-D
+    2300054: woodRocker-A
+    2300056: woodRocker-B
+    3300000: blackbord-A
+    3300002: blackbord-B
+    3300004: blackbord-C
+    3300006: blackbord-D
+    3300008: clock
+    3300010: curtain-A
+    3300012: curtain-B
+    3300014: door
+    3300016: floor
+    3300018: paperbord
+    3300020: rockerBox
+    3300022: rockerDoor
+    3300024: speaker
+    3300026: stage-A
+    3300028: stage-B
+    3300030: studentsChair
+    3300032: studentsDesk
+    3300034: teachersDesk
+    3300036: wall-doorA
+    3300038: wall-doorB
+    3300040: wall-flat
+    3300042: wall-groundside-A
+    3300044: wall-groundside-B
+    3300046: window-A
+    3300048: window-B
+    3300050: window-C
+    3300052: window-D
+    3300054: woodRocker-A
+    3300056: woodRocker-B
+    4300000: blackbord-B
+    4300002: floor
+    4300004: woodRocker-B
+    4300006: curtain-A
+    4300008: blackbord-C
+    4300010: blackbord-D
+    4300012: rockerBox
+    4300014: rockerDoor
+    4300016: window-D
+    4300018: window-C
+    4300020: window-A
+    4300022: window-B
+    4300024: wall-doorB
+    4300026: wall-doorA
+    4300028: wall-groundside-A
+    4300030: wall-groundside-B
+    4300032: wall-flat
+    4300034: woodRocker-A
+    4300036: door
+    4300038: curtain-B
+    4300040: stage-B
+    4300042: paperbord
+    4300044: speaker
+    4300046: clock
+    4300048: stage-A
+    4300050: teachersDesk
+    4300052: studentsChair
+    4300054: blackbord-A
+    4300056: studentsDesk
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackbord-A
+    second: {fileID: 2100000, guid: 2bc771b9fdb51244c97301bc347343ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackbord-B
+    second: {fileID: 2100000, guid: 97b3337f99ae8d548848cb63fd83cd1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackbord-C
+    second: {fileID: 2100000, guid: 38e202e7efb81424b891fa4c3bc2db06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackbord-D
+    second: {fileID: 2100000, guid: 2a197e626a3be9042ba525b11f3253a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clock
+    second: {fileID: 2100000, guid: 778775f2e1b6c68489ee53e09830fad1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: curtain-A
+    second: {fileID: 2100000, guid: 42b06822826c2be43a8548531415e9f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: curtain-B
+    second: {fileID: 2100000, guid: 5b0f5ee555152584ea0175f4e0597ad8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door
+    second: {fileID: 2100000, guid: 1ccb2b889e6d7ba43b66e5b6e71c964b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door-window
+    second: {fileID: 2100000, guid: 30e3cfeca27f402488a864ba0ed7810e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: b66618bd3d25a264eb030837344560b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paperbord
+    second: {fileID: 2100000, guid: 868e20680a23c4749a76fc51937c8285, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rockerBox
+    second: {fileID: 2100000, guid: 71fad9111f6ef4640a65b214e8df80c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rockerDoor
+    second: {fileID: 2100000, guid: 7070f1e19aa6e3e459ef678a0b07cd88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: speaker
+    second: {fileID: 2100000, guid: 56c9ffa722cd5a64ebcee08edc956fed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage-A
+    second: {fileID: 2100000, guid: 13c96fddf0dec3c4d89c439abc002fc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stage-B
+    second: {fileID: 2100000, guid: 153deba3459cc194c88e1e1429f6b890, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: studentsChair
+    second: {fileID: 2100000, guid: 890a67027f143c54d9f81f60884267ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: studentsDesk
+    second: {fileID: 2100000, guid: eefa5e66f896ca24c95e15141342460a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teachersDesk
+    second: {fileID: 2100000, guid: 357ffc08d4459644b99a356a846d4c41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-doorA
+    second: {fileID: 2100000, guid: adfb206c828bfaf4a9ba7f9d1f3209de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-doorB
+    second: {fileID: 2100000, guid: 630be4ee3fe1617439bc9f459b2c1e0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-flat
+    second: {fileID: 2100000, guid: 1c144b0f2c530994cad27457a682bb4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-groundside-A
+    second: {fileID: 2100000, guid: cfa102244bfe4d1429a0683459f43795, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-groundside-B
+    second: {fileID: 2100000, guid: 3fdb553c1dbb6c643ab4e007f7834486, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-A
+    second: {fileID: 2100000, guid: a4b779d2f22a91b4e9e66095d817d227, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-A-frame
+    second: {fileID: 2100000, guid: 065af1b467c36a546adb7ad2766cd7c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-B
+    second: {fileID: 2100000, guid: eb31070a864a4d849ad398220a6739c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-B-frame
+    second: {fileID: 2100000, guid: 0e4d1032cb6761d42bc2419a1a7d6fbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-C
+    second: {fileID: 2100000, guid: 37b50556493ac8d4eb9ad1dd2875537b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-C-frame
+    second: {fileID: 2100000, guid: d5521749dc9adbe488209c3d09bf4e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-D
+    second: {fileID: 2100000, guid: 2cf4d747733a1854fa9d702ba358409d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-D-frame
+    second: {fileID: 2100000, guid: f0ff12d2b2ecb6c4c970578a1dec6a9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woodRocker-A
+    second: {fileID: 2100000, guid: 82cb51badd1346a4884845fc4443a052, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woodRocker-B
+    second: {fileID: 2100000, guid: 4a5cfebae55f4ae44a9125b49a5dab6d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

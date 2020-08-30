@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: c04b1c9256d9ec643b8d8dbc9a7b9a8f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: door
+    100002: floor-A
+    100004: floor-B
+    100006: floor-C
+    100008: //RootNode
+    100010: shoebox
+    100012: wall-A
+    100014: wall-B
+    100016: wall-C
+    100018: wall-D
+    100020: window-A
+    100022: window-B
+    100024: woodStep
+    400000: door
+    400002: floor-A
+    400004: floor-B
+    400006: floor-C
+    400008: //RootNode
+    400010: shoebox
+    400012: wall-A
+    400014: wall-B
+    400016: wall-C
+    400018: wall-D
+    400020: window-A
+    400022: window-B
+    400024: woodStep
+    2100000: window-B-frame
+    2100002: window-B
+    2100004: window-A-frame
+    2100006: window-A
+    2100008: wall-B
+    2100010: door
+    2100012: door-window
+    2100014: shoebox
+    2100016: wall-A
+    2100018: floor-B
+    2100020: wall-C
+    2100022: woodStep
+    2100024: floor-C
+    2100026: wall-D
+    2100028: floor-A
+    2300000: door
+    2300002: floor-A
+    2300004: floor-B
+    2300006: floor-C
+    2300008: shoebox
+    2300010: wall-A
+    2300012: wall-B
+    2300014: wall-C
+    2300016: wall-D
+    2300018: window-A
+    2300020: window-B
+    2300022: woodStep
+    3300000: door
+    3300002: floor-A
+    3300004: floor-B
+    3300006: floor-C
+    3300008: shoebox
+    3300010: wall-A
+    3300012: wall-B
+    3300014: wall-C
+    3300016: wall-D
+    3300018: window-A
+    3300020: window-B
+    3300022: woodStep
+    4300000: window-B
+    4300002: window-A
+    4300004: wall-B
+    4300006: door
+    4300008: shoebox
+    4300010: wall-A
+    4300012: floor-B
+    4300014: wall-C
+    4300016: woodStep
+    4300018: floor-C
+    4300020: wall-D
+    4300022: floor-A
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door
+    second: {fileID: 2100000, guid: 24bae734027017e458cb4c6d527012a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door-window
+    second: {fileID: 2100000, guid: 9bb5c410c29f42b4aa8ea55eff751001, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor-A
+    second: {fileID: 2100000, guid: 29c34ba201f144f4fad9a045954b032d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor-B
+    second: {fileID: 2100000, guid: 44f56f9b41f2c3b49b88043b92142b2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor-C
+    second: {fileID: 2100000, guid: 9913e7a880b849249911789367dbb1ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoebox
+    second: {fileID: 2100000, guid: 840db39bc3fd21841bddb168887bcaac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-A
+    second: {fileID: 2100000, guid: e3fea7624ee996f4c884a86ba3ae673a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-B
+    second: {fileID: 2100000, guid: beda1abf75b682448a0e474945a6ca09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-C
+    second: {fileID: 2100000, guid: c6d3cd4a8badf3b44a70ab26e5b4ba05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall-D
+    second: {fileID: 2100000, guid: 8ce5157d88319d64c8b638d53eff37c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-A
+    second: {fileID: 2100000, guid: 3d5b2f99ac938594bae9ce210d131e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-A-frame
+    second: {fileID: 2100000, guid: 10aa7420d91730547b8fb9be2ffb0b73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-B
+    second: {fileID: 2100000, guid: 67c548dc980d9d845b27d54dac33e943, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window-B-frame
+    second: {fileID: 2100000, guid: 3911dad727140a848b2bab23663cf239, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woodStep
+    second: {fileID: 2100000, guid: a9b92b296f565224fa680a030e47d3fc, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

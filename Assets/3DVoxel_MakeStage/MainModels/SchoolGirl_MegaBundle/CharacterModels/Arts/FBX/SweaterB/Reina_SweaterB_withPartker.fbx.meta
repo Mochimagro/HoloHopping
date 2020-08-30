@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: 3802ea2e77a3c96498107e1733be5b80
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armIK.L
+    100002: armIK.L_end
+    100004: armIK.R
+    100006: armIK.R_end
+    100008: armPole.L
+    100010: armPole.L_end
+    100012: armPole.R
+    100014: armPole.R_end
+    100016: b_armature_Reina_SweaterPartker
+    100018: body
+    100020: chest
+    100022: foot.L
+    100024: foot.R
+    100026: footIK.L
+    100028: footIK.L_end
+    100030: footIK.R
+    100032: footIK.R_end
+    100034: forearm.L
+    100036: forearm.R
+    100038: hand.L
+    100040: hand.L_end
+    100042: hand.R
+    100044: hand.R_end
+    100046: head
+    100048: head.001
+    100050: head.002
+    100052: head.003
+    100054: head.003_end
+    100056: heel.02.L
+    100058: heel.02.L_end
+    100060: heel.02.R
+    100062: heel.02.R_end
+    100064: heel.L
+    100066: heel.R
+    100068: hips
+    100070: LegPole.L
+    100072: LegPole.L_end
+    100074: LegPole.R
+    100076: LegPole.R_end
+    100078: neck
+    100080: parker
+    100082: Partker_L
+    100084: Partker_L.001
+    100086: Partker_L.002
+    100088: Partker_L.003
+    100090: Partker_L.003_end
+    100092: Partker_R
+    100094: Partker_R.001
+    100096: Partker_R.002
+    100098: Partker_R.003
+    100100: Partker_R.003_end
+    100102: PartkerF_L
+    100104: PartkerF_L.001
+    100106: PartkerF_L.002
+    100108: PartkerF_L.003
+    100110: PartkerF_L.003_end
+    100112: PartkerF_R
+    100114: PartkerF_R.001
+    100116: PartkerF_R.002
+    100118: PartkerF_R.003
+    100120: PartkerF_R.003_end
+    100122: //RootNode
+    100124: shin.L
+    100126: shin.R
+    100128: shoulder.L
+    100130: shoulder.R
+    100132: spine
+    100134: thigh.L
+    100136: thigh.R
+    100138: toe.L
+    100140: toe.L_end
+    100142: toe.R
+    100144: toe.R_end
+    100146: upper_arm.L
+    100148: upper_arm.R
+    400000: armIK.L
+    400002: armIK.L_end
+    400004: armIK.R
+    400006: armIK.R_end
+    400008: armPole.L
+    400010: armPole.L_end
+    400012: armPole.R
+    400014: armPole.R_end
+    400016: b_armature_Reina_SweaterPartker
+    400018: body
+    400020: chest
+    400022: foot.L
+    400024: foot.R
+    400026: footIK.L
+    400028: footIK.L_end
+    400030: footIK.R
+    400032: footIK.R_end
+    400034: forearm.L
+    400036: forearm.R
+    400038: hand.L
+    400040: hand.L_end
+    400042: hand.R
+    400044: hand.R_end
+    400046: head
+    400048: head.001
+    400050: head.002
+    400052: head.003
+    400054: head.003_end
+    400056: heel.02.L
+    400058: heel.02.L_end
+    400060: heel.02.R
+    400062: heel.02.R_end
+    400064: heel.L
+    400066: heel.R
+    400068: hips
+    400070: LegPole.L
+    400072: LegPole.L_end
+    400074: LegPole.R
+    400076: LegPole.R_end
+    400078: neck
+    400080: parker
+    400082: Partker_L
+    400084: Partker_L.001
+    400086: Partker_L.002
+    400088: Partker_L.003
+    400090: Partker_L.003_end
+    400092: Partker_R
+    400094: Partker_R.001
+    400096: Partker_R.002
+    400098: Partker_R.003
+    400100: Partker_R.003_end
+    400102: PartkerF_L
+    400104: PartkerF_L.001
+    400106: PartkerF_L.002
+    400108: PartkerF_L.003
+    400110: PartkerF_L.003_end
+    400112: PartkerF_R
+    400114: PartkerF_R.001
+    400116: PartkerF_R.002
+    400118: PartkerF_R.003
+    400120: PartkerF_R.003_end
+    400122: //RootNode
+    400124: shin.L
+    400126: shin.R
+    400128: shoulder.L
+    400130: shoulder.R
+    400132: spine
+    400134: thigh.L
+    400136: thigh.R
+    400138: toe.L
+    400140: toe.L_end
+    400142: toe.R
+    400144: toe.R_end
+    400146: upper_arm.L
+    400148: upper_arm.R
+    2100000: ReinaBody
+    2100002: eyeBlack
+    2100004: eyeColor_L
+    2100006: eyeColor_R
+    2100008: Parker_base
+    2100010: Parker_button
+    4300000: body
+    4300002: parker
+    9500000: //RootNode
+    13700000: body
+    13700002: parker
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parker_base
+    second: {fileID: 2100000, guid: c0f57d1442282754c9e10e530e782f23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parker_button
+    second: {fileID: 2100000, guid: 85ea043ddd322884185f8af2dad62604, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ReinaBody
+    second: {fileID: 2100000, guid: 1094d17c503376842bed9ad2324c6d46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeBlack
+    second: {fileID: 2100000, guid: 2db012d6d95f0d24daf9f6635c996e06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_L
+    second: {fileID: 2100000, guid: 16747c9bd4383f54994039efd2bddf32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_R
+    second: {fileID: 2100000, guid: d51fa506d01f1ff43ad16a2445f57487, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

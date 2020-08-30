@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 19bae3c61308ece4e95a996e43e4a813
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: basebal-net
+    100002: baseball-base
+    100004: baseball-home
+    100006: //RootNode
+    100008: ground
+    100010: ground-baseball
+    100012: ground-soccer-A
+    100014: ground-soccer-B
+    100016: net
+    100018: net-half
+    100020: road
+    100022: soccerGorl
+    100024: tower
+    100026: tower-half
+    100028: tower-quarter
+    400000: basebal-net
+    400002: baseball-base
+    400004: baseball-home
+    400006: //RootNode
+    400008: ground
+    400010: ground-baseball
+    400012: ground-soccer-A
+    400014: ground-soccer-B
+    400016: net
+    400018: net-half
+    400020: road
+    400022: soccerGorl
+    400024: tower
+    400026: tower-half
+    400028: tower-quarter
+    2100000: ground-soccer-A
+    2100002: ground-soccer-B
+    2100004: ground-baseball
+    2100006: tower
+    2100008: tower-half
+    2100010: tower-quarter
+    2100012: net
+    2100014: net-half
+    2100016: road
+    2100018: ground
+    2100020: baseball-home
+    2100022: baseball-base
+    2100024: No Name
+    2100026: soccerGorl
+    2100028: basebal-net
+    2300000: basebal-net
+    2300002: baseball-base
+    2300004: baseball-home
+    2300006: ground
+    2300008: ground-baseball
+    2300010: ground-soccer-A
+    2300012: ground-soccer-B
+    2300014: net
+    2300016: net-half
+    2300018: road
+    2300020: soccerGorl
+    2300022: tower
+    2300024: tower-half
+    2300026: tower-quarter
+    3300000: basebal-net
+    3300002: baseball-base
+    3300004: baseball-home
+    3300006: ground
+    3300008: ground-baseball
+    3300010: ground-soccer-A
+    3300012: ground-soccer-B
+    3300014: net
+    3300016: net-half
+    3300018: road
+    3300020: soccerGorl
+    3300022: tower
+    3300024: tower-half
+    3300026: tower-quarter
+    4300000: ground-soccer-A
+    4300002: ground-soccer-B
+    4300004: ground-baseball
+    4300006: tower
+    4300008: tower-half
+    4300010: tower-quarter
+    4300012: net
+    4300014: net-half
+    4300016: road
+    4300018: ground
+    4300020: baseball-home
+    4300022: baseball-base
+    4300024: basebal-net
+    4300026: soccerGorl
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: basebal-net
+    second: {fileID: 2100000, guid: 017cc4af1568cb24e88ae2ab13c2e3bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baseball-base
+    second: {fileID: 2100000, guid: 23a8ad45c2260364593c9079ca4ebb64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baseball-home
+    second: {fileID: 2100000, guid: 8c8d46171108344439a7cb90f9c50e8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground
+    second: {fileID: 2100000, guid: 416a7c837e467e04282cc6415ab4df7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground-baseball
+    second: {fileID: 2100000, guid: 295732a0d28c7ce4cbddd0dea1e84d5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground-soccer-A
+    second: {fileID: 2100000, guid: bd25fd2951e5f6f4f87050e7bcec0131, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground-soccer-B
+    second: {fileID: 2100000, guid: 313ef284ccd60664ab0648e4bbd067d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: net
+    second: {fileID: 2100000, guid: 32f4caf206d239f4da88cb17e8b1d59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: net-half
+    second: {fileID: 2100000, guid: 0fe84f3c610006a40ac95d831cdcbba9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: road
+    second: {fileID: 2100000, guid: 479883f68f133464d8dd11f5d39a83db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: soccerGorl
+    second: {fileID: 2100000, guid: 95ebbcc034be2974ba5e274ec9513b4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tower
+    second: {fileID: 2100000, guid: c579e1de9e885ed4f8d4edc5836fb7c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tower-half
+    second: {fileID: 2100000, guid: 07119352c8edafb4eadb6bfe857975c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tower-quarter
+    second: {fileID: 2100000, guid: 1fc57e89db5d3494bbb7357fe2755e14, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

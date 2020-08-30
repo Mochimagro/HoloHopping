@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: b344d4a59b8df354f8c6c01dc1fe24d3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armature_Touko_SailorB_WithSweater
+    100002: armIK.L
+    100004: armIK.L_end
+    100006: armIK.R
+    100008: armIK.R_end
+    100010: armPole.L
+    100012: armPole.L_end
+    100014: armPole.R
+    100016: armPole.R_end
+    100018: Body_Touko_SailorB_WithSweater
+    100020: chest
+    100022: foot.L
+    100024: foot.R
+    100026: footIK.L
+    100028: footIK.L_end
+    100030: footIK.R
+    100032: footIK.R_end
+    100034: forearm.L
+    100036: forearm.R
+    100038: hair
+    100040: hair.001
+    100042: hair.002
+    100044: hair.002_end
+    100046: hand.L
+    100048: hand.L_end
+    100050: hand.R
+    100052: hand.R_end
+    100054: head
+    100056: heel.02.L
+    100058: heel.02.L_end
+    100060: heel.02.R
+    100062: heel.02.R_end
+    100064: heel.L
+    100066: heel.R
+    100068: hips
+    100070: LegPole.L
+    100072: LegPole.L_end
+    100074: LegPole.R
+    100076: LegPole.R_end
+    100078: neck
+    100080: shin.L
+    100082: shin.R
+    100084: shoulder.L
+    100086: shoulder.R
+    100088: spine
+    100090: Sweaterbelt
+    100092: sweaterbelt_B
+    100094: sweaterbelt_B.001
+    100096: sweaterbelt_B.002
+    100098: sweaterbelt_B.003
+    100100: sweaterbelt_B.003_end
+    100102: sweaterbelt_F
+    100104: sweaterbelt_F.001
+    100106: sweaterbelt_F.002
+    100108: sweaterbelt_F.002_end
+    100110: sweaterbelt_F.003
+    100112: sweaterbelt_F.004
+    100114: sweaterbelt_F.004_end
+    100116: thigh.L
+    100118: thigh.R
+    100120: TMPhips
+    100122: toe.L
+    100124: toe.L_end
+    100126: toe.R
+    100128: toe.R_end
+    100130: //RootNode
+    100132: upper_arm.L
+    100134: upper_arm.R
+    400000: armature_Touko_SailorB_WithSweater
+    400002: armIK.L
+    400004: armIK.L_end
+    400006: armIK.R
+    400008: armIK.R_end
+    400010: armPole.L
+    400012: armPole.L_end
+    400014: armPole.R
+    400016: armPole.R_end
+    400018: Body_Touko_SailorB_WithSweater
+    400020: chest
+    400022: foot.L
+    400024: foot.R
+    400026: footIK.L
+    400028: footIK.L_end
+    400030: footIK.R
+    400032: footIK.R_end
+    400034: forearm.L
+    400036: forearm.R
+    400038: hair
+    400040: hair.001
+    400042: hair.002
+    400044: hair.002_end
+    400046: hand.L
+    400048: hand.L_end
+    400050: hand.R
+    400052: hand.R_end
+    400054: head
+    400056: heel.02.L
+    400058: heel.02.L_end
+    400060: heel.02.R
+    400062: heel.02.R_end
+    400064: heel.L
+    400066: heel.R
+    400068: hips
+    400070: LegPole.L
+    400072: LegPole.L_end
+    400074: LegPole.R
+    400076: LegPole.R_end
+    400078: neck
+    400080: shin.L
+    400082: shin.R
+    400084: shoulder.L
+    400086: shoulder.R
+    400088: spine
+    400090: Sweaterbelt
+    400092: sweaterbelt_B
+    400094: sweaterbelt_B.001
+    400096: sweaterbelt_B.002
+    400098: sweaterbelt_B.003
+    400100: sweaterbelt_B.003_end
+    400102: sweaterbelt_F
+    400104: sweaterbelt_F.001
+    400106: sweaterbelt_F.002
+    400108: sweaterbelt_F.002_end
+    400110: sweaterbelt_F.003
+    400112: sweaterbelt_F.004
+    400114: sweaterbelt_F.004_end
+    400116: thigh.L
+    400118: thigh.R
+    400120: TMPhips
+    400122: toe.L
+    400124: toe.L_end
+    400126: toe.R
+    400128: toe.R_end
+    400130: //RootNode
+    400132: upper_arm.L
+    400134: upper_arm.R
+    2100000: Sweaterbelt
+    2100002: Body_Touko_SailorB_WithSweater
+    2100004: eyeBlack
+    2100006: eyeColor_L
+    2100008: eyeColor_R
+    2300000: Sweaterbelt
+    3300000: Sweaterbelt
+    4300000: Sweaterbelt
+    4300002: Body_Touko_SailorB_WithSweater
+    9500000: //RootNode
+    13700000: Body_Touko_SailorB_WithSweater
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body_Touko_SailorB_WithSweater
+    second: {fileID: 2100000, guid: 708b3c553f7ed1742b4c7e836fd71387, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sweaterbelt
+    second: {fileID: 2100000, guid: 99723326582792749bd9f865db16ca33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeBlack
+    second: {fileID: 2100000, guid: 141d19bdfa07c2042b4304aa35870861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_L
+    second: {fileID: 2100000, guid: 15f9ffe979e3b2f498d9ee0a7c2bfe1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeColor_R
+    second: {fileID: 2100000, guid: bebdb1aa20b685f44838f4a63736c37f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
