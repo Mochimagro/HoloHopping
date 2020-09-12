@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Linq;
 using NCMB;
 using NCMB.Extensions;
+using UnityEngine.Networking;
 
 namespace naichilab
 {
@@ -20,6 +21,7 @@ namespace naichilab
         [SerializeField] InputField nameInputField;
         [SerializeField] Button sendScoreButton;
         [SerializeField] Button closeButton;
+        [SerializeField] Button twitterButton;
         [SerializeField] RectTransform scrollViewContent;
         [SerializeField] GameObject rankingNodePrefab;
         [SerializeField] GameObject readingNodePrefab;
@@ -248,6 +250,23 @@ namespace naichilab
             var m = scrollViewContent.parent.GetComponent<Mask>();
             m.enabled = false;
             m.enabled = true;
+        }
+
+        public void OnTwitterButtonClick()
+        {
+
+            //urlの作成
+            // string esctext = UnityWebRequest.EscapeURL("ホロホッピング!!!\n今回のスコア：" + _lastScore.TextForDisplay + "\nhttps://unityroom.com/games/holohopping");
+            // string esctag = UnityWebRequest.EscapeURL("hololive");
+            // string unitytag = UnityWebRequest.EscapeURL("unityroom");
+            // string url = "https://twitter.com/intent/tweet?text=" + esctext + "&hashtags=" + esctag + " &hashtags=" + unitytag;
+
+            UnityRoomTweet.Tweet("holohopping", "ホロホッピング!!!\n今回のスコア：" + _lastScore.TextForDisplay
+            , "hololive", "unityroom");
+
+            //Twitter投稿画面の起動
+            //Application.OpenURL(url);
+
         }
     }
 }

@@ -168,18 +168,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI pressKeyText = null;
     private void GameOver()
     {
-        Observable.EveryUpdate()
-            .Where(_ => Input.GetButtonDown("Jump"))
-            .Subscribe(_ =>
-            {
-                //SceneManager.LoadSceneAsync("Title");
-                naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score);
-            }).AddTo(this);
+        // Observable.EveryUpdate()
+        //     .Where(_ => Input.GetButtonDown("Jump"))
+        //     .Subscribe(_ =>
+        //     {
+        //         //SceneManager.LoadSceneAsync("Title");
+        //         naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score);
+        //     }).AddTo(this);
 
         StartCoroutine(PlayMissBGM());
 
         gameoverText.gameObject.SetActive(true);
         gameoverText.DOFade(0, 0);
+
+        Sequence gameoverSeq = DOTween.Sequence();
 
         DOTweenTMPAnimator gameoverAnimator = new DOTweenTMPAnimator(gameoverText);
 
@@ -187,19 +189,27 @@ public class GameManager : MonoBehaviour
         {
 
             Vector3 currCharOffset = gameoverAnimator.GetCharOffset(i);
-            DOTween.Sequence()
+
+            gameoverSeq.Join(
+                DOTween.Sequence()
                 .Append(gameoverAnimator.DOOffsetChar(i, currCharOffset + new Vector3(0, -60, 0), 0.8f).SetEase(Ease.OutFlash))
                 .Join(gameoverAnimator.DOFadeChar(i, 1, 0.6f))
                 .Join(gameoverAnimator.DOScaleChar(i, 1, 0.6f).SetEase(Ease.OutBack))
-                .SetDelay(0.07f * i);
+                .SetDelay(0.07f * i)
+            );
         }
 
-        pressKeyText.gameObject.SetActive(true);
-        pressKeyText.DOFade(0, 0);
+        gameoverSeq.OnComplete(() =>
+        {
+            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score);
+        });
 
-        pressKeyText.DOFade(1f, 2.0f)
-        .SetLoops(-1, LoopType.Yoyo)
-        .SetEase(Ease.OutQuad);
+        // pressKeyText.gameObject.SetActive(true);
+        // pressKeyText.DOFade(0, 0);
+
+        // pressKeyText.DOFade(1f, 2.0f)
+        // .SetLoops(-1, LoopType.Yoyo)
+        // .SetEase(Ease.OutQuad);
 
     }
 }

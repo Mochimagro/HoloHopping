@@ -61,7 +61,7 @@ public class TitleAnimation : MonoBehaviour
                     .Subscribe(__ =>
                     {
 
-                        SceneManager.LoadSceneAsync("Main");
+                        SceneManager.LoadSceneAsync("ScoreAttack");
                     });
                 });
 
