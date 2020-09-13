@@ -22,6 +22,11 @@ public class HoppingPlayer : MonoBehaviour
     private void Update()
     {
         animator.SetFloat("velocity", rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            ActionButton();
+        }
     }
 
 
@@ -35,8 +40,10 @@ public class HoppingPlayer : MonoBehaviour
             dis = transform.position.x - other.transform.position.x;
             hoppingSubject.OnNext(multiItemCount);
             multiItemCount = 0;
-
-            StartCoroutine(ActionButton());
+            pushFrame = Time.frameCount;
+            playerMove.ChargeStart();
+            animator.SetTrigger("Charge");
+            //StartCoroutine(ActionButton());
         }
         else if (other.gameObject.CompareTag("Ground"))
         {
@@ -61,6 +68,19 @@ public class HoppingPlayer : MonoBehaviour
         {
             multiItemCount += multiItemCount + 1;
         }
+        else if (other.CompareTag("ActionArea"))
+        {
+            ableActionButton = false;
+            isActionArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ActionArea"))
+        {
+            isActionArea = false;
+        }
     }
 
     private void OnCollisionExit(Collision other)
@@ -68,38 +88,54 @@ public class HoppingPlayer : MonoBehaviour
         startedPlayer = true;
     }
 
+    private bool isActionArea = false;
+    private bool ableActionButton = false;
+    private int actionButtonFrame = 0;
+    private int pushFrame = 0;
 
-    private IEnumerator ActionButton()
+    private void ActionButton()
     {
-        animationEnd = false;
-        bool succesAction = false;
-        playerMove.ChargeStart();
-        animator.SetTrigger("Charge");
-
-        while (true)
+        if (isActionArea)
         {
-
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (!ableActionButton)
             {
-                succesAction = true;
-                //yield break;
+                actionButtonFrame = Time.frameCount;
+                ableActionButton = false;
             }
-
-
-            if (animationEnd)
-            {
-                if (succesAction)
-                {
-                    PowerJump(1.3f);
-                    yield break;
-                }
-                PowerJump(1.0f);
-                yield break;
-            }
-            yield return null;
         }
-
     }
+
+    // private IEnumerator ActionButton()
+    // {
+    //     animationEnd = false;
+    //     bool succesAction = false;
+    //     playerMove.ChargeStart();
+    //     animator.SetTrigger("Charge");
+
+    //     while (true)
+    //     {
+
+    //         if (Input.GetKeyDown(KeyCode.Space))
+    //         {
+    //             succesAction = true;
+    //             //yield break;
+    //         }
+
+
+    //         if (animationEnd)
+    //         {
+    //             if (succesAction)
+    //             {
+    //                 PowerJump(1.3f);
+    //                 yield break;
+    //             }
+    //             PowerJump(1.0f);
+    //             yield break;
+    //         }
+    //         yield return null;
+    //     }
+
+    // }
 
     private bool animationEnd = false;
 
@@ -109,6 +145,13 @@ public class HoppingPlayer : MonoBehaviour
     public void ChargeEnd()
     {
         animationEnd = true;
+
+        if (Math.Abs(pushFrame - actionButtonFrame) <= 30)
+        {
+            PowerJump(1.3f);
+            return;
+        }
+        PowerJump(1.0f);
     }
 
     public void StartJump(int side)
