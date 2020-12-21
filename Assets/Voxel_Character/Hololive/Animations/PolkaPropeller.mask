@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PolkaPropeller
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: armature
+    m_Weight: 1
+  - m_Path: armature/armIK.L
+    m_Weight: 1
+  - m_Path: armature/armIK.L/armIK.L_end
+    m_Weight: 1
+  - m_Path: armature/armIK.R
+    m_Weight: 1
+  - m_Path: armature/armIK.R/armIK.R_end
+    m_Weight: 1
+  - m_Path: armature/armPole.L
+    m_Weight: 1
+  - m_Path: armature/armPole.L/armPole.L_end
+    m_Weight: 1
+  - m_Path: armature/armPole.R
+    m_Weight: 1
+  - m_Path: armature/armPole.R/armPole.R_end
+    m_Weight: 1
+  - m_Path: armature/footIK.L
+    m_Weight: 1
+  - m_Path: armature/footIK.L/footIK.L_end
+    m_Weight: 1
+  - m_Path: armature/footIK.R
+    m_Weight: 1
+  - m_Path: armature/footIK.R/footIK.R_end
+    m_Weight: 1
+  - m_Path: armature/hips
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_L
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_L/ribbon_L.001
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_L/ribbon_L.001/ribbon_L.002
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_L/ribbon_L.001/ribbon_L.002/ribbon_L.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_R
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_R/ribbon_R.001
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_R/ribbon_R.001/ribbon_R.002
+    m_Weight: 1
+  - m_Path: armature/hips/ribbon_R/ribbon_R.001/ribbon_R.002/ribbon_R.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_L
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_L/skirt_L.001
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_L/skirt_L.001/skirt_L.002
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_L/skirt_L.001/skirt_L.002/skirt_L.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_R
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_R/skirt_R.001
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_R/skirt_R.001/skirt_R.002
+    m_Weight: 1
+  - m_Path: armature/hips/skirt_R/skirt_R.001/skirt_R.002/skirt_R.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_L/ear_L.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_L/ear_L.001/ear_L.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_L/ear_L.001/ear_L.002/ear_L.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_R/ear_R.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_R/ear_R.001/ear_R.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/ear_R/ear_R.001/ear_R.002/ear_R.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L/hair_L.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L/hair_L.001/hair_L.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L/hair_L.001/hair_L.002/hair_L.003
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L/hair_L.001/hair_L.002/hair_L.003/hair_L.004
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_L/hair_L.001/hair_L.002/hair_L.003/hair_L.004/hair_L.004_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_R/hair_R.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_R/hair_R.001/hair_R.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_R/hair_R.001/hair_R.002/hair_R.003
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_R/hair_R.001/hair_R.002/hair_R.003/hair_R.003_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_S
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_S/hair_S.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_S/hair_S.001/hair_S.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/hair_S/hair_S.001/hair_S.002/hair_S.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.001
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.001/propeller.002
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.001/propeller.002/propeller.002_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.003
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.003/propeller.004
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/neck/head/propeller/propeller.003/propeller.004/propeller.004_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.L/upper_arm.L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.L/upper_arm.L/forearm.L/hand.L/hand.L_end
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.R/upper_arm.R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R
+    m_Weight: 1
+  - m_Path: armature/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/hand.R_end
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/foot.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/foot.L/toe.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/heel.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/heel.L/heel.02.L
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.L/shin.L/heel.L/heel.02.L/heel.02.L_end
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/foot.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/foot.R/toe.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/heel.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/heel.R/heel.02.R
+    m_Weight: 1
+  - m_Path: armature/hips/thigh.R/shin.R/heel.R/heel.02.R/heel.02.R_end
+    m_Weight: 1
+  - m_Path: armature/hips.001
+    m_Weight: 1
+  - m_Path: armature/hips.001/hips.002
+    m_Weight: 1
+  - m_Path: armature/hips.001/hips.002/hips.003
+    m_Weight: 1
+  - m_Path: armature/hips.001/hips.002/hips.003/hips.004
+    m_Weight: 1
+  - m_Path: armature/hips.001/hips.002/hips.003/hips.004/hips.004_end
+    m_Weight: 1
+  - m_Path: armature/LegPole.L
+    m_Weight: 1
+  - m_Path: armature/LegPole.L/LegPole.L_end
+    m_Weight: 1
+  - m_Path: armature/LegPole.R
+    m_Weight: 1
+  - m_Path: armature/LegPole.R/LegPole.R_end
+    m_Weight: 1
+  - m_Path: body
+    m_Weight: 1
