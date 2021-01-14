@@ -15,18 +15,18 @@ namespace naichilab
         private const string COLUMN_NAME = "name";
 
 
-        [SerializeField] Text captionLabel;
-        [SerializeField] Text scoreLabel;
-        [SerializeField] Text highScoreLabel;
-        [SerializeField] InputField nameInputField;
-        [SerializeField] Button sendScoreButton;
-        [SerializeField] Button closeButton;
-        [SerializeField] Button twitterButton;
-        [SerializeField] RectTransform scrollViewContent;
-        [SerializeField] GameObject rankingNodePrefab;
-        [SerializeField] GameObject readingNodePrefab;
-        [SerializeField] GameObject notFoundNodePrefab;
-        [SerializeField] GameObject unavailableNodePrefab;
+        [SerializeField] Text captionLabel = null;
+        [SerializeField] Text scoreLabel = null;
+        [SerializeField] Text highScoreLabel = null;
+        [SerializeField] InputField nameInputField = null;
+        [SerializeField] Button sendScoreButton = null;
+        [SerializeField] Button closeButton = null;
+        // [SerializeField] Button twitterButton = null;
+        [SerializeField] RectTransform scrollViewContent = null;
+        [SerializeField] GameObject rankingNodePrefab = null;
+        [SerializeField] GameObject readingNodePrefab = null;
+        [SerializeField] GameObject notFoundNodePrefab = null;
+        [SerializeField] GameObject unavailableNodePrefab = null;
 
         private string _objectid = null;
 

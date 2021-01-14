@@ -61,7 +61,7 @@ namespace naichilab
                         break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Debug.LogWarning("不正なデータが渡されました。[" + scoreText + "]");
             }
