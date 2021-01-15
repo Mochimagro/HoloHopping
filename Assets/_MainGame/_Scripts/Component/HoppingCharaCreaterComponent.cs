@@ -11,10 +11,12 @@ namespace HoloHopping.Entity
     {
         public HoppingCharacter(Data.HoppingCharacterData data)
         {
-
+            Component = data.CharaComponent;
         }
 
-
+        public Component.HoppingCharacterComponent Component { get; private set; }
+        public Vector3 StartRotation { get; set; }
+        public Waypoint StartWay { get; set; }
     }
 }
 
@@ -28,7 +30,14 @@ namespace HoloHopping.Component
 
         public HoppingCharacterComponent CreateHoppingCharacter()
         {
-            var chara = Instantiate(_hoppingCharacterList.RandomData.CharaComponent,CreatePosition,Quaternion.identity);
+            var entity = new Entity.HoppingCharacter(_hoppingCharacterList.RandomData);
+            entity.StartWay = this.StartWay;
+            entity.StartRotation = this.CharacterRotation;
+
+            var chara = Instantiate(entity.Component,CreatePosition,Quaternion.identity);
+
+
+            chara.SetEntity = entity;
 
             return chara;
 
@@ -38,13 +47,33 @@ namespace HoloHopping.Component
         {
             get
             {
-                var playerPos = _systemParameter.GetTransform("Player");
-
-                return playerPos.position.x >= 0 ? _systemParameter.GetComponent<Waypoint>("WayLeft").GetPoint(0).position : _systemParameter.GetComponent<Waypoint>("WayRight").GetPoint(0).position;
-
+                return StartWay.GetPoint(0).position;
             }
         }
 
+        public Vector3 CharacterRotation
+        {
+            get
+            {
+                return PlayerIsLeft ? new Vector3(0, 240, 0) : new Vector3(0, 120, 0);
+            }
+        }
 
+        public Waypoint StartWay
+        {
+            get
+            {
+                return PlayerIsLeft ? _systemParameter.GetComponent<Waypoint>("WayRight") : _systemParameter.GetComponent<Waypoint>("WayLeft");
+            }
+        }
+
+        private bool PlayerIsLeft
+        {
+            get 
+            {
+                var playerPos = _systemParameter.GetTransform("Player");
+                return playerPos.position.x <= 0;
+            }
+        }
     }
 }

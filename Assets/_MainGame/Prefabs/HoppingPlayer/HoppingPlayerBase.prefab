@@ -442,6 +442,9 @@ GameObject:
   - component: {fileID: 6592455566306301454}
   - component: {fileID: 1161978065077423212}
   - component: {fileID: 5483403583419905783}
+  - component: {fileID: 8594530070676371163}
+  - component: {fileID: 1427169989054131284}
+  - component: {fileID: 221292312034462782}
   m_Layer: 8
   m_Name: HoppingPlayerBase
   m_TagString: Character
@@ -576,12 +579,23 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -780
-      y: -384
+      y: -300
       width: 300
       height: 105
     showComment: 0
     nodeComment: 
     _Object: {fileID: 1651188417536691263}
+  - _NodeGraph: {fileID: 2032234957565731363}
+    _NodeID: 919275682
+    position:
+      serializedVersion: 2
+      x: -780
+      y: -456
+      width: 300
+      height: 105
+    showComment: 0
+    nodeComment: 
+    _Object: {fileID: 1427169989054131284}
   _Comments: []
   _Groups: []
   _DataBranchRerouteNodes:
@@ -606,10 +620,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1651188417536691263}
     outNodeID: 1240895648
     lineBezier:
-      _StartPosition: {x: -480, y: -289}
-      _StartControl: {x: -430, y: -289}
-      _EndPosition: {x: -344, y: -301}
-      _EndControl: {x: -394, y: -301}
+      _StartPosition: {x: -480, y: -205}
+      _StartControl: {x: -430, y: -205}
+      _EndPosition: {x: -344, y: -273}
+      _EndControl: {x: -394, y: -273}
     showDataValue: 0
   - branchID: 630327709
     enabled: 1
@@ -635,6 +649,18 @@ MonoBehaviour:
       _EndPosition: {x: 64, y: 211}
       _EndControl: {x: 14, y: 211}
     showDataValue: 0
+  - branchID: 1752227528
+    enabled: 1
+    inBehaviour: {fileID: 8594530070676371163}
+    inNodeID: 1559595546
+    outBehaviour: {fileID: 1427169989054131284}
+    outNodeID: 919275682
+    lineBezier:
+      _StartPosition: {x: -480, y: -361}
+      _StartControl: {x: -430, y: -361}
+      _EndPosition: {x: -344, y: -377}
+      _EndControl: {x: -394, y: -377}
+    showDataValue: 0
   playOnStart: 1
   updateSettings:
     type: 0
@@ -647,13 +673,14 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -324
-      y: -420
+      y: -516
       width: 300
-      height: 249
+      height: 373
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
+    - {fileID: 8594530070676371163}
     - {fileID: 4144888488353191437}
     _BreakPoint: 0
     name: Start
@@ -695,11 +722,12 @@ MonoBehaviour:
       x: 72
       y: -396
       width: 300
-      height: 177
+      height: 243
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
+    - {fileID: 221292312034462782}
     - {fileID: 1856524127928932944}
     - {fileID: 7859061493262873888}
     _BreakPoint: 0
@@ -860,7 +888,7 @@ MonoBehaviour:
   _SerializeVersion: 1
   _Speed:
     _Type: 0
-    _Value: 2.5
+    _Value: 2
     _Parameter:
       _Type: 0
       _Container: {fileID: 0}
@@ -1674,6 +1702,152 @@ MonoBehaviour:
   _AnimatorStateTransition_SerializeVersion: 1
   _OldLayerName: 
   _OldStateName: 
+--- !u!114 &8594530070676371163
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335577768965471859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cba266f97792404593f6d692e172969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 2032234957565731363}
+  _NodeID: 1559595546
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _Transform:
+    _Type: 3
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _SerializeVersion: 1
+  _UpdateTiming:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Space:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Rotation:
+    _Type: 2
+    _Value: {x: 0, y: 150, z: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 2032234957565731363}
+      branchID: 1752227528
+  _TransformSetRotation_SerializeVersion: 1
+  _OldUpdateTiming: 1
+  _OldSpace: 0
+--- !u!114 &1427169989054131284
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335577768965471859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49f6be3b3b23cc4d86f5db3a17b9429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 2032234957565731363}
+  _NodeID: 919275682
+  _DataSlotFieldLinks: []
+  _ParameterReference:
+    _Type: 0
+    _Container: {fileID: 5889726281006920085}
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    id: 237820880
+    name: StartRotation
+  _Output:
+    nodeGraph: {fileID: 2032234957565731363}
+    branchIDs: c8de7068
+    _OutputSlotBase_SerializeVersion:
+      _Version: 1
+      _IsInitialized: 1
+      _IsVersioning: 1
+    _Type:
+      _AssemblyTypeName: UnityEngine.Vector3, UnityEngine
+  _IsInGraphParameter: 0
+  _SerializeVersion: 1
+--- !u!114 &221292312034462782
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335577768965471859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7a327a2c118b949b751c17eb56baba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 2032234957565731363}
+  _NodeID: 1871007331
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _StateMachine:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _OverrideConstraintType:
+      _AssemblyTypeName: 
 --- !u!1 &1615653385074334875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,6 +3700,15 @@ MonoBehaviour:
   _Owner: {fileID: 0}
   _Parameters:
   - container: {fileID: 5889726281006920085}
+    id: 237820880
+    type: 1001
+    name: StartRotation
+    _ParameterIndex: 0
+    _IsPublicSet: 1
+    _IsPublicGet: 1
+    referenceType:
+      _AssemblyTypeName: 
+  - container: {fileID: 5889726281006920085}
     id: 534011718
     type: 2004
     name: StartWay
@@ -3562,7 +3745,8 @@ MonoBehaviour:
   _StringListParameters: []
   _Vector2Parameters: []
   _Vector2ListParameters: []
-  _Vector3Parameters: []
+  _Vector3Parameters:
+  - {x: 0, y: 0, z: 0}
   _Vector3ListParameters: []
 --- !u!1001 &5008006510247537303
 PrefabInstance:
