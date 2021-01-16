@@ -10,6 +10,7 @@ namespace HoloHopping.Component
     public class HoppingCharacterComponent : MonoBehaviour
     {
         [SerializeField] private ParameterContainer _parameter = null;
+        private Rigidbody _rigidbody => GetComponent<Rigidbody>();
 
         public Entity.HoppingCharacter SetEntity
         {
@@ -24,5 +25,11 @@ namespace HoloHopping.Component
         {
 
         }
+
+        public bool UseGravity
+        {
+            set { _rigidbody.useGravity = value; }
+        }
+
     }
 }
