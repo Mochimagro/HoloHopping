@@ -19,7 +19,9 @@ namespace HoloHopping.Model
 
         public int AddScore
         {
-            set { _score.Value += value; }
+            set { _score.Value += value;
+                Debug.Log(_score.Value);
+            }
         }
 
         public ScoreModel()

@@ -17,10 +17,12 @@ namespace HoloHopping.Presenter
             get { return _scoreModel.GetScore; }
         }
 
-        public void Init()
+        public void Init(out ScoreModel model)
         {
             _scoreModel = new ScoreModel();
-
+            model = _scoreModel;
+            _scoreView.Init();
+            Bind();
         }
 
         private void Bind()

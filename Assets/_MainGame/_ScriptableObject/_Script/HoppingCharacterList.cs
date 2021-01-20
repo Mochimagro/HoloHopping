@@ -3,7 +3,10 @@ using UnityEngine;
 
 namespace HoloHopping.Data
 {
-    [CreateAssetMenu(menuName ="Data/HoppingCharacterList", fileName ="HoppingCharacterList")]
+    [CreateAssetMenu(menuName =
+        MenuName.Format.DATA +
+        MenuName.Attribute.HOPPING_CHARACTER +
+        MenuName.Type.LIST, fileName ="HoppingCharacterList")]
     public class HoppingCharacterList : ScriptableObject
     {
         [SerializeField] private List<HoppingCharacterData> _hoppingCharacterDatas = new List<HoppingCharacterData>();

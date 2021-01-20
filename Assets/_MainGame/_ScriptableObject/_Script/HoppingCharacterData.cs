@@ -5,7 +5,11 @@ using UniRx;
 
 namespace HoloHopping.Data
 {
-    [CreateAssetMenu(menuName ="Data/HoppingCharacter",fileName ="NewCharacterName")]
+    [CreateAssetMenu(menuName =
+        MenuName.Format.DATA + 
+        MenuName.Attribute.HOPPING_CHARACTER + 
+        MenuName.Type.PARAMETER,
+        fileName ="NewCharacterName")]
     public class HoppingCharacterData : ScriptableObject
     {
         [SerializeField] private Component.HoppingCharacterComponent _prefab = null;

@@ -17,7 +17,7 @@ namespace HoloHopping.View
             set 
             {
                 int i = _prevValue;
-                _prevValue += value;
+                _prevValue = value;
                 DOTween.To(
                     () => i,
                     num =>
