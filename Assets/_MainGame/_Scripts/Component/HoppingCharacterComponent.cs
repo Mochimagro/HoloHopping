@@ -12,6 +12,9 @@ namespace HoloHopping.Component
         [SerializeField] private ParameterContainer _parameter = null;
         private Rigidbody _rigidbody => GetComponent<Rigidbody>();
 
+        private Subject<HoppingCharacterComponent> _onMiss = new Subject<HoppingCharacterComponent>(); 
+        public IObservable<HoppingCharacterComponent> OnMiss => _onMiss;
+
         public Entity.HoppingCharacter SetEntity
         {
             set
@@ -29,6 +32,11 @@ namespace HoloHopping.Component
         public bool UseGravity
         {
             set { _rigidbody.useGravity = value; }
+        }
+
+        public void InvokeMiss()
+        {
+            _onMiss.OnNext(this);
         }
 
     }

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System;
 using UnityEngine;
 using UniRx;
 using Arbor;
@@ -28,6 +28,12 @@ namespace HoloHopping.Component
         [SerializeField] private ParameterContainer _systemParameter = null;
         [SerializeField] private Data.HoppingCharacterList _hoppingCharacterList = null;
 
+        public IObservable<HoppingCharacterComponent> OnCharacterMiss => _onCharacterMiss;
+        private Subject<HoppingCharacterComponent> _onCharacterMiss = new Subject<HoppingCharacterComponent>();
+
+        public IObservable<HoppingCharacterComponent> OnCreateCharacter => _onCreateCharacter;
+        private Subject<HoppingCharacterComponent> _onCreateCharacter = new Subject<HoppingCharacterComponent>();
+
         public HoppingCharacterComponent CreateHoppingCharacter()
         {
             var entity = new Entity.HoppingCharacter(_hoppingCharacterList.RandomData);
@@ -36,9 +42,14 @@ namespace HoloHopping.Component
 
             var chara = Instantiate(entity.Component,CreatePosition,Quaternion.identity);
 
+            chara.OnMiss.TakeUntilDisable(chara).Subscribe(value =>
+            {
+                _onCharacterMiss.OnNext(value);
+            });
 
             chara.SetEntity = entity;
 
+            _onCreateCharacter.OnNext(chara);
             return chara;
 
         }
