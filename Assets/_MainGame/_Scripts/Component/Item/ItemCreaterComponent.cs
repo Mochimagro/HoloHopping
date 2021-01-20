@@ -14,8 +14,6 @@ namespace HoloHopping.Component
 
     public class ItemCreaterComponent : MonoBehaviour
     {
-        // TODO:アイテムデータリストから取得する
-        [SerializeField] private Data.ItemData _debudItem = null;
 
         [SerializeField] private Arbor.ArborFSM _autoCreateState = null;
         private Model.ScoreModel _scoreModel = null;
@@ -30,10 +28,10 @@ namespace HoloHopping.Component
             _autoCreateState.SendTrigger(ItemCreaterMessage.AUTO_CREATE_ITEM);
         }
 
-        public ItemComponent CreateItem(Vector3 position)
+        public ItemComponent CreateItem(Data.ItemData itemData,Vector3 position)
         {
 
-            var entity = new Entity.ItemEntity(_debudItem);
+            var entity = new Entity.ItemEntity(itemData);
             var item = Instantiate(entity.Component,position,Quaternion.identity);
 
             item.Init(entity);

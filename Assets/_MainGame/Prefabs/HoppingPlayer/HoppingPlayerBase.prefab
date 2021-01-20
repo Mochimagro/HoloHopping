@@ -479,6 +479,8 @@ GameObject:
   - component: {fileID: 4246327081831178403}
   - component: {fileID: 7309323571687049800}
   - component: {fileID: 4492676759567461026}
+  - component: {fileID: 6916450923153389304}
+  - component: {fileID: 2478761061985242957}
   m_Layer: 8
   m_Name: HoppingPlayerBase
   m_TagString: Character
@@ -792,11 +794,12 @@ MonoBehaviour:
       x: 828
       y: 36
       width: 300
-      height: 383
+      height: 563
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
+    - {fileID: 6916450923153389304}
     - {fileID: 7062960155478458452}
     - {fileID: 1161978065077423212}
     - {fileID: 5483403583419905783}
@@ -822,13 +825,14 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: 828
-      y: -240
+      y: -420
       width: 300
-      height: 217
+      height: 397
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
+    - {fileID: 2478761061985242957}
     - {fileID: 5069474470415802307}
     - {fileID: 3390974034499471679}
     _BreakPoint: 0
@@ -2119,7 +2123,7 @@ MonoBehaviour:
       x: -384
       y: -864
       width: 300
-      height: 477
+      height: 478
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -2148,8 +2152,8 @@ MonoBehaviour:
     _NodeID: 1655911537
     position:
       serializedVersion: 2
-      x: 924
-      y: -360
+      x: 972
+      y: -564
       width: 300
       height: 268
     showComment: 0
@@ -2211,8 +2215,8 @@ MonoBehaviour:
     _NodeID: 1944859510
     position:
       serializedVersion: 2
-      x: 1380
-      y: -576
+      x: 1560
+      y: -552
       width: 300
       height: 129
     showComment: 0
@@ -2226,8 +2230,8 @@ MonoBehaviour:
     _NodeID: 919275682
     position:
       serializedVersion: 2
-      x: 1392
-      y: -348
+      x: 1560
+      y: -324
       width: 300
       height: 132
     showComment: 0
@@ -5262,6 +5266,312 @@ MonoBehaviour:
       _Version: 1
       _IsInitialized: 1
       _IsVersioning: 1
+--- !u!114 &6916450923153389304
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335577768965471859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d80aa977c02c41b4ea3178067a5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 2032234957565731363}
+  _NodeID: 1944859510
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _EventEntries:
+  - triggerType: 1
+    callback:
+      _Calls:
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.HoppingCharacterComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 1235998369069373313}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.HoppingCharacterComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 2
+        _MemberName: UseGravity
+        _Arguments:
+        - _Type:
+            _AssemblyTypeName: System.Boolean, mscorlib
+          _Name: Value
+          _Attributes: 0
+          _ParameterType: 3
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters:
+          - _Type: 0
+            _Value: 0
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 0}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 0
+              name: 
+            _Probability: 0
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
+  _SerializeVersion: 1
+  _OnStateAwake:
+    _Calls: []
+  _OnStateBegin:
+    _Calls: []
+  _OnStateEnd:
+    _Calls: []
+--- !u!114 &2478761061985242957
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335577768965471859}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d80aa977c02c41b4ea3178067a5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 2032234957565731363}
+  _NodeID: 1015591673
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _EventEntries:
+  - triggerType: 1
+    callback:
+      _Calls:
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.HoppingCharacterComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 1235998369069373313}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.HoppingCharacterComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 2
+        _MemberName: UseGravity
+        _Arguments:
+        - _Type:
+            _AssemblyTypeName: System.Boolean, mscorlib
+          _Name: Value
+          _Attributes: 0
+          _ParameterType: 3
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters:
+          - _Type: 0
+            _Value: 1
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 0}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 0
+              name: 
+            _Probability: 0
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
+  _SerializeVersion: 1
+  _OnStateAwake:
+    _Calls: []
+  _OnStateBegin:
+    _Calls: []
+  _OnStateEnd:
+    _Calls: []
 --- !u!1 &1615653385074334875
 GameObject:
   m_ObjectHideFlags: 0
