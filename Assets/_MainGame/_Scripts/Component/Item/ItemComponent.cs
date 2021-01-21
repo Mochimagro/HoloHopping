@@ -5,23 +5,23 @@ using UniRx;
 
 namespace HoloHopping.Component
 {
-
+    using Entity;
     public interface IItem
     {
-        IObservable<int> OnGetItem { get; }
+        IObservable<ItemEntity> OnGetItem { get; }
         //void Init(Entity.IEntity entity);
     }
 
     public class ItemComponent : MonoBehaviour,IItem
     {
-        private int _score = -1;
+        private ItemEntity _entity = null;
 
-        public IObservable<int> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
-        private Subject<int> _onGetItem = new Subject<int>();
+        public IObservable<ItemEntity> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
+        private Subject<ItemEntity> _onGetItem = new Subject<ItemEntity>();
 
         public void Init(Entity.ItemEntity entity)
         {
-            _score = entity.Score;
+            _entity = entity;
         }
 
         public void OnTriggerEnter(Collider other)
@@ -29,8 +29,10 @@ namespace HoloHopping.Component
 
             if (other.CompareTag(TagName.CHARACTER))
             {
+                _entity.GetPos = transform.position;
+                _entity.GetText = "+"+ _entity.Score;
+                _onGetItem.OnNext(_entity);
                 Destroy(this.gameObject);
-                _onGetItem.OnNext(_score);
             }
         }
 

@@ -18,6 +18,9 @@ namespace HoloHopping.Component
         [SerializeField] private Arbor.ArborFSM _autoCreateState = null;
         private Model.ScoreModel _scoreModel = null;
 
+        public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
+        private Subject<Entity.ItemEntity> _onGetItem = new Subject<Entity.ItemEntity>();
+
         public void Init(Model.ScoreModel scoreModel)
         {
             _scoreModel = scoreModel;
@@ -36,9 +39,10 @@ namespace HoloHopping.Component
 
             item.Init(entity);
 
-            item.OnGetItem.Subscribe(score =>
+            item.OnGetItem.Subscribe(e =>
             {
-                _scoreModel.AddScore = score;
+                _scoreModel.AddScore = e.Score;
+                _onGetItem.OnNext(e);
             });
 
 

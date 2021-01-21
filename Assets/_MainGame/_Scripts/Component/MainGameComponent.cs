@@ -10,11 +10,15 @@ namespace HoloHopping.Component
     using Model;
     public class MainGameComponent : MonoBehaviour
     {
+        [Header("Components")]
         [SerializeField] private HoppingCharaCreaterComponent _hoppingCharaCreaterComponent = null;
         [SerializeField] private ItemCreaterComponent _itemCreaterComponent = null;
+        [SerializeField] private ItemTextCreaterComponent _itemTextCreaterComponent = null;
 
+        [Header("Presenters")]
         [SerializeField] private ScorePresenter _scorePresenter = null;
         [SerializeField] private ReadyLabelPresenter _readyLabelPresenter = null;
+
         private GameSystemModel _gameSystemModel = null;
 
         public void Init()
@@ -44,6 +48,11 @@ namespace HoloHopping.Component
 
         private void Bind()
         {
+            _itemCreaterComponent.OnGetItem.Subscribe(entity =>
+            {
+                _itemTextCreaterComponent.CreateText(entity);
+            });
+
             _hoppingCharaCreaterComponent.OnCreateCharacter.Subscribe(createdChara =>
             {
                 Debug.Log("Create");

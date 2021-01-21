@@ -16,11 +16,14 @@ namespace HoloHopping.Entity
         {
             Component = data.PrefabComponent;
             Score = data.Score;
+            TextColor = data.TextColor;
         }
 
         public Component.ItemComponent Component { get; private set; }
         public int Score { get; private set; }
-
+        public string GetText { get; set; }
+        public Color TextColor { get; private set; }
+        public Vector3 GetPos { get; set; }
     }
 }
 
@@ -35,8 +38,10 @@ namespace HoloHopping.Data
     {
         [SerializeField] private Component.ItemComponent _prefab = null;
         [SerializeField] private int _score = 100;
+        [SerializeField] private Color _textColor = Color.white;
 
         public Component.ItemComponent PrefabComponent { get { return _prefab; } }
         public int Score { get { return _score; } }
+        public Color TextColor { get { return _textColor; } }
     }
 }
