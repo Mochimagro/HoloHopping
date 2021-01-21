@@ -30,7 +30,7 @@ namespace HoloHopping.Component
             if (other.CompareTag(TagName.CHARACTER))
             {
                 _entity.GetPos = transform.position;
-                _entity.GetText = "+"+ _entity.Score;
+                _entity.GetText = _entity.ItemMode == Data.ItemMode.Score ? "+" + _entity.Score : _entity.ItemMode.ToString();
                 _onGetItem.OnNext(_entity);
                 Destroy(this.gameObject);
             }
