@@ -62,16 +62,17 @@ namespace HoloHopping.Component
         public IObservable<FXCreateEntity> OnHop  =>_onHop;
         private Subject<FXCreateEntity> _onHop = new Subject<FXCreateEntity>();
 
-        public HoppingCharacter SetEntity
+        public HoppingCharacterEntity SetEntity
         {
             set
             {
                 _parameter.SetComponent("StartWay", value.StartWay);
-                _parameter.SetVector3("StartRotation", value.StartRotation);
+                _parameter.SetVector3("StartRotation", value.CharaRotation);
+                _parameter.SetVector3("StartJumpVector", value.JumpVector);
             }
         }
 
-        public void Init(HoppingCharacter entity)
+        public void Init(HoppingCharacterEntity entity)
         {
             SetEntity = entity;
             _actionEntity = new FXCreateEntity();

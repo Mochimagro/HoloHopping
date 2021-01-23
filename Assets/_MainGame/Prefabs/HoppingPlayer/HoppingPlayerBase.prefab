@@ -2128,7 +2128,7 @@ MonoBehaviour:
       x: -384
       y: -864
       width: 300
-      height: 478
+      height: 497
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -2240,7 +2240,7 @@ MonoBehaviour:
       x: 1560
       y: -324
       width: 300
-      height: 293
+      height: 292
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -2272,7 +2272,7 @@ MonoBehaviour:
       x: 324
       y: -48
       width: 300
-      height: 474
+      height: 473
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -2397,16 +2397,16 @@ MonoBehaviour:
       nodeGraph: {fileID: 0}
       branchID: 0
   _Direction:
-    _Type: 0
+    _Type: 1
     _Value: {x: -2, y: 10, z: 0}
     _Parameter:
       _Type: 0
-      _Container: {fileID: 0}
+      _Container: {fileID: 5889726281006920085}
       _Slot:
         nodeGraph: {fileID: 0}
         branchID: 0
-      id: 0
-      name: 
+      id: 1848543519
+      name: StartJumpVector
     _Slot:
       nodeGraph: {fileID: 0}
       branchID: 0
@@ -4895,7 +4895,7 @@ MonoBehaviour:
     _LongParameters: []
     _FloatParameters:
     - _Type: 0
-      _Value: 500
+      _Value: 450
       _Parameter:
         _Type: 0
         _Container: {fileID: 0}
@@ -4976,7 +4976,7 @@ MonoBehaviour:
     _LongParameters: []
     _FloatParameters:
     - _Type: 0
-      _Value: 750
+      _Value: 650
       _Parameter:
         _Type: 0
         _Container: {fileID: 0}
@@ -7984,6 +7984,15 @@ MonoBehaviour:
     _IsPublicGet: 1
     referenceType:
       _AssemblyTypeName: 
+  - container: {fileID: 5889726281006920085}
+    id: 1848543519
+    type: 1001
+    name: StartJumpVector
+    _ParameterIndex: 1
+    _IsPublicSet: 1
+    _IsPublicGet: 1
+    referenceType:
+      _AssemblyTypeName: 
   _SerializeVersion: 1
   _OldParameters: []
   _AssetObjectListParameters: []
@@ -8015,6 +8024,7 @@ MonoBehaviour:
   _Vector2Parameters: []
   _Vector2ListParameters: []
   _Vector3Parameters:
+  - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   _Vector3ListParameters: []
 --- !u!1001 &5008006510247537303

@@ -7,16 +7,20 @@ using Arbor;
 
 namespace HoloHopping.Entity
 {
-    public class HoppingCharacter
+    public class HoppingCharacterEntity
     {
-        public HoppingCharacter(Data.HoppingCharacterData data)
+        public HoppingCharacterEntity(Data.HoppingCharacterData data, Vector3 charaRot, Waypoint startWay, Vector3 jumpVec)
         {
             Component = data.CharaComponent;
+            CharaRotation = charaRot;
+            StartWay = startWay;
+            JumpVector = jumpVec;
         }
 
         public Component.HoppingCharacterComponent Component { get; private set; }
-        public Vector3 StartRotation { get; set; }
-        public Waypoint StartWay { get; set; }
+        public Vector3 CharaRotation { get; private set; }
+        public Waypoint StartWay { get; private set; }
+        public Vector3 JumpVector { get; private set; }
     }
 }
 
@@ -39,11 +43,10 @@ namespace HoloHopping.Component
 
         public HoppingCharacterComponent CreateHoppingCharacter()
         {
-            var entity = new Entity.HoppingCharacter(_hoppingCharacterList.RandomData);
-            entity.StartWay = this.StartWay;
-            entity.StartRotation = this.CharacterRotation;
+            var entity = new Entity.HoppingCharacterEntity(_hoppingCharacterList.RandomData, this.CharacterRotation, this.StartWay, this.JumpVector);
 
-            var chara = Instantiate(entity.Component,CreatePosition,Quaternion.identity);
+
+            var chara = Instantiate(entity.Component, CreatePosition, Quaternion.identity);
 
             chara.OnMiss.TakeUntilDestroy(chara).Subscribe(value =>
             {
@@ -86,9 +89,17 @@ namespace HoloHopping.Component
             }
         }
 
+        public Vector3 JumpVector
+        {
+            get
+            {
+                return PlayerIsLeft ? new Vector3(-2, 10, 0) : new Vector3(2, 10, 0);
+            }
+        }
+
         private bool PlayerIsLeft
         {
-            get 
+            get
             {
                 var playerPos = _systemParameter.GetTransform("Player");
                 return playerPos.position.x <= 0;
