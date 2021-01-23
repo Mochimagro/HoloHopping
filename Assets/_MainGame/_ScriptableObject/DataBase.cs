@@ -18,6 +18,7 @@ namespace HoloHopping.Data
             public const string HOPPING_CHARACTER = "HoppingCharacter/";
             public const string ITEM = "Item/";
             public const string FX = "FX/";
+            public const string BGM = "BGM/";
         }
 
         public struct Type
@@ -28,7 +29,7 @@ namespace HoloHopping.Data
     }
 
     public class DataBase : ScriptableObject
-    {        
-        
+    {
+
     }
 }

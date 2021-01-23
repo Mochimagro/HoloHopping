@@ -19,6 +19,7 @@ namespace HoloHopping.Component
         [Header("Presenters")]
         [SerializeField] private ScorePresenter _scorePresenter = null;
         [SerializeField] private ReadyLabelPresenter _readyLabelPresenter = null;
+        [SerializeField] private BGMPresenter _bgmPresenter = null;
 
         private GameSystemModel _gameSystemModel = null;
 
@@ -35,6 +36,9 @@ namespace HoloHopping.Component
 
             _effectCreaterComponent.Init();
 
+            _bgmPresenter.Init();
+            _bgmPresenter.PlayReadySound();
+
             Bind();
         }
 
@@ -47,6 +51,8 @@ namespace HoloHopping.Component
             _itemCreaterComponent.StartAutoCreate();
 
             _hoppingCharaCreaterComponent.CreateHoppingCharacter();
+
+            _bgmPresenter.PlayStartSound();
         }
 
         private void Bind()
