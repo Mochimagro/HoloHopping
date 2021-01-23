@@ -28,8 +28,11 @@ namespace HoloHopping.Component
         [SerializeField] private ParameterContainer _systemParameter = null;
         [SerializeField] private Data.HoppingCharacterList _hoppingCharacterList = null;
 
-        public IObservable<HoppingCharacterComponent> OnCharacterMiss => _onCharacterMiss;
-        private Subject<HoppingCharacterComponent> _onCharacterMiss = new Subject<HoppingCharacterComponent>();
+        public IObservable<Entity.MissInfoEntity> OnCharacterMiss => _onCharacterMiss;
+        private Subject<Entity.MissInfoEntity> _onCharacterMiss = new Subject<Entity.MissInfoEntity>();
+
+        public IObservable<Entity.FXCreateEntity> OnHopCharacter => _onHopCharacter;
+        private Subject<Entity.FXCreateEntity> _onHopCharacter = new Subject<Entity.FXCreateEntity>();
 
         public IObservable<HoppingCharacterComponent> OnCreateCharacter => _onCreateCharacter;
         private Subject<HoppingCharacterComponent> _onCreateCharacter = new Subject<HoppingCharacterComponent>();
@@ -42,12 +45,17 @@ namespace HoloHopping.Component
 
             var chara = Instantiate(entity.Component,CreatePosition,Quaternion.identity);
 
-            chara.OnMiss.TakeUntilDisable(chara).Subscribe(value =>
+            chara.OnMiss.TakeUntilDestroy(chara).Subscribe(value =>
             {
                 _onCharacterMiss.OnNext(value);
             });
 
-            chara.SetEntity = entity;
+            chara.OnHop.TakeUntilDestroy(chara).Subscribe(value =>
+            {
+                _onHopCharacter.OnNext(value);
+            });
+
+            chara.Init(entity);
 
             _onCreateCharacter.OnNext(chara);
             return chara;

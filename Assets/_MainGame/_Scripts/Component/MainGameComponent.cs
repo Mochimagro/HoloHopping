@@ -14,6 +14,7 @@ namespace HoloHopping.Component
         [SerializeField] private HoppingCharaCreaterComponent _hoppingCharaCreaterComponent = null;
         [SerializeField] private ItemCreaterComponent _itemCreaterComponent = null;
         [SerializeField] private ItemTextCreaterComponent _itemTextCreaterComponent = null;
+        [SerializeField] private EffectCreaterComponent _effectCreaterComponent = null;
 
         [Header("Presenters")]
         [SerializeField] private ScorePresenter _scorePresenter = null;
@@ -31,6 +32,8 @@ namespace HoloHopping.Component
             _scorePresenter.Init(out scoreModel);
 
             _itemCreaterComponent.Init(scoreModel);
+
+            _effectCreaterComponent.Init();
 
             Bind();
         }
@@ -63,6 +66,12 @@ namespace HoloHopping.Component
             {
                 Debug.Log("Miss");
                 _gameSystemModel.ReduceLeaveCount();
+                _effectCreaterComponent.CreateEffect(missChara.FXCreateEntity);
+            });
+
+            _hoppingCharaCreaterComponent.OnHopCharacter.Subscribe(fxEntity =>
+            {
+                _effectCreaterComponent.CreateEffect(fxEntity);
             });
 
             _gameSystemModel.AllCharacterMiss.Subscribe(_ =>

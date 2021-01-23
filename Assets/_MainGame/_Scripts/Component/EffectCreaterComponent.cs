@@ -23,6 +23,11 @@ namespace HoloHopping.Component
 
         }
 
+        public void CreateEffect(Entity.FXCreateEntity entity)
+        {
+            CreateEffect(entity.Position, entity.FXType);
+        }
+
         private void CreateEffect(Vector3 pos,Enum.FXType type)
         {
             var item = Instantiate(_fxDictionary[type], pos, Quaternion.identity);

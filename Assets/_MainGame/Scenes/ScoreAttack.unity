@@ -1920,6 +1920,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179765427}
   m_CullTransparentMesh: 0
+--- !u!1 &207544953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207544954}
+  - component: {fileID: 207544955}
+  m_Layer: 0
+  m_Name: EffectCreater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &207544954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207544953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2115199272}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &207544955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207544953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3fc86836e48764c9918bb18248f3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fxList: {fileID: 11400000, guid: 568ae3aa3d90c0c4d8528ce020045551, type: 2}
 --- !u!1001 &211189895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11913,6 +11957,7 @@ Transform:
   - {fileID: 243576367}
   - {fileID: 395478381}
   - {fileID: 1440514050}
+  - {fileID: 207544954}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.1220002}
@@ -12093,6 +12138,7 @@ MonoBehaviour:
   _hoppingCharaCreaterComponent: {fileID: 29624260}
   _itemCreaterComponent: {fileID: 1526271409}
   _itemTextCreaterComponent: {fileID: 1440514051}
+  _effectCreaterComponent: {fileID: 207544955}
   _scorePresenter: {fileID: 243576369}
   _readyLabelPresenter: {fileID: 395478383}
 --- !u!114 &2115199277

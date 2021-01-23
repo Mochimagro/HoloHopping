@@ -5735,7 +5735,7 @@ MonoBehaviour:
     _IsPublicSet: 1
     _IsPublicGet: 1
     referenceType:
-      _AssemblyTypeName: HoloHopping.Entity.HoppingType, Assembly-CSharp
+      _AssemblyTypeName: HoloHopping.Enum.FXType, Assembly-CSharp
   _SerializeVersion: 1
   _OldParameters: []
   _AssetObjectListParameters: []
@@ -5805,7 +5805,7 @@ MonoBehaviour:
     id: 630327709
     name: HoppingType
   _ValueType:
-    _AssemblyTypeName: HoloHopping.Entity.HoppingType, Assembly-CSharp
+    _AssemblyTypeName: HoloHopping.Enum.FXType, Assembly-CSharp
   _ParameterType: 13
   _ParameterList:
     _IntParameters: []
@@ -5823,7 +5823,7 @@ MonoBehaviour:
     _ComponentParameters: []
     _EnumParameters:
     - _Type: 0
-      _Value: 1
+      _Value: 2
       _Parameter:
         _Type: 0
         _Container: {fileID: 0}
@@ -5884,7 +5884,7 @@ MonoBehaviour:
     id: 630327709
     name: HoppingType
   _ValueType:
-    _AssemblyTypeName: HoloHopping.Entity.HoppingType, Assembly-CSharp
+    _AssemblyTypeName: HoloHopping.Enum.FXType, Assembly-CSharp
   _ParameterType: 13
   _ParameterList:
     _IntParameters: []
@@ -5902,7 +5902,7 @@ MonoBehaviour:
     _ComponentParameters: []
     _EnumParameters:
     - _Type: 0
-      _Value: 2
+      _Value: 3
       _Parameter:
         _Type: 0
         _Container: {fileID: 0}
@@ -5950,7 +5950,7 @@ MonoBehaviour:
         _TargetComponent:
           _Type: 0
           _HierarchyType: 0
-          _Value: {fileID: 0}
+          _Value: {fileID: 1235998369069373313}
           _Parameter:
             _Type: 0
             _Container: {fileID: 0}
@@ -6000,7 +6000,7 @@ MonoBehaviour:
         _MemberName: InvokeHop
         _Arguments:
         - _Type:
-            _AssemblyTypeName: HoloHopping.Entity.HoppingType, Assembly-CSharp
+            _AssemblyTypeName: HoloHopping.Enum.FXType, Assembly-CSharp
           _Name: type
           _Attributes: 0
           _ParameterType: 13

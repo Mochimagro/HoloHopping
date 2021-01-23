@@ -7,16 +7,41 @@ using Arbor;
 namespace HoloHopping.Entity
 {
 
-    public class HoppingActionEntity
+    public class FXCreateEntity
     {
-       public HoppingActionEntity(Vector3 pos, Enum.FXType type)
+        public FXCreateEntity()
+        {
+
+        }
+       public FXCreateEntity(Vector3 pos, Enum.FXType type)
+        {
+            SetData(pos,type);
+        }
+
+        public FXCreateEntity SetData(Vector3 pos, Enum.FXType type)
         {
             Position = pos;
-            HoppingType = type;
+            FXType = type;
+
+            return this;
         }
 
         public Vector3 Position { get; private set; }
-        public Enum.FXType HoppingType { get; private set; }
+        public Enum.FXType FXType { get; private set; }
+        public Color FXColor { get; private set; }
+
+    }
+
+    public class MissInfoEntity
+    {
+        public MissInfoEntity(FXCreateEntity entity, Component.HoppingCharacterComponent component)
+        {
+            FXCreateEntity = entity;
+            HoppingCharacterComponent = component;
+        }
+
+        public FXCreateEntity FXCreateEntity { get; private set; }
+        public Component.HoppingCharacterComponent HoppingCharacterComponent { get;private set; }
 
     }
 }
@@ -27,15 +52,17 @@ namespace HoloHopping.Component
     public class HoppingCharacterComponent : MonoBehaviour
     {
         [SerializeField] private ParameterContainer _parameter = null;
+        private FXCreateEntity _actionEntity = null;
+        
         private Rigidbody _rigidbody => GetComponent<Rigidbody>();
 
-        public IObservable<HoppingCharacterComponent> OnMiss => _onMiss;
-        private Subject<HoppingCharacterComponent> _onMiss = new Subject<HoppingCharacterComponent>();
+        public IObservable<MissInfoEntity> OnMiss => _onMiss;
+        private Subject<MissInfoEntity> _onMiss = new Subject<MissInfoEntity>();
 
-        public IObservable<HoppingActionEntity> OnHop  =>_onHop;
-        private Subject<HoppingActionEntity> _onHop = new Subject<HoppingActionEntity>();
+        public IObservable<FXCreateEntity> OnHop  =>_onHop;
+        private Subject<FXCreateEntity> _onHop = new Subject<FXCreateEntity>();
 
-        public Entity.HoppingCharacter SetEntity
+        public HoppingCharacter SetEntity
         {
             set
             {
@@ -44,9 +71,10 @@ namespace HoloHopping.Component
             }
         }
 
-        public void Init()
+        public void Init(HoppingCharacter entity)
         {
-
+            SetEntity = entity;
+            _actionEntity = new FXCreateEntity();
         }
 
         public bool UseGravity
@@ -56,12 +84,17 @@ namespace HoloHopping.Component
 
         public void InvokeMiss()
         {
-            _onMiss.OnNext(this);
+            _onMiss.OnNext(new  MissInfoEntity
+                (
+                    new FXCreateEntity(this.transform.position,Enum.FXType.Miss),
+                    this
+                )
+                );
         }
 
         public void InvokeHop(Enum.FXType type)
         {
-            _onHop.OnNext(new HoppingActionEntity(this.transform.position, type));
+            _onHop.OnNext(_actionEntity.SetData(this.transform.position, type));
         }
 
     }
