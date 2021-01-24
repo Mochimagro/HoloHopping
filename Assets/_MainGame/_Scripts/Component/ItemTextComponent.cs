@@ -20,7 +20,7 @@ namespace HoloHopping.Component
 
             _text.text = entity.GetText;
 
-            _text.color = entity.TextColor;
+            _text.color = entity.ItemColor;
 
             _text.rectTransform.position = RectTransformUtility.WorldToScreenPoint(targetCamera, entity.GetPos + new Vector3(0,1.0f,0));
 

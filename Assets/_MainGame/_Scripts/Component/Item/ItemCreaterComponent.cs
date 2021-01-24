@@ -31,16 +31,17 @@ namespace HoloHopping.Component
             _autoCreateState.SendTrigger(ItemCreaterMessage.AUTO_CREATE_ITEM);
         }
 
-        public ItemComponent CreateItem(Data.ItemData itemData,Vector3 position)
+        public ItemComponent CreateItem(Data.ItemData itemData, Vector3 position)
         {
 
             var entity = new Entity.ItemEntity(itemData);
-            var item = Instantiate(entity.Component,position,Quaternion.identity);
+            var item = Instantiate(entity.Component, position, Quaternion.identity);
 
             item.Init(entity);
 
             item.OnGetItem.Subscribe(e =>
             {
+                e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPos, Enum.FXType.Item, e.ItemColor);
                 _scoreModel.AddScore = e.Score;
                 _onGetItem.OnNext(e);
             });

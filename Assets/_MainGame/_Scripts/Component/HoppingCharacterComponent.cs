@@ -13,10 +13,17 @@ namespace HoloHopping.Entity
         {
 
         }
-       public FXCreateEntity(Vector3 pos, Enum.FXType type)
+        public FXCreateEntity(Vector3 pos, Enum.FXType type)
         {
-            SetData(pos,type);
+            SetData(pos, type);
         }
+
+        public FXCreateEntity(Vector3 pos, Enum.FXType type, Color fxColor)
+        {
+            SetData(pos, type);
+            FXColor = fxColor;
+        }
+
 
         public FXCreateEntity SetData(Vector3 pos, Enum.FXType type)
         {
@@ -41,7 +48,7 @@ namespace HoloHopping.Entity
         }
 
         public FXCreateEntity FXCreateEntity { get; private set; }
-        public Component.HoppingCharacterComponent HoppingCharacterComponent { get;private set; }
+        public Component.HoppingCharacterComponent HoppingCharacterComponent { get; private set; }
 
     }
 }
@@ -53,13 +60,13 @@ namespace HoloHopping.Component
     {
         [SerializeField] private ParameterContainer _parameter = null;
         private FXCreateEntity _actionEntity = null;
-        
+
         private Rigidbody _rigidbody => GetComponent<Rigidbody>();
 
         public IObservable<MissInfoEntity> OnMiss => _onMiss;
         private Subject<MissInfoEntity> _onMiss = new Subject<MissInfoEntity>();
 
-        public IObservable<FXCreateEntity> OnHop  =>_onHop;
+        public IObservable<FXCreateEntity> OnHop => _onHop;
         private Subject<FXCreateEntity> _onHop = new Subject<FXCreateEntity>();
 
         public HoppingCharacterEntity SetEntity
@@ -85,9 +92,9 @@ namespace HoloHopping.Component
 
         public void InvokeMiss()
         {
-            _onMiss.OnNext(new  MissInfoEntity
+            _onMiss.OnNext(new MissInfoEntity
                 (
-                    new FXCreateEntity(this.transform.position,Enum.FXType.Miss),
+                    new FXCreateEntity(this.transform.position, Enum.FXType.Miss),
                     this
                 )
                 );

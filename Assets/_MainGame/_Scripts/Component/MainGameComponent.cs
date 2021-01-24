@@ -69,6 +69,7 @@ namespace HoloHopping.Component
             {
                 _itemTextCreaterComponent.CreateText(entity);
                 _sePresenter.PlaySound(entity.SEScene);
+                _effectCreaterComponent.CreateEffect(entity.FXCreateEntity);
             });
 
             _hoppingCharaCreaterComponent.OnCreateCharacter.Subscribe(createdChara =>

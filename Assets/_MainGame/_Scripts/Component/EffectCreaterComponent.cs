@@ -16,7 +16,7 @@ namespace HoloHopping.Component
         {
             var entity = new Entity.FXEntityList(_fxList);
 
-            foreach(var item in entity.Entities)
+            foreach (var item in entity.Entities)
             {
                 _fxDictionary.Add(item.Type, item.Component);
             }
@@ -25,14 +25,9 @@ namespace HoloHopping.Component
 
         public void CreateEffect(Entity.FXCreateEntity entity)
         {
-            CreateEffect(entity.Position, entity.FXType);
-        }
-
-        private void CreateEffect(Vector3 pos,Enum.FXType type)
-        {
-            var item = Instantiate(_fxDictionary[type], pos, Quaternion.identity);
+            var item = Instantiate(_fxDictionary[entity.FXType], entity.Position, Quaternion.identity);
+            item.FXColor = entity.FXColor;
 
         }
-
     }
 }
