@@ -19,6 +19,10 @@ namespace HoloHopping.View
 
         }
 
+        public void StopSound()
+        {
+            _audioSource.Stop();
+        }
         public void PlayLoopBGM(AudioClip clip)
         {
             _audioSource.loop = true;

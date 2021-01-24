@@ -6,6 +6,7 @@ using UniRx;
 namespace HoloHopping.Presenter
 {
     using Model;
+    using System.Collections;
     using View;
     public class BGMPresenter : MonoBehaviour
     {
@@ -44,12 +45,21 @@ namespace HoloHopping.Presenter
 
         public void PlayGameOverSound()
         {
-            _bgmView.PlaySound(_bgmModel.GetSceneBGM(Enum.BGMScene.GameOver));
+            StartCoroutine(PlayGameOver());
 
             _bgmView.OnCompleteSound.Subscribe(_ =>
             {
 
             });
+        }
+
+        private IEnumerator PlayGameOver()
+        {
+            _bgmView.StopSound();
+            yield return new WaitForSeconds(1.5f);
+
+            _bgmView.PlaySound(_bgmModel.GetSceneBGM(Enum.BGMScene.GameOver));
+
         }
 
     }

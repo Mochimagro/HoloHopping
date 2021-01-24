@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using Doozy.Engine;
+using Arbor;
 
 namespace HoloHopping.Component
 {
@@ -10,6 +11,9 @@ namespace HoloHopping.Component
     using Model;
     public class MainGameComponent : MonoBehaviour
     {
+        [Header("ArborFSM")]
+        [SerializeField] private ArborFSM arborFSM = null;
+
         [Header("Components")]
         [SerializeField] private HoppingCharaCreaterComponent _hoppingCharaCreaterComponent = null;
         [SerializeField] private ItemCreaterComponent _itemCreaterComponent = null;
@@ -20,6 +24,8 @@ namespace HoloHopping.Component
         [SerializeField] private ScorePresenter _scorePresenter = null;
         [SerializeField] private ReadyLabelPresenter _readyLabelPresenter = null;
         [SerializeField] private BGMPresenter _bgmPresenter = null;
+
+
 
         private GameSystemModel _gameSystemModel = null;
 
@@ -44,7 +50,7 @@ namespace HoloHopping.Component
 
         public void InvokeSystem()
         {
-            GameEventMessage.SendEvent("StartGame");
+            GameEventMessage.SendEvent(NodyGameEventList.GAME_START);
 
             _readyLabelPresenter.ShowGoText();
 
@@ -83,7 +89,14 @@ namespace HoloHopping.Component
             _gameSystemModel.AllCharacterMiss.Subscribe(_ =>
             {
                 Debug.Log("AllMiss");
+                arborFSM.SendTrigger(TriggerNameList.ALLMISS);
             });
+        }
+
+        public void GameOver()
+        {
+            GameEventMessage.SendEvent(NodyGameEventList.GAME_OVER);
+            _bgmPresenter.PlayGameOverSound();
         }
 
     }
