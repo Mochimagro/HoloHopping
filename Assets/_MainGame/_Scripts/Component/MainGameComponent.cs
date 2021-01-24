@@ -15,6 +15,7 @@ namespace HoloHopping.Component
         [SerializeField] private ArborFSM arborFSM = null;
 
         [Header("Components")]
+        [SerializeField] private MainPlayerComponent _mainPlayerComponent = null;
         [SerializeField] private HoppingCharaCreaterComponent _hoppingCharaCreaterComponent = null;
         [SerializeField] private ItemCreaterComponent _itemCreaterComponent = null;
         [SerializeField] private ItemTextCreaterComponent _itemTextCreaterComponent = null;
@@ -31,6 +32,8 @@ namespace HoloHopping.Component
 
         public void Init()
         {
+            _mainPlayerComponent.DebugInit();
+
             _readyLabelPresenter.ShowReadyText();
 
             ScoreModel scoreModel = null;

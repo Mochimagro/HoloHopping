@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
+namespace HoloHopping.Enum
+{
+    public enum CharacterType
+    {
+        None,
+        ControllPlayer,
+        Hopping
+    }
+}
+
 namespace HoloHopping.Entity
 {
     public class CharacterEntity
     {
         public CharacterEntity(Data.CharacterData data)
         {
-            CharacterObject = data.CharacterObject;
+            CharacterComponent = data.CharacterObject;
             Name = data.Name;
         }
 
-        public GameObject CharacterObject { get; private set; }
+        public Component.CharacterComponent CharacterComponent { get; private set; }
         public string Name { get; private set; }
 
     }
@@ -29,10 +39,10 @@ namespace HoloHopping.Data
         fileName = "NewCharacter")]
     public class CharacterData : ScriptableObject
     {
-        [SerializeField] private GameObject _characterObject = null;
+        [SerializeField] private Component.CharacterComponent _characterObject = null;
         [SerializeField] private string _name = null;
 
-        public GameObject CharacterObject { get { return _characterObject; } }
+        public Component.CharacterComponent CharacterObject { get { return _characterObject; } }
         public string Name { get { return _name; } }
 
     }
