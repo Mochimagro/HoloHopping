@@ -10,22 +10,25 @@ namespace HoloHopping.Entity
     {
 
     }
-    public class ItemEntity:IEntity
+    public class ItemEntity : IEntity
     {
         public ItemEntity(Data.ItemData data)
         {
             Component = data.PrefabComponent;
             Score = data.Score;
+            ItemGetSEClip = data.ItemGetSEClip;
             TextColor = data.TextColor;
             ItemMode = data.ItemMode;
         }
 
         public Component.ItemComponent Component { get; private set; }
         public int Score { get; private set; }
+        public AudioClip ItemGetSEClip { get; private set; }
         public string GetText { get; set; }
         public Data.ItemMode ItemMode { get; private set; }
         public Color TextColor { get; private set; }
         public Vector3 GetPos { get; set; }
+        public Enum.SEScene SEScene { get; set; }
     }
 }
 
@@ -48,10 +51,12 @@ namespace HoloHopping.Data
     {
         [SerializeField] private Component.ItemComponent _prefab = null;
         [SerializeField] private int _score = 100;
+        [SerializeField] private AudioClip _itemGetSEClip = null;
         [SerializeField] private Color _textColor = Color.white;
         [SerializeField] private ItemMode _itemMode = ItemMode.None;
         public Component.ItemComponent PrefabComponent { get { return _prefab; } }
         public int Score { get { return _score; } }
+        public AudioClip ItemGetSEClip { get { return _itemGetSEClip; } }
         public Color TextColor { get { return _textColor; } }
         public ItemMode ItemMode { get { return _itemMode; } }
     }

@@ -12,7 +12,7 @@ namespace HoloHopping.Component
         //void Init(Entity.IEntity entity);
     }
 
-    public class ItemComponent : MonoBehaviour,IItem
+    public class ItemComponent : MonoBehaviour, IItem
     {
         private ItemEntity _entity = null;
 
@@ -31,6 +31,7 @@ namespace HoloHopping.Component
             {
                 _entity.GetPos = transform.position;
                 _entity.GetText = _entity.ItemMode == Data.ItemMode.Score ? "+" + _entity.Score : _entity.ItemMode.ToString();
+                _entity.SEScene = _entity.ItemMode == Data.ItemMode.Score ? Enum.SEScene.ScoreItem : Enum.SEScene.SpecialItem;
                 _onGetItem.OnNext(_entity);
                 Destroy(this.gameObject);
             }

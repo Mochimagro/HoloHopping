@@ -19,6 +19,7 @@ namespace HoloHopping.Data
             public const string ITEM = "Item/";
             public const string FX = "FX/";
             public const string BGM = "BGM/";
+            public const string SE = "SE/";
         }
 
         public struct Type
