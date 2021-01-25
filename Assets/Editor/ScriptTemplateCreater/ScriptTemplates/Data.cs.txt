@@ -1,0 +1,32 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace #PROJECTNAME#.Entity
+{
+    public class #NAME#Entity
+    {
+        #NOTRIM#
+        public #NAME#Entity(Data.#NAME#Data data)
+        {
+            SampleParameter = data.SampleParameter;
+        }
+        #NOTRIM#
+        public object SampleParameter { get; private set; }
+        #NOTRIM#
+    }
+}
+
+namespace #PROJECTNAME#.Data
+{
+    [CreateAssetMenu(menuName = 
+        "FormatName/" + 
+        "AttributeName/" + 
+        "TypeName",
+        fileName = "NewDataName")]
+    public class #NAME#Data : ScriptableObject
+    {
+        [SerializeField] private object _sampleParameter = null;
+		#NOTRIM#
+        public object SampleParameter { get { return _sampleParameter; } }
+    }
+}

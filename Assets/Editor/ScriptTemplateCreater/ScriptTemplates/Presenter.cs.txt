@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+namespace #PROJECTNAME#.Game.Presenter
+{
+	using Model;
+	using View;
+	public class #NAME#Presenter : MonoBehaviour 
+	{
+		[SerializeField] private #NAME#View _#NAMETOLOWER#View = null;
+		private #NAME#Model _#NAMETOLOWER#Model = null;
+
+		public void Init () 
+		{
+			_#NAMETOLOWER#Model = new #NAME#Model();
+			_#NAMETOLOWER#View.Init();
+			#NOTRIM#
+			Bind();
+		}
+		
+		private void Bind () 
+		{
+			#NOTRIM#
+		}
+	}
+}

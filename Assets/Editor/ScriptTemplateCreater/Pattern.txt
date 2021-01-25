@@ -1,0 +1,36 @@
+エディターウィンドウで名前を入力
+↓
+入力名でフォルダを作成
+↓
+フォルダ内に***Presenter,***View,***Modelの作成
+↓
+やったぜ
+
+フォルダ構成(*は新規作成)
+Assets
++_Scripts
+ *Group
+  *GroupPresenter.cs
+  *GroupView.cs
+  *GroupModel.cs
+
+
+一応参考にしているところの変数
+Action引数
+pathName:新規作成したフォルダパス/新規作成入力した文字列.cs
+(ここはその前のMenuItemが実装されているところで変更できそう)
+resourceFile:元となるテキストファイル(string)
+
+
+name:入力名
+scriptName:nameと同義？
+projectName:Unityのプロジェクト名
+
+File.WriteAllText(string path,string contents,Encoding encoding)
+
+
+定義
+#NAME# : 入力値
+#NAMETOLOWER# : すべて小文字にした入力値
+#PROJECTNAME# : プロジェクト名
+#NOTRIM# : 改行コード \n

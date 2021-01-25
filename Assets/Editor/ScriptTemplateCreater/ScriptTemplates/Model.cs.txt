@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+namespace #PROJECTNAME#.Game.Model
+{
+	public class #NAME#Model
+	{
+		public #NAME#Model()
+		{
+			#NOTRIM#
+		}
+	}
+}

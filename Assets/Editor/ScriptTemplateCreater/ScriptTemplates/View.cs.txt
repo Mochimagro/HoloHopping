@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UniRx;
+using UnityEngine.UI;
+
+namespace #PROJECTNAME#.Game.View
+{
+	public class #NAME#View : MonoBehaviour 
+	{
+		public void Init()
+		{
+			#NOTRIM#
+		}
+	}
+}
