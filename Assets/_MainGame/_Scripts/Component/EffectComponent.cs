@@ -8,7 +8,7 @@ namespace HoloHopping.Component
 
     public class EffectComponent : MonoBehaviour
     {
-        [SerializeField] private List<ParticleSystem> _particleSystems;
+        [SerializeField] private List<ParticleSystem> _particleSystems = null;
 
         public Color FXColor
         {

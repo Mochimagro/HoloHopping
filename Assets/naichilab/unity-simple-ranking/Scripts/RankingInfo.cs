@@ -53,12 +53,10 @@ namespace naichilab
                     case ScoreType.Number:
                         double d = double.Parse(scoreText);
                         return new NumberScore(d, CustomFormat);
-                        break;
                     case ScoreType.Time:
                         long ticks = long.Parse(scoreText);
                         TimeSpan t = new TimeSpan(ticks);
                         return new TimeScore(t, CustomFormat);
-                        break;
                 }
             }
             catch (Exception)

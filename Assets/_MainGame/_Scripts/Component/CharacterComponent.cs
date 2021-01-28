@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEditor.Animations;
 
 namespace HoloHopping.Component
 {
@@ -15,7 +14,6 @@ namespace HoloHopping.Component
         }
 
         public bool HoppingObjectSetActive { set { _hopping.SetActive(value); } }
-        public AnimatorController AnimatorController { set { _animator.runtimeAnimatorController = value; } }
         public Animator Animator { get { return _animator; } }
         public SkinnedMeshRenderer HoppingSkin { get { return _hopping.GetComponent<SkinnedMeshRenderer>(); } }
     }

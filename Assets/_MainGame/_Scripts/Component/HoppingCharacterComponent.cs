@@ -9,7 +9,7 @@ namespace HoloHopping.Enum
     public struct AnimationParameterHopPlayer
     {
         public const string JUMP = "Jump";
-        public const string CHARGE = "Charge";
+        public const string BEND = "Bend";
         public const string MISS = "Miss";
         public const string END_UP = "endUp";
         public const string START_DOWN = "startDown";
@@ -102,6 +102,7 @@ namespace HoloHopping.Component
             this.gameObject.SetActive(true);
             SetEntity = entity;
             _characterComponent.HoppingObjectSetActive = false;
+            _characterComponent.Animator.SetLayerWeight(1, 1);
             _actionEntity = new FXCreateEntity();
         }
 

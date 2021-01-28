@@ -3,7 +3,6 @@ using System;
 using UnityEngine;
 using UniRx;
 using Arbor;
-using UnityEditor.Animations;
 
 namespace HoloHopping.Entity
 {
@@ -37,7 +36,6 @@ namespace HoloHopping.Component
     public class HoppingCharaCreaterComponent : MonoBehaviour
     {
         [SerializeField] private ParameterContainer _systemParameter = null;
-        [SerializeField] private AnimatorController _hoppingAnimatorController = null;
         [SerializeField] private HoppingCharacterComponent _hoppingCharacterBase = null;
 
         [SerializeField] private Data.CharacterList _DebugCharacters = null;
@@ -86,8 +84,6 @@ namespace HoloHopping.Component
             var hopEntity = new Entity.HoppingCharacterEntity(hop, this.CharacterRotation, this.StartWay, this.JumpVector);
 
             hop.SetCharacterComponent = chara;
-
-            chara.AnimatorController = _hoppingAnimatorController;
 
             hop.OnMiss.TakeUntilDestroy(chara).Subscribe(value =>
             {

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
-using UnityEditor.Animations;
 
 namespace HoloHopping.Enum
 {
@@ -21,8 +20,6 @@ namespace HoloHopping.Component
         [SerializeField] private Arbor.ArborFSM _arborFSM = null;
         [SerializeField] private Arbor.ParameterContainer _parameter = null;
 
-        [SerializeField] private AnimatorController _controller = null;
-
         [SerializeField] private Data.CharacterList _DebugCharacters = null;
 
         private Animator _animator = null;
@@ -35,7 +32,6 @@ namespace HoloHopping.Component
         public void Init(Entity.CharacterEntity entity)
         {
             var com = Instantiate(entity.CharacterComponent, this.transform);
-            com.AnimatorController = _controller;
             com.HoppingObjectSetActive = true;
             _parameter.SetComponent("HoppingSkin", com.HoppingSkin);
 
