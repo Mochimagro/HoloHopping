@@ -899,20 +899,6 @@ Transform:
   m_Father: {fileID: 2651202495778423937}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5786489969196690003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3128770808809907153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dae067a6fb6ada44b822327f758bab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FX_HighJump: {fileID: 0}
-  FX_NormalJump: {fileID: 0}
 --- !u!1 &3146696293357904827
 GameObject:
   m_ObjectHideFlags: 0

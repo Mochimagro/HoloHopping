@@ -6,7 +6,7 @@ using UnityEditor.Animations;
 
 namespace HoloHopping.Enum
 {
-    public class AnimationParameterName
+    public struct AnimationParameterMainPlayer
     {
         public const string MOVE = "move";
         public const string CHARGE = "Charge";

@@ -3,19 +3,26 @@ using System;
 using UnityEngine;
 using UniRx;
 using Arbor;
-
+using UnityEditor.Animations;
 
 namespace HoloHopping.Entity
 {
     public class HoppingCharacterEntity
     {
         public HoppingCharacterEntity(Data.HoppingCharacterData data, Vector3 charaRot, Waypoint startWay, Vector3 jumpVec)
+        : this(data.CharaComponent, charaRot, startWay, jumpVec)
         {
-            Component = data.CharaComponent;
+        }
+
+        public HoppingCharacterEntity(Component.HoppingCharacterComponent com, Vector3 charaRot, Waypoint startWay, Vector3 jumpVec)
+        {
+
+            Component = com;
             CharaRotation = charaRot;
             StartWay = startWay;
             JumpVector = jumpVec;
         }
+
 
         public Component.HoppingCharacterComponent Component { get; private set; }
         public Vector3 CharaRotation { get; private set; }
@@ -30,7 +37,10 @@ namespace HoloHopping.Component
     public class HoppingCharaCreaterComponent : MonoBehaviour
     {
         [SerializeField] private ParameterContainer _systemParameter = null;
-        [SerializeField] private Data.HoppingCharacterList _hoppingCharacterList = null;
+        [SerializeField] private AnimatorController _hoppingAnimatorController = null;
+        [SerializeField] private HoppingCharacterComponent _hoppingCharacterBase = null;
+
+        [SerializeField] private Data.CharacterList _DebugCharacters = null;
 
         public IObservable<Entity.MissInfoEntity> OnCharacterMiss => _onCharacterMiss;
         private Subject<Entity.MissInfoEntity> _onCharacterMiss = new Subject<Entity.MissInfoEntity>();
@@ -41,6 +51,7 @@ namespace HoloHopping.Component
         public IObservable<HoppingCharacterComponent> OnCreateCharacter => _onCreateCharacter;
         private Subject<HoppingCharacterComponent> _onCreateCharacter = new Subject<HoppingCharacterComponent>();
 
+        /*
         public HoppingCharacterComponent CreateHoppingCharacter()
         {
             var entity = new Entity.HoppingCharacterEntity(_hoppingCharacterList.RandomData, this.CharacterRotation, this.StartWay, this.JumpVector);
@@ -63,6 +74,36 @@ namespace HoloHopping.Component
             _onCreateCharacter.OnNext(chara);
             return chara;
 
+        }
+        */
+
+        public HoppingCharacterComponent CreateHoppingCharacter()
+        {
+            var hop = Instantiate(_hoppingCharacterBase, CreatePosition, Quaternion.identity, this.transform);
+
+            var chara = Instantiate(new Entity.CharacterEntityList(_DebugCharacters).GetRondomCharacter.CharacterComponent, hop.transform);
+
+            var hopEntity = new Entity.HoppingCharacterEntity(hop, this.CharacterRotation, this.StartWay, this.JumpVector);
+
+            hop.SetCharacterComponent = chara;
+
+            chara.AnimatorController = _hoppingAnimatorController;
+
+            hop.OnMiss.TakeUntilDestroy(chara).Subscribe(value =>
+            {
+                _onCharacterMiss.OnNext(value);
+            });
+
+            hop.OnHop.TakeUntilDestroy(chara).Subscribe(value =>
+            {
+                _onHopCharacter.OnNext(value);
+            });
+
+            hop.Init(hopEntity);
+
+            _onCreateCharacter.OnNext(hop);
+
+            return hop;
         }
 
         public Vector3 CreatePosition

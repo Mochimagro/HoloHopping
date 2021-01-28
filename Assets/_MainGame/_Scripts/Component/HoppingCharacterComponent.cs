@@ -4,6 +4,19 @@ using UnityEngine;
 using UniRx;
 using Arbor;
 
+namespace HoloHopping.Enum
+{
+    public struct AnimationParameterHopPlayer
+    {
+        public const string JUMP = "Jump";
+        public const string CHARGE = "Charge";
+        public const string MISS = "Miss";
+        public const string END_UP = "endUp";
+        public const string START_DOWN = "startDown";
+
+    }
+}
+
 namespace HoloHopping.Entity
 {
 
@@ -59,6 +72,10 @@ namespace HoloHopping.Component
     public class HoppingCharacterComponent : MonoBehaviour
     {
         [SerializeField] private ParameterContainer _parameter = null;
+
+        private CharacterComponent _characterComponent = null;
+        public CharacterComponent SetCharacterComponent { set { _characterComponent = value; } }
+
         private FXCreateEntity _actionEntity = null;
 
         private Rigidbody _rigidbody => GetComponent<Rigidbody>();
@@ -76,12 +93,15 @@ namespace HoloHopping.Component
                 _parameter.SetComponent("StartWay", value.StartWay);
                 _parameter.SetVector3("StartRotation", value.CharaRotation);
                 _parameter.SetVector3("StartJumpVector", value.JumpVector);
+                _parameter.SetComponent<Animator>("CharaAnimator", _characterComponent.Animator);
             }
         }
 
         public void Init(HoppingCharacterEntity entity)
         {
+            this.gameObject.SetActive(true);
             SetEntity = entity;
+            _characterComponent.HoppingObjectSetActive = false;
             _actionEntity = new FXCreateEntity();
         }
 
@@ -103,6 +123,16 @@ namespace HoloHopping.Component
         public void InvokeHop(Enum.FXType type)
         {
             _onHop.OnNext(_actionEntity.SetData(this.transform.position, type));
+        }
+
+        public void SetBoolAnimation(string parameterName, bool value)
+        {
+            _characterComponent.Animator.SetBool(parameterName, value);
+        }
+
+        public void SetTriggerAnimation(string parameterName)
+        {
+            _characterComponent.Animator.SetTrigger(parameterName);
         }
 
     }
