@@ -8,7 +8,7 @@ namespace HoloHopping.Enum
     public struct AnimationParameterMainPlayer
     {
         public const string MOVE = "move";
-        public const string CHARGE = "Charge";
+        public const string CHARGE = "Charging";
     }
 }
 
