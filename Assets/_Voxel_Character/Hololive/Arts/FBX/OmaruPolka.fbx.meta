@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 0d059194455fd4340b7ed91513b8df5b
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: 4229319454462945294
@@ -30,6 +30,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: a8228e69d205daa4d8ad78576e767db4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: eyeBlack
     second: {fileID: 2100000, guid: ab9759f61ff610046acba81fc47e2a41, type: 2}
   - first:
@@ -47,6 +52,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: eyeColor_R
     second: {fileID: 2100000, guid: aa4e18cf05953f248acd0fe2f75e8fb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 4563f69b2bac43c4a82b09c69dcb9524, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: head
+    second: {fileID: 2100000, guid: 5902fc6a0f4c31848b7ee92f621578cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reg
+    second: {fileID: 2100000, guid: fd1932af064503a4894021e4e20f9c4d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -317,7 +337,6 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -427,7 +446,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: head
+    - boneName: head 1
       humanName: Head
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -515,6 +534,30 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: ear_L.001
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ear_R.001
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: propeller.001
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
     - name: OmaruPolka(Clone)
       parentName: 
@@ -546,13 +589,13 @@ ModelImporter:
       position: {x: 1.7345859e-19, y: 0.0046047824, z: -0.00000610305}
       rotation: {x: 0.1404078, y: -0.00000011802839, z: -0.000000016737912, w: 0.99009377}
       scale: {x: 1, y: 1, z: 0.9999999}
-    - name: head
+    - name: head 1
       parentName: neck
       position: {x: 4.672958e-18, y: 0.0018206827, z: -1.8626451e-11}
       rotation: {x: -0.12436413, y: 1.1654606e-14, z: 0.00000002965072, w: 0.9922367}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: ear_L
-      parentName: head
+      parentName: head 1
       position: {x: -0.0036102533, y: 0.009103545, z: -0.000006385218}
       rotation: {x: -0.26982495, y: 0.65295756, z: 0.27137944, w: 0.653601}
       scale: {x: 1, y: 1.0000002, z: 1}
@@ -572,7 +615,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: ear_R
-      parentName: head
+      parentName: head 1
       position: {x: 0.0036102533, y: 0.009103545, z: -0.0000063869397}
       rotation: {x: -0.2698219, y: -0.65295863, z: -0.27137628, w: 0.65360236}
       scale: {x: 1, y: 1.0000004, z: 1}
@@ -592,19 +635,19 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: propeller
-      parentName: head
+      parentName: head 1
       position: {x: 7.437581e-10, y: 0.010157421, z: 0.0024189395}
       rotation: {x: 0.00000013925482, y: 0.70626503, z: 0.70794755, w: 0.00000004916641}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: propeller.001
       parentName: propeller
       position: {x: -3.907985e-16, y: 0.0019999996, z: 2.0658224e-10}
-      rotation: {x: 0.12225229, y: 0.6964584, z: 0.6964585, w: -0.12225225}
-      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+      rotation: {x: 0.12225209, y: 0.69645846, z: 0.6964586, w: -0.122252285}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: propeller.002
       parentName: propeller.001
-      position: {x: -4.404108e-10, y: 0.0020629424, z: 9.614078e-11}
-      rotation: {x: -0.34333837, y: -0.6181575, z: -0.3433383, w: 0.6181576}
+      position: {x: -4.404107e-10, y: 0.00206294, z: -2.0188214e-10}
+      rotation: {x: -0.34333837, y: -0.6181575, z: -0.34333834, w: 0.6181576}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: propeller.002_end
       parentName: propeller.002
@@ -615,10 +658,10 @@ ModelImporter:
       parentName: propeller
       position: {x: -3.907985e-16, y: 0.0019999996, z: 2.0658224e-10}
       rotation: {x: 0.09897051, y: 0.7001463, z: -0.7001462, w: 0.09897104}
-      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
     - name: propeller.004
       parentName: propeller.003
-      position: {x: -4.1360948e-10, y: 0.0022679784, z: -3.5358474e-10}
+      position: {x: 1.8243689e-10, y: 0.0022679784, z: -5.5561465e-11}
       rotation: {x: 0.17505246, y: -0.685096, z: 0.17505245, w: 0.68509614}
       scale: {x: 1, y: 1, z: 1}
     - name: propeller.004_end
@@ -627,7 +670,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hair_L
-      parentName: head
+      parentName: head 1
       position: {x: -0.0027476274, y: 0.008249815, z: -0.0037464786}
       rotation: {x: 0.7066225, y: -0.054820158, z: -0.5904508, w: -0.38606656}
       scale: {x: 1.0000001, y: 1, z: 1.0000001}
@@ -658,7 +701,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hair_R
-      parentName: head
+      parentName: head 1
       position: {x: 0.0027476256, y: 0.008249815, z: -0.0037464797}
       rotation: {x: 0.7066226, y: 0.05481999, z: 0.5904505, w: -0.3860668}
       scale: {x: 0.9999999, y: 0.99999994, z: 0.9999998}
@@ -683,7 +726,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hair_S
-      parentName: head
+      parentName: head 1
       position: {x: 0.0063481685, y: -0.00020363374, z: 0.0011900157}
       rotation: {x: 0.47135127, y: 0.31904346, z: 0.7493963, w: 0.3382963}
       scale: {x: 1, y: 1, z: 1.0000002}
@@ -1021,7 +1064,22 @@ ModelImporter:
       parentName: OmaruPolka(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-      scale: {x: 109.42768, y: 109.42768, z: 109.42768}
+      scale: {x: 109.526, y: 109.526, z: 109.526}
+    - name: reg
+      parentName: OmaruPolka(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 109.526, y: 109.526, z: 109.526}
+    - name: head
+      parentName: OmaruPolka(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 109.526, y: 109.526, z: 109.526}
+    - name: eyes
+      parentName: OmaruPolka(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 109.526, y: 109.526024, z: 109.526024}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
