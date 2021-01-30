@@ -11,16 +11,21 @@ namespace HoloHopping.Entity
         public CharacterEntityList(Data.CharacterList list)
         {
             Entities = new List<CharacterEntity>();
+            EntitiesDictionary = new Dictionary<string, CharacterEntity>();
 
             foreach (var data in list.List)
             {
+                EntitiesDictionary.Add(data.Name, new CharacterEntity(data));
                 Entities.Add(new CharacterEntity(data));
             }
         }
 
         public List<CharacterEntity> Entities { get; private set; }
 
+        public Dictionary<string, CharacterEntity> EntitiesDictionary { get; }
+
         public CharacterEntity GetRondomCharacter { get { return Entities[UnityEngine.Random.Range(0, Entities.Count)]; } }
+
 
     }
 }

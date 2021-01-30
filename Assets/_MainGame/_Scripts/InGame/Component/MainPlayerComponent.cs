@@ -22,11 +22,14 @@ namespace HoloHopping.Component
 
         [SerializeField] private Data.CharacterList _DebugCharacters = null;
 
+        [SerializeField] private Arbor.GlobalParameterContainer _globalParameterContainer = null;
+
         private Animator _animator = null;
 
         public void DebugInit()
         {
-            Init(new Entity.CharacterEntityList(_DebugCharacters).GetRondomCharacter);
+            var selectName = _globalParameterContainer.container.GetString("SelectCharacter");
+            Init(new Entity.CharacterEntityList(_DebugCharacters).EntitiesDictionary[selectName]);
         }
 
         public void Init(Entity.CharacterEntity entity)

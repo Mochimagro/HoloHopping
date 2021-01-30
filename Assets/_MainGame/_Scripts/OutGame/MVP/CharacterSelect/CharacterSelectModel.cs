@@ -16,9 +16,9 @@ namespace HoloHopping.Model
             _listIndex = new IntReactiveProperty(0);
             _characterList = new List<Entity.CharacterEntity>();
 
-            foreach (var e in listEntity.Entities)
+            foreach (var e in listEntity.EntitiesDictionary)
             {
-                _characterList.Add(e);
+                _characterList.Add(e.Value);
             }
 
 
