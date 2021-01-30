@@ -3,31 +3,34 @@ using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
+using System.Linq;
 
-namespace MochimagroEditor.CreateAsset
+namespace EditorExpand.CreateAsset
 {
     public class CreateAssetDataEntity : EndNameEditAction
     {
-        [MenuItem("Assets/Create/ScriptTemplate/DataAndEntity", false, -1)]
-        private static void CreateMonoBehaviour()
+        [MenuItem("Assets/Create/ScriptTemplate/DataAndEntity", false,81)]
+        private static void CreateDataAndEntity()
         {
+            // load text file at the path, and store the store the text
             var resourceFile = Path.Combine(
                 Application.dataPath,
                 "Editor/ScriptTemplateCreater/ScriptTemplates/Data.cs.txt");
 
 
-            // unityで用意されているC#のアイコンを利用する
+            // use the C# icon provided by unity. 
             var csIcon =
                 EditorGUIUtility.IconContent("cs Script Icon").image as Texture2D;
 
-            // ScriptableObjectのインスタンスとして作成する
+            // create as an instance of ScriptableObject
             var endNameEditAction =
                 ScriptableObject.CreateInstance<CreateAssetDataEntity>();
 
+            // create Scripts from the selscted infomation in menu
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(
                 0,
                 endNameEditAction,
-                "NewData.cs",
+                "NewDataName.cs",
                 csIcon,
                 resourceFile);
 
@@ -56,10 +59,14 @@ namespace MochimagroEditor.CreateAsset
 
             var encording = new UTF8Encoding(true, false);
 
-            File.WriteAllText(pathName, text, encording);
+            var n = pathName.Split('/').Last();
 
-            AssetDatabase.ImportAsset(pathName);
-            var asset = AssetDatabase.LoadAssetAtPath<MonoScript>(pathName);
+            var dataPathName = pathName.Replace(n,name + "Data.cs");
+
+            File.WriteAllText(dataPathName, text, encording);
+
+            AssetDatabase.ImportAsset(dataPathName);
+            var asset = AssetDatabase.LoadAssetAtPath<MonoScript>(dataPathName);
 
             ProjectWindowUtil.ShowCreatedAsset(asset);
         }

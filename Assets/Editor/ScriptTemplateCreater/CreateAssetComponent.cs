@@ -3,32 +3,35 @@ using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
+using System.Linq;
 
-namespace MochimagroEditor.CreateAsset
+namespace EditorExpand.CreateAsset
 {
     public class CreateAssetComponent : EndNameEditAction
     {
 
-        [MenuItem("Assets/Create/ScriptTemplate/Component", false, -1)]
-        private static void CreateMonoBehaviour()
+        [MenuItem("Assets/Create/ScriptTemplate/Component", false,81)]
+        private static void CreateComponentScript()
         {
+            // load text file at the path, and store the store the text
             var resourceFile = Path.Combine(
                 Application.dataPath,
                 "Editor/ScriptTemplateCreater/ScriptTemplates/Component.cs.txt");
 
 
-            // unityで用意されているC#のアイコンを利用する
+            // use the C# icon provided by unity. 
             var csIcon =
                 EditorGUIUtility.IconContent("cs Script Icon").image as Texture2D;
 
-            // ScriptableObjectのインスタンスとして作成する
+            // create as an instance of ScriptableObject
             var endNameEditAction =
                 ScriptableObject.CreateInstance<CreateAssetComponent>();
 
+            // create Scripts from the selscted infomation in menu
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(
                 0,
                 endNameEditAction,
-                "NewComponent.cs",
+                "NewComponentName.cs",
                 csIcon,
                 resourceFile);
 
@@ -36,7 +39,7 @@ namespace MochimagroEditor.CreateAsset
 
         public override void Action(int instanceId, string pathName, string resourceFile)
         {
-
+            
             var text = File.ReadAllText(resourceFile);
             var pathes = Application.dataPath.Split('/');
 
@@ -57,10 +60,14 @@ namespace MochimagroEditor.CreateAsset
 
             var encording = new UTF8Encoding(true, false);
 
-            File.WriteAllText(pathName, text, encording);
+            var n = pathName.Split('/').Last();
 
-            AssetDatabase.ImportAsset(pathName);
-            var asset = AssetDatabase.LoadAssetAtPath<MonoScript>(pathName);
+            var dataPathName = pathName.Replace(n, name + "Component.cs");
+
+            File.WriteAllText(dataPathName, text, encording);
+
+            AssetDatabase.ImportAsset(dataPathName);
+            var asset = AssetDatabase.LoadAssetAtPath<MonoScript>(dataPathName);
 
             ProjectWindowUtil.ShowCreatedAsset(asset);
         }

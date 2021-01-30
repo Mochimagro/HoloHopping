@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace #PROJECTNAME#.Game.Component
 {
-	public class #SCRIPTNAME# : MonoBehaviour 
+	public class #SCRIPTNAME#Component : MonoBehaviour 
 	{
 		public void Init () 
 		{

@@ -367,8 +367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _systemParameter: {fileID: 18354464}
-  _hoppingAnimatorController: {fileID: 9100000, guid: f1d96fc9dd0edf840b7b111d185f9993,
-    type: 2}
   _hoppingCharacterBase: {fileID: 2327171840655259828}
   _DebugCharacters: {fileID: 11400000, guid: 04e5e6cc41c494e418041fdaf961a7bf, type: 2}
 --- !u!1 &36579428
@@ -4427,7 +4425,7 @@ MonoBehaviour:
   StartAlpha: 1
   CanvasName: MasterCanvas
   CustomCanvasName: 0
-  DontDestroyCanvasOnLoad: 1
+  DontDestroyCanvasOnLoad: 0
 --- !u!114 &730404507
 MonoBehaviour:
   m_ObjectHideFlags: 0

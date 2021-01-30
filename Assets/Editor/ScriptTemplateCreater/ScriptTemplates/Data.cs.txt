@@ -11,7 +11,7 @@ namespace #PROJECTNAME#.Entity
             SampleParameter = data.SampleParameter;
         }
         #NOTRIM#
-        public object SampleParameter { get; private set; }
+        public GameObject SampleParameter { get; private set; }
         #NOTRIM#
     }
 }
@@ -20,13 +20,13 @@ namespace #PROJECTNAME#.Data
 {
     [CreateAssetMenu(menuName = 
         "FormatName/" + 
-        "AttributeName/" + 
+        "#NAME#/" + 
         "TypeName",
-        fileName = "NewDataName")]
+        fileName = "NewData")]
     public class #NAME#Data : ScriptableObject
     {
-        [SerializeField] private object _sampleParameter = null;
+        [SerializeField] private GameObject _sampleParameter = null;
 		#NOTRIM#
-        public object SampleParameter { get { return _sampleParameter; } }
+        public GameObject SampleParameter { get { return _sampleParameter; } }
     }
 }

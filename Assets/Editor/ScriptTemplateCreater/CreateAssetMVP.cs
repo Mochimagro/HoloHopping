@@ -4,21 +4,22 @@ using System.Text;
 using UnityEditor;
 using UnityEditor.ProjectWindowCallback;
 
-namespace MochimagroEditor.CreateAsset
+namespace EditorExpand.CreateAsset
 {
     public class CreateAssetMVP : EndNameEditAction
     {
-        [MenuItem("Assets/Create/ScriptTemplate/MVP", false, -1)]
-        private static void CreateMonoBehaviour()
+        [MenuItem("Assets/Create/ScriptTemplate/MVP", false,81)]
+        private static void CreateMVPScripts()
         {
-            // unityで用意されているC#のアイコンを利用する
+            // use the duplicate icon provided by unity. 
             var groupIcon =
                 EditorGUIUtility.IconContent("TreeEditor.Duplicate").image as Texture2D;
 
-            // ScriptableObjectのインスタンスとして作成する
+            // create as an instance of ScriptableObject
             var endNameEditAction =
                 ScriptableObject.CreateInstance<CreateAssetMVP>();
 
+            // create Scripts from the selscted infomation in menu
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(
                 0,
                 endNameEditAction,
@@ -36,14 +37,14 @@ namespace MochimagroEditor.CreateAsset
             var pathes = pathName.Split('/');
 
             // ディレクトリの作成
-            var directoryPath = pathName.Replace(pathes[pathes.Length - 1], groupName);
+            var directoryPath = pathName.Replace(pathes[pathes.Length - 1],groupName);
             Directory.CreateDirectory(directoryPath);
 
-            foreach (var type in fileType)
+            foreach(var type in fileType)
             {
                 var resourceModelFile = Path.Combine(
                     Application.dataPath,
-                    "Editor/ScriptTemplateCreater/ScriptTemplates/" + type + ".cs.txt");
+                    "Editor/ScriptTemplateCreater/ScriptTemplates/" + type +".cs.txt");
                 CreateScript(directoryPath, resourceModelFile, type);
             }
 
@@ -51,7 +52,7 @@ namespace MochimagroEditor.CreateAsset
 
         }
 
-        private void CreateScript(string pathName, string resourceFile, string fileType)
+        private void CreateScript(string pathName,string resourceFile,string fileType)
         {
             var text = File.ReadAllText(resourceFile);
             var pathes = Application.dataPath.Split('/');
@@ -61,7 +62,7 @@ namespace MochimagroEditor.CreateAsset
             projectName = projectName.Replace(" ", "");
 
             text = text.Replace("#NAME#", groupName);
-            text = text.Replace("#NAMETOLOWER#", char.ToLower(groupName[0]) + groupName.Substring(1));
+            text = text.Replace("#NAMETOLOWER#", char.ToLower(groupName[0]) +groupName.Substring(1));
             text = text.Replace("#PROJECTNAME#", projectName);
             text = text.Replace("#NOTRIM#", "\n");
 
