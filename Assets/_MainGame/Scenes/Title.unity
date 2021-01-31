@@ -400,9 +400,9 @@ MonoBehaviour:
   DisableButtonBetweenClicksInterval: 0.2
   DoubleClickRegisterInterval: 0.2
   InputData:
-    EnableAlternateInputs: 1
-    InputMode: 2
-    KeyCode: 13
+    EnableAlternateInputs: 0
+    InputMode: 1
+    KeyCode: 276
     KeyCodeAlt: 32
     VirtualButtonName: Submit
     VirtualButtonNameAlt: Jump
@@ -2924,9 +2924,9 @@ MonoBehaviour:
   DisableButtonBetweenClicksInterval: 0.2
   DoubleClickRegisterInterval: 0.2
   InputData:
-    EnableAlternateInputs: 1
-    InputMode: 2
-    KeyCode: 13
+    EnableAlternateInputs: 0
+    InputMode: 1
+    KeyCode: 275
     KeyCodeAlt: 32
     VirtualButtonName: Submit
     VirtualButtonNameAlt: Jump

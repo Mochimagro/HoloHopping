@@ -78,7 +78,7 @@ MonoBehaviour:
   _RectParameters: []
   _RectListParameters: []
   _StringParameters:
-  - PlayerName
+  - "\u5C3E\u4E38\u30DD\u30EB\u30AB"
   _StringListParameters: []
   _Vector2Parameters: []
   _Vector2ListParameters: []

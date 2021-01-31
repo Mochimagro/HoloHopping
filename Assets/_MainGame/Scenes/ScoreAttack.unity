@@ -9668,8 +9668,8 @@ MonoBehaviour:
     lineBezier:
       _StartPosition: {x: -264, y: 277}
       _StartControl: {x: -214, y: 277}
-      _EndPosition: {x: -176, y: 745}
-      _EndControl: {x: -226, y: 745}
+      _EndPosition: {x: -176, y: 746}
+      _EndControl: {x: -226, y: 746}
     showDataValue: 0
   - branchID: 1111907664
     enabled: 1
@@ -15318,6 +15318,7 @@ GameObject:
   - component: {fileID: 2586209015835103560}
   - component: {fileID: 2586209015835103559}
   - component: {fileID: 2586209015835103567}
+  - component: {fileID: 2586209015835103568}
   m_Layer: 8
   m_Name: HoppingPlayerBase
   m_TagString: Character
@@ -16328,6 +16329,45 @@ MonoBehaviour:
         _IsVersioning: 1
       _Type:
         _AssemblyTypeName: System.String, mscorlib
+--- !u!114 &2586209015835103568
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586209015835103558}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6940129ee1dc134e9a4e96f7664d3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 7444274881497869583}
+  _NodeID: 1655911537
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _ButtonName:
+    _Type: 0
+    _Value: Fire1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _SerializeVersion: 1
+  _OldButtonName: Fire1
+  _NextState:
+    name: 
+    stateID: 2137491492
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2784515317340378537
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -19352,12 +19392,13 @@ MonoBehaviour:
       x: 972
       y: -564
       width: 300
-      height: 268
+      height: 333
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
     - {fileID: 2784515317340378537}
+    - {fileID: 2586209015835103568}
     - {fileID: 2024872063036600628}
     _BreakPoint: 0
     name: ChargeActionWait
@@ -19432,7 +19473,7 @@ MonoBehaviour:
       x: 1560
       y: -324
       width: 300
-      height: 291
+      height: 292
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -19464,7 +19505,7 @@ MonoBehaviour:
       x: 324
       y: -48
       width: 300
-      height: 472
+      height: 474
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -19480,7 +19521,7 @@ MonoBehaviour:
       _NodeID: 2137491492
       position:
         serializedVersion: 2
-        x: 1440
+        x: 1476
         y: -108
         width: 32
         height: 32
