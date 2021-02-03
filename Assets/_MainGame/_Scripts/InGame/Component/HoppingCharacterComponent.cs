@@ -102,7 +102,7 @@ namespace HoloHopping.Component
             this.gameObject.SetActive(true);
             SetEntity = entity;
             _characterComponent.HoppingObjectSetActive = false;
-            _characterComponent.Animator.SetLayerWeight(1, 1);
+            _characterComponent.Animator.SetLayerWeight(2, 1);
             _actionEntity = new FXCreateEntity();
         }
 

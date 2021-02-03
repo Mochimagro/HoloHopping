@@ -9,15 +9,24 @@ namespace HoloHopping.Model
     {
         private IntReactiveProperty _listIndex = null;
         private List<Entity.CharacterEntity> _characterList = null;
-
+        private List<GameObject> _characterObjectList = null;
+        private GameObject _selectCharacterObject = null;
 
         public CharacterSelectModel(Entity.CharacterEntityList listEntity)
         {
             _listIndex = new IntReactiveProperty(0);
             _characterList = new List<Entity.CharacterEntity>();
+            _characterObjectList = new List<GameObject>();
 
-            foreach (var e in listEntity.EntitiesDictionary)
+            foreach (var entity in listEntity.EntitiesDictionary)
             {
+                var e = entity;
+
+                e.Value.CharacterComponent.HoppingObjectSetActive = false;
+                var chara = UnityEngine.Object.Instantiate(e.Value.CharacterComponent.gameObject);
+                chara.SetActive(false);
+
+                _characterObjectList.Add(chara);
                 _characterList.Add(e.Value);
             }
 
@@ -34,6 +43,16 @@ namespace HoloHopping.Model
         public string GetSelectCharacterName
         {
             get { return _characterList[_listIndex.Value].Name; }
+        }
+
+        public GameObject GetSelectCharacterObject
+        {
+            get
+            {
+                if (_selectCharacterObject != null) _selectCharacterObject.SetActive(false);
+                _selectCharacterObject = _characterObjectList[_listIndex.Value];
+                return _selectCharacterObject;
+            }
         }
 
     }

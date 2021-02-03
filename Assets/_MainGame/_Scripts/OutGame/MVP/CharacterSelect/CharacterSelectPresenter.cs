@@ -42,11 +42,14 @@ namespace HoloHopping.Presenter
             _characterSelectModel.OnChangeIndex.TakeUntilDisable(this).Subscribe(value =>
             {
                 _characterSelectView.SetTextCharacterName = _characterSelectModel.GetSelectCharacterName;
+                _characterSelectView.ShowSelectCharacterObject(_characterSelectModel.GetSelectCharacterObject);
+
             });
 
-            _characterSelectView.OnDecision.Subscribe(_ =>
+            _characterSelectView.OnDecision.TakeUntilDisable(this).Subscribe(_ =>
             {
                 _parameterContainer.container.SetString("SelectCharacter", _characterSelectModel.GetSelectCharacterName);
+                _characterSelectView.MoveSelectCharacter();
             });
 
         }
@@ -54,7 +57,7 @@ namespace HoloHopping.Presenter
 
         public void Kill()
         {
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
 }

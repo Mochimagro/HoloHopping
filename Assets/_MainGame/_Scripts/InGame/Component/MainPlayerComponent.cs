@@ -36,6 +36,9 @@ namespace HoloHopping.Component
         {
             var com = Instantiate(entity.CharacterComponent, this.transform);
             com.HoppingObjectSetActive = true;
+
+            com.Animator.SetLayerWeight(1, 1);
+
             _parameter.SetComponent("HoppingSkin", com.HoppingSkin);
 
             _animator = com.Animator;
