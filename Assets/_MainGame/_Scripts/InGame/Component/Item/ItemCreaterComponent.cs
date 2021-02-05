@@ -10,6 +10,8 @@ namespace HoloHopping.Component
         public const string AUTO_CREATE_ITEM = "AutoCreateItem";
         public const string STOP_CREATE_ITEM = "StopCreateItem";
         public const string CREATE_SPECIAL_ITEM = "CreateSpecialItem";
+        public const string REDUCE_SPECIAL_ITEM_INTERVAL = "ReduceSpecialItemInterval";
+        public const string START_SPECIAL_ITEM_INTERVAL = "StarSpecialItemInterval";
     }
 
 
@@ -17,6 +19,7 @@ namespace HoloHopping.Component
     {
 
         [SerializeField] private Arbor.ArborFSM _autoCreateState = null;
+        [SerializeField] private Arbor.ArborFSM _specialItemCreater = null;
         private Model.ScoreModel _scoreModel = null;
 
         public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
@@ -42,6 +45,7 @@ namespace HoloHopping.Component
 
             item.OnGetItem.Subscribe(e =>
             {
+                _specialItemCreater.SendTrigger(ItemCreaterMessage.REDUCE_SPECIAL_ITEM_INTERVAL);
                 e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPos, Enum.FXType.Item, e.ItemColor);
                 _scoreModel.AddScore = e.Score;
                 _onGetItem.OnNext(e);
