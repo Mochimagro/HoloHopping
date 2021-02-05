@@ -45,7 +45,7 @@ namespace HoloHopping.Data
         MenuName.Format.DATA +
         MenuName.Attribute.ITEM +
         MenuName.Type.PARAMETER,
-        fileName = "NewItemName")]
+        fileName = "NewItemName"), System.Serializable]
     public class ItemData : ScriptableObject
     {
         [SerializeField] private Component.ItemComponent _prefab = null;

@@ -9,6 +9,7 @@ namespace HoloHopping.Component
     {
         public const string AUTO_CREATE_ITEM = "AutoCreateItem";
         public const string STOP_CREATE_ITEM = "StopCreateItem";
+        public const string CREATE_SPECIAL_ITEM = "CreateSpecialItem";
     }
 
 

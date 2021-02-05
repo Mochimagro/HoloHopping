@@ -43,6 +43,7 @@ namespace HoloHopping.Component
             _scorePresenter.Init(out scoreModel);
 
             _itemCreaterComponent.Init(scoreModel);
+            _specialItemEffectComponent.Init();
 
             _effectCreaterComponent.Init();
 
@@ -72,6 +73,7 @@ namespace HoloHopping.Component
             // GetItem
             _itemCreaterComponent.OnGetItem.Subscribe(entity =>
             {
+                _specialItemEffectComponent.InvokeEffect(entity.ItemMode);
                 _itemTextCreaterComponent.CreateText(entity);
                 _sePresenter.PlaySound(entity.SEScene);
                 _effectCreaterComponent.CreateEffect(entity.FXCreateEntity);
