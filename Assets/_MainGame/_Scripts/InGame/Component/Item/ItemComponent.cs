@@ -20,6 +20,9 @@ namespace HoloHopping.Component
         public IObservable<ItemEntity> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
         private Subject<ItemEntity> _onGetItem = new Subject<ItemEntity>();
 
+        public IObservable<ItemEntity> OnDeathItem => _onDeathItem;
+        private Subject<ItemEntity> _onDeathItem = new Subject<ItemEntity>();
+
         public IObservable<Unit> OnStopParticle;
 
         [SerializeField] private List<ParticleSystem> _tailPaticles = new List<ParticleSystem>();
@@ -32,15 +35,12 @@ namespace HoloHopping.Component
             _entity = entity;
         }
 
-        public bool TailParticlesLoop
+
+        public void AllStopTailParticle()
         {
-            set
+            foreach (var item in _tailPaticles)
             {
-                foreach (var item in _tailPaticles)
-                {
-                    var main = item.main;
-                    main.loop = value;
-                }
+                item.Stop();
             }
 
         }
@@ -64,7 +64,10 @@ namespace HoloHopping.Component
 
             _spriteRenderer.color = Color.clear;
             _collider.enabled = false;
-            TailParticlesLoop = false;
+            AllStopTailParticle();
+
+            _onDeathItem.OnNext(_entity);
+            _onDeathItem.OnCompleted();
 
             if (_tailPaticles.Count > 0)
             {

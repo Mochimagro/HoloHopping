@@ -1251,6 +1251,10 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 19841286, guid: 73731ad9fadc37e42a41a168585de315, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 19849282, guid: 73731ad9fadc37e42a41a168585de315, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.05
@@ -1279,9 +1283,17 @@ PrefabInstance:
       propertyPath: stopAction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 19849282, guid: 73731ad9fadc37e42a41a168585de315, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 19881506, guid: 73731ad9fadc37e42a41a168585de315, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19881506, guid: 73731ad9fadc37e42a41a168585de315, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73731ad9fadc37e42a41a168585de315, type: 3}

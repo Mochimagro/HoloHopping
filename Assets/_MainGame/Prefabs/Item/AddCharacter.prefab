@@ -207,8 +207,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: -84
       y: 36
-      width: 300
-      height: 299
+      width: 408
+      height: 263
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
   _ComponentListParameters: []
   _EnumListParameters: []
   _FloatParameters:
-  - 10
+  - 50
   _FloatListParameters: []
   _GameObjectListParameters: []
   _IntParameters: 
@@ -949,6 +949,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.9525433
       objectReference: {fileID: 0}
+    - target: {fileID: 19812708, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 19819218, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
@@ -964,6 +968,10 @@ PrefabInstance:
     - target: {fileID: 19819218, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
       propertyPath: stopAction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19819218, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 19889260, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
@@ -984,6 +992,10 @@ PrefabInstance:
     - target: {fileID: 19889260, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.9525433
+      objectReference: {fileID: 0}
+    - target: {fileID: 19889260, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
