@@ -20,7 +20,8 @@ GameObject:
   - component: {fileID: -6901301742416284606}
   - component: {fileID: 1574574684879370943}
   - component: {fileID: -7789055950164641496}
-  - component: {fileID: -4406739479929442455}
+  - component: {fileID: 6707932683189198775}
+  - component: {fileID: 8225391572098194304}
   m_Layer: 0
   m_Name: AddCharacter
   m_TagString: Score
@@ -56,6 +57,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bd050fe2c4de44a8fb25138ace05f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tailPaticles:
+  - {fileID: 5678537977040300623}
+  - {fileID: 5678537977040239857}
+  - {fileID: 5678537977040294393}
+  _spriteRenderer: {fileID: 8310193562823315725}
+  _collider: {fileID: 8310193562823315715}
 --- !u!212 &8310193562823315725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -209,6 +216,35 @@ MonoBehaviour:
     - {fileID: 786141543012195001}
     _BreakPoint: 0
     name: Update
+  - _NodeGraph: {fileID: 8967051005491854142}
+    _NodeID: 1655911537
+    position:
+      serializedVersion: 2
+      x: -444
+      y: 48
+      width: 300
+      height: 129
+    showComment: 0
+    nodeComment: 
+    _Resident: 1
+    _Behaviours:
+    - {fileID: 8225391572098194304}
+    _BreakPoint: 0
+    name: GettedItem
+  - _NodeGraph: {fileID: 8967051005491854142}
+    _NodeID: 630327709
+    position:
+      serializedVersion: 2
+      x: -456
+      y: 228
+      width: 300
+      height: 24
+    showComment: 0
+    nodeComment: 
+    _Resident: 0
+    _Behaviours: []
+    _BreakPoint: 0
+    name: None
   _StateLinkRerouteNodes:
     _Nodes: []
 --- !u!114 &2101052584004693797
@@ -516,12 +552,12 @@ MonoBehaviour:
       x: -216
       y: 48
       width: 300
-      height: 72
+      height: 186
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
-    - {fileID: -4406739479929442455}
+    - {fileID: 6707932683189198775}
     _BreakPoint: 0
     name: Death
   _StateLinkRerouteNodes:
@@ -635,7 +671,7 @@ MonoBehaviour:
   _SerializeVersion: 2
   _OldSeconds: 0
   _OldTimeType: 0
---- !u!114 &-4406739479929442455
+--- !u!114 &6707932683189198775
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +680,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8310193562823315713}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2ac2cd87f72b749ae9ac23afa238e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 992d80aa977c02c41b4ea3178067a5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: -6901301742416284606}
@@ -652,23 +688,184 @@ MonoBehaviour:
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _Target:
-    _Type: 3
-    _HierarchyType: 0
-    _Value: {fileID: 0}
-    _Parameter:
-      _Type: 0
-      _Container: {fileID: 0}
-      _Slot:
-        nodeGraph: {fileID: -6901301742416284606}
-        branchID: 0
-      id: 0
-      name: 
-    _Slot:
-      nodeGraph: {fileID: -6901301742416284606}
-      branchID: 0
+  _EventEntries:
+  - triggerType: 1
+    callback:
+      _Calls:
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 3
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 0
+        _MemberName: KillObject
+        _Arguments: []
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters: []
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
   _SerializeVersion: 1
-  _OldTarget: {fileID: 0}
+  _OnStateAwake:
+    _Calls: []
+  _OnStateBegin:
+    _Calls: []
+  _OnStateEnd:
+    _Calls: []
+--- !u!114 &8225391572098194304
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310193562823315713}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef006057aed7ff489613d325cadad31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 8967051005491854142}
+  _NodeID: 1655911537
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _TagChecker:
+    _IsCheckTag:
+      _Type: 0
+      _Value: 1
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Probability: 0
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _Tag:
+      _Type: 0
+      _Value: Character
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+  _SerializeVersionBase: 1
+  _OldIsCheckTag: 0
+  _OldTag: Untagged
+  _Collider:
+    nodeGraph: {fileID: 0}
+    branchIDs: 
+    _OutputSlotBase_SerializeVersion:
+      _Version: 1
+      _IsInitialized: 1
+      _IsVersioning: 1
+  _NextState:
+    name: 
+    stateID: 630327709
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &5678537977024938141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,6 +961,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.9525433
       objectReference: {fileID: 0}
+    - target: {fileID: 19819218, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
+      propertyPath: stopAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19889260, guid: 1d9f1941057f3b34ba948d944427e946, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
@@ -789,6 +990,24 @@ PrefabInstance:
 --- !u!4 &5678537977025115295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 439298, guid: 1d9f1941057f3b34ba948d944427e946,
+    type: 3}
+  m_PrefabInstance: {fileID: 5678537977024938141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5678537977040300623 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19819218, guid: 1d9f1941057f3b34ba948d944427e946,
+    type: 3}
+  m_PrefabInstance: {fileID: 5678537977024938141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5678537977040239857 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19889260, guid: 1d9f1941057f3b34ba948d944427e946,
+    type: 3}
+  m_PrefabInstance: {fileID: 5678537977024938141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5678537977040294393 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19812708, guid: 1d9f1941057f3b34ba948d944427e946,
     type: 3}
   m_PrefabInstance: {fileID: 5678537977024938141}
   m_PrefabAsset: {fileID: 0}

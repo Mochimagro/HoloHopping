@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2505373563660740589}
   - component: {fileID: 4248326511083844802}
   - component: {fileID: 296720344424122562}
-  - component: {fileID: 6187067246772006524}
+  - component: {fileID: 4223493567056138521}
   m_Layer: 0
   m_Name: FeverScore
   m_TagString: Score
@@ -56,6 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bd050fe2c4de44a8fb25138ace05f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tailPaticles: []
+  _spriteRenderer: {fileID: 8310193562823315725}
+  _collider: {fileID: 8310193562823315715}
 --- !u!212 &8310193562823315725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -516,12 +519,12 @@ MonoBehaviour:
       x: -216
       y: 48
       width: 300
-      height: 72
+      height: 186
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
-    - {fileID: 6187067246772006524}
+    - {fileID: 4223493567056138521}
     _BreakPoint: 0
     name: Death
   _StateLinkRerouteNodes:
@@ -635,7 +638,7 @@ MonoBehaviour:
   _SerializeVersion: 2
   _OldSeconds: 0
   _OldTimeType: 0
---- !u!114 &6187067246772006524
+--- !u!114 &4223493567056138521
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +647,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8310193562823315713}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2ac2cd87f72b749ae9ac23afa238e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 992d80aa977c02c41b4ea3178067a5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 2505373563660740589}
@@ -652,23 +655,121 @@ MonoBehaviour:
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _Target:
-    _Type: 3
-    _HierarchyType: 0
-    _Value: {fileID: 0}
-    _Parameter:
-      _Type: 0
-      _Container: {fileID: 0}
-      _Slot:
-        nodeGraph: {fileID: 0}
-        branchID: 0
-      id: 0
-      name: 
-    _Slot:
-      nodeGraph: {fileID: 0}
-      branchID: 0
+  _EventEntries:
+  - triggerType: 1
+    callback:
+      _Calls:
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 3
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 0
+        _MemberName: KillObject
+        _Arguments: []
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters: []
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
   _SerializeVersion: 1
-  _OldTarget: {fileID: 0}
+  _OnStateAwake:
+    _Calls: []
+  _OnStateBegin:
+    _Calls: []
+  _OnStateEnd:
+    _Calls: []
 --- !u!1001 &6974986875531870002
 PrefabInstance:
   m_ObjectHideFlags: 0
