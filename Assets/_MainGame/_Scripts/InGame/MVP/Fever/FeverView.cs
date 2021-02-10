@@ -35,7 +35,7 @@ namespace HoloHopping.View
             _countDownSequence = DOTween.Sequence();
 
             _countDownSequence
-                .Append(_timeFillImage.DOFillAmount(0, _time))
+                .Append(_timeFillImage.DOFillAmount(0, _time).SetEase(Ease.Linear))
                 .OnStepComplete(() =>
                 {
                     _onCompleteTime.OnNext(Unit.Default);

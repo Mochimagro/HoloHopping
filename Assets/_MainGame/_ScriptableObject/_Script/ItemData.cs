@@ -38,7 +38,8 @@ namespace HoloHopping.Data
         None,
         Score,
         AddCharacter,
-        StarRush
+        StarRush,
+        FeverTime
     }
 
     [CreateAssetMenu(menuName =

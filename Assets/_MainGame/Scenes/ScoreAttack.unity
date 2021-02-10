@@ -11046,6 +11046,7 @@ MonoBehaviour:
   - list:
     - {fileID: 11400000, guid: 09b92151c7ff107489ff93e9ec471956, type: 2}
     - {fileID: 11400000, guid: 1749578b9ede4674687a8aa0adfa3d18, type: 2}
+    - {fileID: 11400000, guid: 8d23a8fe1544fed4b867cf31054bf029, type: 2}
   _BoolParameters: 
   _BoolListParameters: []
   _BoundsParameters: []
@@ -11125,6 +11126,8 @@ MonoBehaviour:
     _effectFSM: {fileID: 1009941060}
   - _mode: 3
     _effectFSM: {fileID: 1933423217}
+  - _mode: 4
+    _effectFSM: {fileID: 1575229211}
 --- !u!114 &1526271422
 MonoBehaviour:
   m_ObjectHideFlags: 3
