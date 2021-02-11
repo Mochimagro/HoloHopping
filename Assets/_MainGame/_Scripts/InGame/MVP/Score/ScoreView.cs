@@ -14,7 +14,7 @@ namespace HoloHopping.View
 
         public int SetScoreText
         {
-            set 
+            set
             {
                 int i = _prevValue;
                 _prevValue = value;
@@ -27,7 +27,7 @@ namespace HoloHopping.View
                     },
                     _prevValue,
                     0.5f
-                    ).SetEase(Ease.OutQuad);
+                    ).SetEase(Ease.OutQuad).Play();
             }
         }
 

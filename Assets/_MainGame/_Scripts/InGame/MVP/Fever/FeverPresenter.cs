@@ -65,6 +65,7 @@ namespace HoloHopping.Presenter
                 _arborFSM.SendTrigger(FeverTrigger.TIME_UP_FEVER);
             });
         }
+
         /// <summary>
         /// 終了処理
         /// アイテム全回収かタイムアップで終了

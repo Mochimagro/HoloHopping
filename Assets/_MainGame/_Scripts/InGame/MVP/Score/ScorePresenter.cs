@@ -33,5 +33,10 @@ namespace HoloHopping.Presenter
             });
         }
 
+        public ScoreModel GetModel
+        {
+            get => _scoreModel;
+        }
+
     }
 }
