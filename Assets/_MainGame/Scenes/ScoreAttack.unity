@@ -21602,6 +21602,8 @@ GameObject:
   - component: {fileID: 1575229230}
   - component: {fileID: 1575229231}
   - component: {fileID: 1575229232}
+  - component: {fileID: 1575229233}
+  - component: {fileID: 1575229234}
   m_Layer: 0
   m_Name: FeverTime
   m_TagString: Untagged
@@ -22634,6 +22636,15 @@ MonoBehaviour:
     _IsPublicGet: 1
     referenceType:
       _AssemblyTypeName: 
+  - container: {fileID: 1575229209}
+    id: 1655911537
+    type: 0
+    name: PerfectBonus
+    _ParameterIndex: 1
+    _IsPublicSet: 1
+    _IsPublicGet: 1
+    referenceType:
+      _AssemblyTypeName: 
   _SerializeVersion: 1
   _OldParameters: []
   _AssetObjectListParameters: []
@@ -22650,7 +22661,7 @@ MonoBehaviour:
   _FloatParameters: []
   _FloatListParameters: []
   _GameObjectListParameters: []
-  _IntParameters: 00000000
+  _IntParameters: 0000000010270000
   _IntListParameters: []
   _LongParameters: 
   _LongListParameters: []
@@ -22846,6 +22857,17 @@ MonoBehaviour:
     showComment: 0
     nodeComment: 
     _Object: {fileID: 1575229231}
+  - _NodeGraph: {fileID: 1575229211}
+    _NodeID: 1304539646
+    position:
+      serializedVersion: 2
+      x: 444
+      y: 1560
+      width: 300
+      height: 87
+    showComment: 0
+    nodeComment: 
+    _Object: {fileID: 1575229233}
   _Comments: []
   _Groups: []
   _DataBranchRerouteNodes:
@@ -22881,8 +22903,8 @@ MonoBehaviour:
     lineBezier:
       _StartPosition: {x: -240, y: 743}
       _StartControl: {x: -190, y: 743}
-      _EndPosition: {x: -188, y: 818}
-      _EndControl: {x: -238, y: 818}
+      _EndPosition: {x: -188, y: 814}
+      _EndControl: {x: -238, y: 814}
     showDataValue: 0
   - branchID: 630327709
     enabled: 1
@@ -22953,8 +22975,8 @@ MonoBehaviour:
     lineBezier:
       _StartPosition: {x: -315.01102, y: 454.2538}
       _StartControl: {x: -283.8299, y: 493.3401}
-      _EndPosition: {x: -188, y: 521}
-      _EndControl: {x: -238, y: 521}
+      _EndPosition: {x: -188, y: 523}
+      _EndControl: {x: -238, y: 523}
     showDataValue: 0
   - branchID: 822959691
     enabled: 1
@@ -23037,8 +23059,20 @@ MonoBehaviour:
     lineBezier:
       _StartPosition: {x: 744, y: 1119}
       _StartControl: {x: 794, y: 1119}
-      _EndPosition: {x: 424, y: 1240}
-      _EndControl: {x: 374, y: 1240}
+      _EndPosition: {x: 424, y: 1252}
+      _EndControl: {x: 374, y: 1252}
+    showDataValue: 0
+  - branchID: 86323836
+    enabled: 1
+    inBehaviour: {fileID: 1575229232}
+    inNodeID: 1208223655
+    outBehaviour: {fileID: 1575229233}
+    outNodeID: 1304539646
+    lineBezier:
+      _StartPosition: {x: 744, y: 1635}
+      _StartControl: {x: 794, y: 1635}
+      _EndPosition: {x: 424, y: 1524}
+      _EndControl: {x: 374, y: 1524}
     showDataValue: 0
   playOnStart: 1
   updateSettings:
@@ -23124,9 +23158,9 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: 444
-      y: 1128
+      y: 1140
       width: 300
-      height: 269
+      height: 414
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -23135,6 +23169,21 @@ MonoBehaviour:
     - {fileID: 1575229232}
     _BreakPoint: 0
     name: PerfectItem
+  - _NodeGraph: {fileID: 1575229211}
+    _NodeID: 278955818
+    position:
+      serializedVersion: 2
+      x: 444
+      y: 1656
+      width: 300
+      height: 111
+    showComment: 0
+    nodeComment: 
+    _Resident: 0
+    _Behaviours:
+    - {fileID: 1575229234}
+    _BreakPoint: 0
+    name: Delay
   _StateLinkRerouteNodes:
     _Nodes: []
 --- !u!114 &1575229212
@@ -25283,16 +25332,142 @@ MonoBehaviour:
         _ReturnOutputSlotIndex: 0
         _ParameterList:
           _IntParameters:
-          - _Type: 0
+          - _Type: 1
             _Value: 10000
             _Parameter:
               _Type: 0
-              _Container: {fileID: 0}
+              _Container: {fileID: 1575229209}
               _Slot:
                 nodeGraph: {fileID: 0}
                 branchID: 0
-              id: 0
-              name: 
+              id: 1655911537
+              name: PerfectBonus
+            _MinRange: 0
+            _MaxRange: 0
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters: []
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Presenter.FeverPresenter, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 3
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Presenter.FeverPresenter, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 0
+        _MemberName: ShowBonusScore
+        _Arguments:
+        - _Type:
+            _AssemblyTypeName: System.Int32, mscorlib
+          _Name: score
+          _Attributes: 0
+          _ParameterType: 0
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters:
+          - _Type: 1
+            _Value: 0
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 1575229209}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 1655911537
+              name: PerfectBonus
             _MinRange: 0
             _MaxRange: 0
             _Slot:
@@ -25437,7 +25612,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575229198}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0ffa05d7023f44aacdfada32c15663, type: 3}
+  m_Script: {fileID: 11500000, guid: a848b4d42b9463649812a195c21315f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 1575229211}
@@ -25445,7 +25620,125 @@ MonoBehaviour:
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _TransitionMethod:
+  _Message:
+    _Type: 2
+    _Value: 
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 1575229211}
+      branchID: 86323836
+  _NextState:
+    name: 
+    stateID: 278955818
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 1
+  _OldMessage: 
+--- !u!114 &1575229233
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575229198}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3fad7a5faa5464e8c5a9b920018bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1575229211}
+  _NodeID: 1304539646
+  _DataSlotFieldLinks: []
+  _Persistent:
+    _TargetType:
+      _AssemblyTypeName: HoloHopping.Presenter.FeverPresenter+FeverTrigger, Assembly-CSharp
+    _TargetMode: 4
+    _TargetComponent:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      _OverrideConstraintType:
+        _AssemblyTypeName: UnityEngine.Component, UnityEngine
+    _TargetGameObject:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetAssetObject:
+      _Type: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetSlot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _MemberType: 1
+    _MemberName: END_TWEEN_BONUS_TEXT
+    _OutputValue:
+      nodeGraph: {fileID: 1575229211}
+      branchIDs: 7c322505
+      _OutputSlotBase_SerializeVersion:
+        _Version: 1
+        _IsInitialized: 1
+        _IsVersioning: 1
+      _Type:
+        _AssemblyTypeName: System.String, mscorlib
+--- !u!114 &1575229234
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575229198}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1575229211}
+  _NodeID: 278955818
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _TimeType:
     _Type: 0
     _Value: 0
     _Parameter:
@@ -25459,14 +25752,31 @@ MonoBehaviour:
     _Slot:
       nodeGraph: {fileID: 0}
       branchID: 0
+  _Seconds:
+    _Type: 0
+    _Value: 1.5
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
   _NextState:
     name: 
     stateID: 919275682
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
-  _SerializeVersion: 1
-  _OldTransitionMethod: 0
+  _SerializeVersion: 2
+  _OldSeconds: 0
+  _OldTimeType: 0
 --- !u!1001 &1597091233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29908,7 +30218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: BONUS +10000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 345908fb1140b304c9daa20b74fbf922, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 791f1d24fefe68b4d92304724b621481, type: 2}
@@ -29917,8 +30227,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2013265919
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.46666667}
+    rgba: 1946157055
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.45}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -29944,13 +30254,13 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 514
-  m_characterSpacing: 0
+  m_characterSpacing: -8
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
@@ -29977,10 +30287,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2104215245}
-    characterCount: 2
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1

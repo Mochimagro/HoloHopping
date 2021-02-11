@@ -16,9 +16,13 @@ namespace HoloHopping.View
         private float _time = 0;
 
         private Sequence _countDownSequence = null;
+        private Sequence _bonusScoreSequence = null;
 
-        private Subject<Unit> _onCompleteTime = null;
         public IObservable<Unit> OnCompleteTime => _onCompleteTime;
+        private Subject<Unit> _onCompleteTime = null;
+
+        public IObservable<Unit> OnBonusTweenEnd => _onBonusTweenEnd;
+        private Subject<Unit> _onBonusTweenEnd = new Subject<Unit>();
 
         public void Init()
         {
@@ -46,11 +50,47 @@ namespace HoloHopping.View
 
         }
 
+        private Sequence SetBonusSequence(int score)
+        {
+
+            _restItemCount.text = "BONUS +" + score;
+
+            var seq = DOTween.Sequence();
+
+            seq.Append(_restItemCount.DOFade(0, 0));
+
+            var tmproAnimator = new DOTweenTMPAnimator(_restItemCount);
+
+            for (int i = 0; i < tmproAnimator.textInfo.characterCount; i++)
+            {
+                Vector3 currCharOffset = tmproAnimator.GetCharOffset(i);
+
+                var charSeq = DOTween.Sequence();
+
+                charSeq.Append(tmproAnimator.DOFadeChar(i, 0.45f, 0.45f));
+                charSeq.Join(tmproAnimator.DOOffsetChar(i, currCharOffset + new Vector3(0, 30f, 0), 0.25f).SetEase(Ease.OutFlash, 2));
+
+                seq.Join(charSeq.SetDelay(i * 0.1f));
+            }
+
+            seq.OnComplete(() =>
+            {
+                _onBonusTweenEnd.OnNext(Unit.Default);
+            });
+
+            return seq;
+        }
+
+        public void PlayBonusText(int score)
+        {
+            _bonusScoreSequence = SetBonusSequence(score);
+
+            _bonusScoreSequence.Play();
+
+        }
 
         public int SetRestItemText { set { _restItemCount.text = value.ToString(); } }
 
         public float SetTimeIntervalFillAmount { set { _timeFillImage.fillAmount = value; } }
-
-
     }
 }

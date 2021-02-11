@@ -14,6 +14,7 @@ namespace HoloHopping.Presenter
         {
             public const string TIME_UP_FEVER = "TimeUpFever";
             public const string ALL_GET_ITEM = "AllGetItem";
+            public const string END_TWEEN_BONUS_TEXT = "EndTweenBonusText";
         }
 
         [SerializeField] private FeverView _feverView = null;
@@ -64,6 +65,17 @@ namespace HoloHopping.Presenter
             {
                 _arborFSM.SendTrigger(FeverTrigger.TIME_UP_FEVER);
             });
+        }
+
+        public void ShowBonusScore(int score)
+        {
+            _feverView.PlayBonusText(score);
+
+            _feverView.OnBonusTweenEnd.Subscribe(_ =>
+            {
+                _arborFSM.SendTrigger(FeverTrigger.END_TWEEN_BONUS_TEXT);
+            });
+
         }
 
         /// <summary>
