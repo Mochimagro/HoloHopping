@@ -33,6 +33,8 @@ namespace HoloHopping.Component
 
         public void Init()
         {
+            DG.Tweening.DOTween.SetTweensCapacity(500, 100);
+
             _mainPlayerComponent.DebugInit();
 
             _readyLabelPresenter.ShowReadyText();

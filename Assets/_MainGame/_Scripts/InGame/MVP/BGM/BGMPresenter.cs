@@ -43,6 +43,23 @@ namespace HoloHopping.Presenter
             });
         }
 
+
+        public void ChangeBGM(Enum.BGMScene scene)
+        {
+            _bgmView.PlayLoopBGM(_bgmModel.GetSceneBGM(scene));
+        }
+
+        public void PlaySound(Enum.BGMScene sound, Enum.BGMScene endToBGM)
+        {
+            _bgmView.PlaySound(_bgmModel.GetSceneBGM(sound));
+
+            _bgmView.OnCompleteSound.Subscribe(_ =>
+            {
+                _bgmView.PlayLoopBGM(_bgmModel.GetSceneBGM(endToBGM));
+            });
+
+        }
+
         public void PlayGameOverSound()
         {
             StartCoroutine(PlayGameOver());

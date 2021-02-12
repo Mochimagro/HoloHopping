@@ -22,11 +22,13 @@ namespace HoloHopping.View
         private Subject<Unit> _onCompleteTime = null;
 
         public IObservable<Unit> OnBonusTweenEnd => _onBonusTweenEnd;
-        private Subject<Unit> _onBonusTweenEnd = new Subject<Unit>();
+        private Subject<Unit> _onBonusTweenEnd;
 
         public void Init()
         {
             _onCompleteTime = new Subject<Unit>();
+
+            _restItemCount.alpha = 0.45f;
 
         }
 
@@ -42,6 +44,7 @@ namespace HoloHopping.View
                 .Append(_timeFillImage.DOFillAmount(0, _time).SetEase(Ease.Linear))
                 .OnStepComplete(() =>
                 {
+                    _countDownSequence.Kill();
                     _onCompleteTime.OnNext(Unit.Default);
                     _onCompleteTime.OnCompleted();
                 });
@@ -54,6 +57,8 @@ namespace HoloHopping.View
         {
 
             _restItemCount.text = "BONUS +" + score;
+
+            _onBonusTweenEnd = new Subject<Unit>();
 
             var seq = DOTween.Sequence();
 
@@ -76,6 +81,7 @@ namespace HoloHopping.View
             seq.OnComplete(() =>
             {
                 _onBonusTweenEnd.OnNext(Unit.Default);
+                _onBonusTweenEnd.OnCompleted();
             });
 
             return seq;
@@ -86,7 +92,14 @@ namespace HoloHopping.View
             _bonusScoreSequence = SetBonusSequence(score);
 
             _bonusScoreSequence.Play();
+            _countDownSequence.Pause();
 
+        }
+
+        public void KillSequence()
+        {
+            _bonusScoreSequence.Kill();
+            _countDownSequence.Kill();
         }
 
         public int SetRestItemText { set { _restItemCount.text = value.ToString(); } }

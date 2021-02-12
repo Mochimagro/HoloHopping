@@ -11,7 +11,9 @@ namespace HoloHopping.Enum
         Ready,
         Start,
         MainGame,
-        GameOver
+        GameOver,
+        Fever,
+        FeverPrefect
     }
 }
 

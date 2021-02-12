@@ -20,10 +20,11 @@ namespace HoloHopping.Presenter
         [SerializeField] private FeverView _feverView = null;
         private FeverModel _feverModel = null;
 
-        [SerializeField] private Arbor.ArborFSM _arborFSM = null;
+        [SerializeField] private Arbor.ArborFSM _arborFSM => GetComponent<Arbor.ArborFSM>();
 
         public void Init()
         {
+
             GameEventMessage.SendEvent("StartFever");
 
             _feverModel = new FeverModel();
@@ -72,9 +73,9 @@ namespace HoloHopping.Presenter
             _feverView.PlayBonusText(score);
 
             _feverView.OnBonusTweenEnd.Subscribe(_ =>
-            {
-                _arborFSM.SendTrigger(FeverTrigger.END_TWEEN_BONUS_TEXT);
-            });
+             {
+                 _arborFSM.SendTrigger(FeverTrigger.END_TWEEN_BONUS_TEXT);
+             });
 
         }
 
@@ -84,6 +85,7 @@ namespace HoloHopping.Presenter
         /// </summary>
         public void FinishFever()
         {
+            _feverView.KillSequence();
             _feverModel.AllRemoveItem();
             GameEventMessage.SendEvent("EndFever");
         }
