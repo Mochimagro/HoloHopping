@@ -23332,7 +23332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sets:
-  - {fileID: 2777394989494126221, guid: 300f406a80102824bb7ce3f0a2bf78c3, type: 3}
+  - {fileID: 710479167802143028, guid: 519f80ccc4dbd854bbc6c3bb7c9d5fcf, type: 3}
+  - {fileID: 2777394989494126221, guid: 7662d50e0f34e9b4b9ed917d1943639b, type: 3}
 --- !u!114 &1575229215
 MonoBehaviour:
   m_ObjectHideFlags: 3
