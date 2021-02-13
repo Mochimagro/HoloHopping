@@ -14713,6 +14713,16 @@ GameObject:
   - component: {fileID: 1526271444}
   - component: {fileID: 1526271447}
   - component: {fileID: 1526271446}
+  - component: {fileID: 1526271457}
+  - component: {fileID: 1526271456}
+  - component: {fileID: 1526271455}
+  - component: {fileID: 1526271454}
+  - component: {fileID: 1526271453}
+  - component: {fileID: 1526271452}
+  - component: {fileID: 1526271451}
+  - component: {fileID: 1526271450}
+  - component: {fileID: 1526271449}
+  - component: {fileID: 1526271448}
   m_Layer: 0
   m_Name: ItemCreater
   m_TagString: Untagged
@@ -14856,7 +14866,7 @@ MonoBehaviour:
       branchID: 0
   _Result:
     nodeGraph: {fileID: 1526271412}
-    branchIDs: 1915d97e
+    branchIDs: 1915d97e7633ec73
     _OutputSlotBase_SerializeVersion:
       _Version: 1
       _IsInitialized: 1
@@ -15254,7 +15264,7 @@ MonoBehaviour:
     enableLogging: 1
     enableBreak: 0
   _OwnerBehaviour: {fileID: 0}
-  _ParameterContainer: {fileID: 0}
+  _ParameterContainer: {fileID: 1526271454}
   _Calculators:
   - _NodeGraph: {fileID: 1526271412}
     _NodeID: 1655911537
@@ -15293,8 +15303,8 @@ MonoBehaviour:
     _NodeID: 1848543519
     position:
       serializedVersion: 2
-      x: 96
-      y: -444
+      x: 396
+      y: -144
       width: 324
       height: 87
     showComment: 0
@@ -15315,13 +15325,24 @@ MonoBehaviour:
     _NodeID: 919275682
     position:
       serializedVersion: 2
-      x: -444
-      y: -180
+      x: -492
+      y: -372
       width: 300
       height: 105
     showComment: 0
     nodeComment: 
     _Object: {fileID: 1526271420}
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 86323836
+    position:
+      serializedVersion: 2
+      x: -36
+      y: -1320
+      width: 324
+      height: 87
+    showComment: 0
+    nodeComment: 
+    _Object: {fileID: 1526271456}
   _Comments: []
   _Groups: []
   _DataBranchRerouteNodes:
@@ -15347,6 +15368,27 @@ MonoBehaviour:
           _IsInitialized: 1
           _IsVersioning: 1
       direction: {x: 0.9061304, y: 0.42299846}
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 1111907664
+      position:
+        serializedVersion: 2
+        x: -180
+        y: -576
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        nodeGraph: {fileID: 1526271412}
+        inputBranchID: 1015591673
+        outputBranchIDs: 7145c005
+        type:
+          _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _RerouteSlot_SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+      direction: {x: 0.98676103, y: 0.1621812}
   _DataBranchies:
   - branchID: 1559595546
     enabled: 1
@@ -15379,10 +15421,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271414}
     outNodeID: 1848543519
     lineBezier:
-      _StartPosition: {x: 420, y: -369}
-      _StartControl: {x: 470, y: -369}
-      _EndPosition: {x: 160, y: -277}
-      _EndControl: {x: 110, y: -277}
+      _StartPosition: {x: 720, y: -69}
+      _StartControl: {x: 770, y: -69}
+      _EndPosition: {x: 388, y: 23}
+      _EndControl: {x: 338, y: 23}
     showDataValue: 0
   - branchID: 1752227528
     enabled: 1
@@ -15415,8 +15457,8 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271420}
     outNodeID: 919275682
     lineBezier:
-      _StartPosition: {x: -144, y: -85}
-      _StartControl: {x: -94, y: -85}
+      _StartPosition: {x: -192, y: -277}
+      _StartControl: {x: -142, y: -277}
       _EndPosition: {x: -56, y: 60}
       _EndControl: {x: -106, y: 60}
     showDataValue: 0
@@ -15444,6 +15486,66 @@ MonoBehaviour:
       _EndPosition: {x: -56, y: 161}
       _EndControl: {x: -106, y: 161}
     showDataValue: 0
+  - branchID: 1944859510
+    enabled: 1
+    inBehaviour: {fileID: 1526271457}
+    inNodeID: 2137491492
+    outBehaviour: {fileID: 1526271408}
+    outNodeID: 630327709
+    lineBezier:
+      _StartPosition: {x: -144, y: 63}
+      _StartControl: {x: -94, y: 63}
+      _EndPosition: {x: -56, y: -690}
+      _EndControl: {x: -106, y: -690}
+    showDataValue: 0
+  - branchID: 919275682
+    enabled: 1
+    inBehaviour: {fileID: 1526271457}
+    inNodeID: 2137491492
+    outBehaviour: {fileID: 1526271420}
+    outNodeID: 919275682
+    lineBezier:
+      _StartPosition: {x: -192, y: -277}
+      _StartControl: {x: -142, y: -277}
+      _EndPosition: {x: -56, y: -708}
+      _EndControl: {x: -106, y: -708}
+    showDataValue: 0
+  - branchID: 1015591673
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 1111907664
+    outBehaviour: {fileID: 1526271457}
+    outNodeID: 2137491492
+    lineBezier:
+      _StartPosition: {x: 264, y: -673}
+      _StartControl: {x: 314, y: -673}
+      _EndPosition: {x: -171.89409, y: -561.2974}
+      _EndControl: {x: -221.23215, y: -569.4065}
+    showDataValue: 0
+  - branchID: 96486769
+    enabled: 1
+    inBehaviour: {fileID: 1526271457}
+    inNodeID: 2137491492
+    outBehaviour: {fileID: 1526271412}
+    outNodeID: 1111907664
+    lineBezier:
+      _StartPosition: {x: -156.10591, y: -558.7026}
+      _StartControl: {x: -106.76786, y: -550.5935}
+      _EndPosition: {x: -56, y: -607}
+      _EndControl: {x: -106, y: -607}
+    showDataValue: 0
+  - branchID: 2137491492
+    enabled: 1
+    inBehaviour: {fileID: 1526271455}
+    inNodeID: 1208223655
+    outBehaviour: {fileID: 1526271456}
+    outNodeID: 86323836
+    lineBezier:
+      _StartPosition: {x: 288, y: -1245}
+      _StartControl: {x: 338, y: -1245}
+      _EndPosition: {x: -56, y: -1153}
+      _EndControl: {x: -106, y: -1153}
+    showDataValue: 0
   playOnStart: 1
   updateSettings:
     type: 0
@@ -15455,8 +15557,8 @@ MonoBehaviour:
     _NodeID: 1559595546
     position:
       serializedVersion: 2
-      x: -468
-      y: -300
+      x: -576
+      y: -576
       width: 300
       height: 91
     showComment: 0
@@ -15486,8 +15588,8 @@ MonoBehaviour:
     _NodeID: 726643700
     position:
       serializedVersion: 2
-      x: 180
-      y: -336
+      x: 408
+      y: -36
       width: 300
       height: 89
     showComment: 0
@@ -15526,6 +15628,56 @@ MonoBehaviour:
     _Behaviours: []
     _BreakPoint: 0
     name: Stopping
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 2137491492
+    position:
+      serializedVersion: 2
+      x: -36
+      y: -840
+      width: 300
+      height: 753
+    showComment: 0
+    nodeComment: 
+    _Resident: 0
+    _Behaviours:
+    - {fileID: 1526271457}
+    - {fileID: 1526271449}
+    - {fileID: 1526271453}
+    - {fileID: 1526271448}
+    _BreakPoint: 0
+    name: FirstCreateItems
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 1208223655
+    position:
+      serializedVersion: 2
+      x: -36
+      y: -1212
+      width: 300
+      height: 89
+    showComment: 0
+    nodeComment: 
+    _Resident: 1
+    _Behaviours:
+    - {fileID: 1526271455}
+    _BreakPoint: 0
+    name: AutoCreateListener
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 182639827
+    position:
+      serializedVersion: 2
+      x: -36
+      y: -1092
+      width: 300
+      height: 223
+    showComment: 0
+    nodeComment: 
+    _Resident: 0
+    _Behaviours:
+    - {fileID: 1526271451}
+    - {fileID: 1526271450}
+    - {fileID: 1526271452}
+    _BreakPoint: 0
+    name: Init
   _StateLinkRerouteNodes:
     _Nodes: []
 --- !u!114 &1526271413
@@ -15876,7 +16028,7 @@ MonoBehaviour:
   - container: {fileID: 1526271419}
     id: 1559595546
     type: 2006
-    name: DefaultScoreItem
+    name: NormalScoreItem
     _ParameterIndex: 0
     _IsPublicSet: 1
     _IsPublicGet: 1
@@ -15951,7 +16103,7 @@ MonoBehaviour:
     name: DefaultScoreItem
   _Output:
     nodeGraph: {fileID: 1526271412}
-    branchIDs: f4b34f2b
+    branchIDs: f4b34f2ba208cb36
     _OutputSlotBase_SerializeVersion:
       _Version: 1
       _IsInitialized: 1
@@ -18246,6 +18398,1139 @@ MonoBehaviour:
         _IsVersioning: 1
       _Type:
         _AssemblyTypeName: System.String, mscorlib
+--- !u!114 &1526271448
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0df0c8699d09a944baa8eba585872c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 2137491492
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _ConditionList:
+    _Conditions:
+    - _Reference:
+        _Type: 0
+        _Container: {fileID: 1526271454}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 1559595546
+        name: createNumber
+      _ParameterType: 0
+      _ReferenceType:
+        _AssemblyTypeName: 
+      _CompareType: 3
+      _ParameterIndex: 0
+    _IntParameters:
+    - _Type: 1
+      _Value: 0
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 1526271454}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 534011718
+        name: createValue
+      _MinRange: 0
+      _MaxRange: 0
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _LongParameters: []
+    _FloatParameters: []
+    _BoolParameters: []
+    _EnumParameters: []
+    _StringParameters: []
+    _Vector2Parameters: []
+    _Vector3Parameters: []
+    _QuaternionParameters: []
+    _RectParameters: []
+    _BoundsParameters: []
+    _ColorParameters: []
+    _GameObjectParameters: []
+    _ComponentParameters: []
+  _NextState:
+    name: 
+    stateID: 534011718
+    transitionTiming: 0
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 2
+  _OldConditions: []
+--- !u!114 &1526271449
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee1df9a95a6204c94e0667c2227481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 2137491492
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _Reference:
+    _Type: 0
+    _Container: {fileID: 1526271454}
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    id: 1559595546
+    name: createNumber
+  _ParameterType: 0
+  _ReferenceType:
+    _AssemblyTypeName: 
+  _Function:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _IntValue:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _LongValue:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _FloatValue:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _BoolValue:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Probability: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _StringValue:
+    _Type: 0
+    _Value: 
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _EnumValue:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _GameObjectValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Vector2Value:
+    _Type: 0
+    _Value: {x: 0, y: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Vector3Value:
+    _Type: 0
+    _Value: {x: 0, y: 0, z: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _QuaternionValue:
+    _Type: 0
+    _Value: {x: 0, y: 0, z: 0, w: 1}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _RectValue:
+    _Type: 0
+    _Value:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _BoundsValue:
+    _Type: 0
+    _Value:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _ColorValue:
+    _Type: 0
+    _Value: {r: 1, g: 1, b: 1, a: 1}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _TransformValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _RectTransformValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _RigidbodyValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Rigidbody2DValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _ComponentValue:
+    _Type: 0
+    _HierarchyType: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _OverrideConstraintType:
+      _AssemblyTypeName: 
+  _SerializeVersion: 2
+  _OldIntValue: 0
+  _OldFloatValue: 0
+  _OldBoolValue: 0
+  _OldFunction: 0
+--- !u!114 &1526271450
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da570d9877ed7384b8323de444b3f54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 182639827
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _ExecuteMethodFlags:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _ParameterReference:
+    _Type: 0
+    _Container: {fileID: 1526271454}
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    id: 534011718
+    name: createValue
+  _ValueType:
+    _AssemblyTypeName: System.Int32, mscorlib
+  _ParameterType: 0
+  _ParameterList:
+    _IntParameters:
+    - _Type: 0
+      _Value: 10
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _MinRange: 0
+      _MaxRange: 0
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _LongParameters: []
+    _FloatParameters: []
+    _BoolParameters: []
+    _StringParameters: []
+    _Vector2Parameters: []
+    _Vector3Parameters: []
+    _QuaternionParameters: []
+    _RectParameters: []
+    _BoundsParameters: []
+    _ColorParameters: []
+    _GameObjectParameters: []
+    _ComponentParameters: []
+    _EnumParameters: []
+    _AssetObjectParameters: []
+    _InputSlotParameters: []
+  _IsInGraphParameter: 1
+  _SerializeVersion: 2
+  _OldInput:
+    nodeGraph: {fileID: 0}
+    branchID: 0
+    _Type:
+      _AssemblyTypeName: 
+--- !u!114 &1526271451
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da570d9877ed7384b8323de444b3f54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 182639827
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _ExecuteMethodFlags:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _ParameterReference:
+    _Type: 0
+    _Container: {fileID: 1526271454}
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    id: 1559595546
+    name: New Int
+  _ValueType:
+    _AssemblyTypeName: System.Int32, mscorlib
+  _ParameterType: 0
+  _ParameterList:
+    _IntParameters:
+    - _Type: 0
+      _Value: 0
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _MinRange: 0
+      _MaxRange: 0
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _LongParameters: []
+    _FloatParameters: []
+    _BoolParameters: []
+    _StringParameters: []
+    _Vector2Parameters: []
+    _Vector3Parameters: []
+    _QuaternionParameters: []
+    _RectParameters: []
+    _BoundsParameters: []
+    _ColorParameters: []
+    _GameObjectParameters: []
+    _ComponentParameters: []
+    _EnumParameters: []
+    _AssetObjectParameters: []
+    _InputSlotParameters: []
+  _IsInGraphParameter: 1
+  _SerializeVersion: 2
+  _OldInput:
+    nodeGraph: {fileID: 0}
+    branchID: 0
+    _Type:
+      _AssemblyTypeName: 
+--- !u!114 &1526271452
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0ffa05d7023f44aacdfada32c15663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 182639827
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _TransitionMethod:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _NextState:
+    name: 
+    stateID: 2137491492
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 1
+  _OldTransitionMethod: 0
+--- !u!114 &1526271453
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 2137491492
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _TimeType:
+    _Type: 0
+    _Value: 0
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Seconds:
+    _Type: 0
+    _Value: 0.1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _NextState:
+    name: 
+    stateID: 2137491492
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 2
+  _OldSeconds: 0
+  _OldTimeType: 0
+--- !u!114 &1526271454
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff7f9820050bbf468fba4b58fe18f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Owner: {fileID: 1526271412}
+  _Parameters:
+  - container: {fileID: 1526271454}
+    id: 1559595546
+    type: 0
+    name: createNumber
+    _ParameterIndex: 0
+    _IsPublicSet: 1
+    _IsPublicGet: 1
+    referenceType:
+      _AssemblyTypeName: 
+  - container: {fileID: 1526271454}
+    id: 534011718
+    type: 0
+    name: createValue
+    _ParameterIndex: 1
+    _IsPublicSet: 1
+    _IsPublicGet: 1
+    referenceType:
+      _AssemblyTypeName: 
+  _SerializeVersion: 1
+  _OldParameters: []
+  _AssetObjectListParameters: []
+  _BoolParameters: 
+  _BoolListParameters: []
+  _BoundsParameters: []
+  _BoundsListParameters: []
+  _ColorParameters: []
+  _ColorListParameters: []
+  _ComponentListParameters: []
+  _EnumListParameters: []
+  _FloatParameters: []
+  _FloatListParameters: []
+  _GameObjectListParameters: []
+  _IntParameters: 000000000a000000
+  _IntListParameters: []
+  _LongParameters: 
+  _LongListParameters: []
+  _ObjectParameters: []
+  _QuaternionParameters: []
+  _QuaternionListParameters: []
+  _RectParameters: []
+  _RectListParameters: []
+  _StringParameters: []
+  _StringListParameters: []
+  _Vector2Parameters: []
+  _Vector2ListParameters: []
+  _Vector3Parameters: []
+  _Vector3ListParameters: []
+--- !u!114 &1526271455
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a848b4d42b9463649812a195c21315f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 1208223655
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _Message:
+    _Type: 2
+    _Value: 
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 1526271412}
+      branchID: 2137491492
+  _NextState:
+    name: 
+    stateID: 182639827
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 1
+  _OldMessage: 
+--- !u!114 &1526271456
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3fad7a5faa5464e8c5a9b920018bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 86323836
+  _DataSlotFieldLinks: []
+  _Persistent:
+    _TargetType:
+      _AssemblyTypeName: HoloHopping.Component.ItemCreaterMessage, Assembly-CSharp
+    _TargetMode: 4
+    _TargetComponent:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      _OverrideConstraintType:
+        _AssemblyTypeName: UnityEngine.Component, UnityEngine
+    _TargetGameObject:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetAssetObject:
+      _Type: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetSlot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _MemberType: 1
+    _MemberName: GAME_START_CREATE
+    _OutputValue:
+      nodeGraph: {fileID: 1526271412}
+      branchIDs: 2488677f
+      _OutputSlotBase_SerializeVersion:
+        _Version: 1
+        _IsInitialized: 1
+        _IsVersioning: 1
+      _Type:
+        _AssemblyTypeName: System.String, mscorlib
+--- !u!114 &1526271457
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d80aa977c02c41b4ea3178067a5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 2137491492
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _EventEntries:
+  - triggerType: 1
+    callback:
+      _Calls:
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 1526271409}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 0
+        _MemberName: CreateItem
+        _Arguments:
+        - _Type:
+            _AssemblyTypeName: HoloHopping.Data.ItemData, Assembly-CSharp
+          _Name: itemData
+          _Attributes: 0
+          _ParameterType: 14
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        - _Type:
+            _AssemblyTypeName: UnityEngine.Vector3, UnityEngine
+          _Name: position
+          _Attributes: 0
+          _ParameterType: 6
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        _ReturnType:
+          _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters: []
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters:
+          - _Type: 2
+            _Value: {x: 0, y: 0, z: 0}
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 0}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 0
+              name: 
+            _Slot:
+              nodeGraph: {fileID: 1526271412}
+              branchID: 1944859510
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters: []
+          _EnumParameters: []
+          _AssetObjectParameters:
+          - _Type: 2
+            _Value: {fileID: 0}
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 0}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 0
+              name: 
+            _Slot:
+              nodeGraph: {fileID: 1526271412}
+              branchID: 919275682
+          _InputSlotParameters: []
+        _OutputSlots:
+        - nodeGraph: {fileID: 1526271412}
+          branchIDs: f9b2883c
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
+      - _TargetType:
+          _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+        _TargetMode: 0
+        _TargetComponent:
+          _Type: 3
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+          _OverrideConstraintType:
+            _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+        _TargetGameObject:
+          _Type: 0
+          _HierarchyType: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetAssetObject:
+          _Type: 0
+          _Value: {fileID: 0}
+          _Parameter:
+            _Type: 0
+            _Container: {fileID: 0}
+            _Slot:
+              nodeGraph: {fileID: 0}
+              branchID: 0
+            id: 0
+            name: 
+          _Slot:
+            nodeGraph: {fileID: 0}
+            branchID: 0
+        _TargetSlot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        _MemberType: 0
+        _MemberName: AddListItem
+        _Arguments:
+        - _Type:
+            _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+          _Name: item
+          _Attributes: 0
+          _ParameterType: 12
+          _ParameterIndex: 0
+          _OutputSlotIndex: 0
+        _ReturnType:
+          _AssemblyTypeName: 
+        _ReturnOutputSlotIndex: 0
+        _ParameterList:
+          _IntParameters: []
+          _LongParameters: []
+          _FloatParameters: []
+          _BoolParameters: []
+          _StringParameters: []
+          _Vector2Parameters: []
+          _Vector3Parameters: []
+          _QuaternionParameters: []
+          _RectParameters: []
+          _BoundsParameters: []
+          _ColorParameters: []
+          _GameObjectParameters: []
+          _ComponentParameters:
+          - _Type: 2
+            _HierarchyType: 0
+            _Value: {fileID: 0}
+            _Parameter:
+              _Type: 0
+              _Container: {fileID: 0}
+              _Slot:
+                nodeGraph: {fileID: 0}
+                branchID: 0
+              id: 0
+              name: 
+            _Slot:
+              nodeGraph: {fileID: 1526271412}
+              branchID: 96486769
+            _OverrideConstraintType:
+              _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
+          _EnumParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters: []
+        _OutputSlots: []
+        _OutputSlotInstance:
+          nodeGraph: {fileID: 0}
+          branchIDs: 
+          _OutputSlotBase_SerializeVersion:
+            _Version: 1
+            _IsInitialized: 1
+            _IsVersioning: 1
+          _Type:
+            _AssemblyTypeName: 
+        _SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+        _IntParameters: []
+        _LongParameters: []
+        _FloatParameters: []
+        _BoolParameters: []
+        _StringParameters: []
+        _Vector2Parameters: []
+        _Vector3Parameters: []
+        _QuaternionParameters: []
+        _RectParameters: []
+        _BoundsParameters: []
+        _ColorParameters: []
+        _GameObjectParameters: []
+        _ComponentParameters: []
+        _EnumParameters: []
+        _InputSlotParameters: []
+  _SerializeVersion: 1
+  _OnStateAwake:
+    _Calls: []
+  _OnStateBegin:
+    _Calls: []
+  _OnStateEnd:
+    _Calls: []
 --- !u!1 &1552550937
 GameObject:
   m_ObjectHideFlags: 0

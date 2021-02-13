@@ -7,6 +7,7 @@ namespace HoloHopping.Component
 {
     public struct ItemCreaterMessage
     {
+        public const string GAME_START_CREATE = "GameStartCreate";
         public const string AUTO_CREATE_ITEM = "AutoCreateItem";
         public const string STOP_CREATE_ITEM = "StopCreateItem";
         public const string CREATE_SPECIAL_ITEM = "CreateSpecialItem";
@@ -38,6 +39,12 @@ namespace HoloHopping.Component
         public void StartAutoCreate()
         {
             _autoCreateState.SendTrigger(ItemCreaterMessage.AUTO_CREATE_ITEM);
+        }
+
+        public void GameStartCreate()
+        {
+            _autoCreateState.SendTrigger(ItemCreaterMessage.GAME_START_CREATE);
+
         }
 
         public ItemComponent CreateItem(Data.ItemData itemData, Vector3 position)

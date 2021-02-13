@@ -63,7 +63,7 @@ namespace HoloHopping.Component
 
             _readyLabelPresenter.ShowGoText();
 
-            _itemCreaterComponent.StartAutoCreate();
+            _itemCreaterComponent.GameStartCreate();
 
             _hoppingCharaCreaterComponent.CreateHoppingCharacter();
 
