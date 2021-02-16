@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using UnityEngine.Serialization;
 
-namespace naichilab
+namespace Naichilab
 {
     /// <summary>
     /// ランキング読み込みクラス
@@ -36,7 +36,7 @@ namespace naichilab
             {
                 if (instance == null)
                 {
-                    instance = (RankingLoader) FindObjectOfType(typeof(RankingLoader));
+                    instance = (RankingLoader)FindObjectOfType(typeof(RankingLoader));
 
                     if (instance == null)
                     {

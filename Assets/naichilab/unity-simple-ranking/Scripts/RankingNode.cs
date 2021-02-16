@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace naichilab
+namespace Naichilab
 {
 	public class RankingNode : MonoBehaviour
 	{

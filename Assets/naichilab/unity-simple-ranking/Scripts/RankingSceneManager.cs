@@ -6,7 +6,7 @@ using NCMB;
 using NCMB.Extensions;
 using UnityEngine.Networking;
 
-namespace naichilab
+namespace Naichilab
 {
     public class RankingSceneManager : MonoBehaviour
     {

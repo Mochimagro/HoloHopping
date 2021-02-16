@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace naichilab.Scripts.Internal
+namespace Naichilab.Scripts.Internal
 {
     public static class GyazoUploader
     {

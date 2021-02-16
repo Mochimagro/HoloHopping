@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-namespace naichilab
+namespace Naichilab
 {
     /// <summary>
     /// ランキング設定

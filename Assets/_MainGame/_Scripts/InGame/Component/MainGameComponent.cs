@@ -27,7 +27,10 @@ namespace HoloHopping.Component
         [SerializeField] private ReadyLabelPresenter _readyLabelPresenter = null;
         [SerializeField] private BGMPresenter _bgmPresenter = null;
         [SerializeField] private SEPresenter _sePresenter = null;
+        [SerializeField] private RankingPresenter _rankingPresenter = null;
 
+        [Header("Model")]
+        private ScoreModel _scoreModel = null;
 
         private GameSystemModel _gameSystemModel = null;
 
@@ -39,12 +42,11 @@ namespace HoloHopping.Component
 
             _readyLabelPresenter.ShowReadyText();
 
-            ScoreModel scoreModel = null;
             _gameSystemModel = new GameSystemModel();
 
-            _scorePresenter.Init(out scoreModel);
+            _scorePresenter.Init(out _scoreModel);
 
-            _itemCreaterComponent.Init(scoreModel);
+            _itemCreaterComponent.Init(_scoreModel);
             _specialItemEffectComponent.Init();
 
             _effectCreaterComponent.Init();
@@ -53,6 +55,8 @@ namespace HoloHopping.Component
             _bgmPresenter.PlayReadySound();
 
             _sePresenter.Init();
+
+            _rankingPresenter.Init(_scoreModel);
 
             Bind();
         }

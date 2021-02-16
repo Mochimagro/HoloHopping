@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace naichilab
+namespace Naichilab
 {
     /// <summary>
     /// 時間型スコア

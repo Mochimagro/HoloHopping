@@ -203,7 +203,7 @@ namespace Legacy
 
             gameoverSeq.OnComplete(() =>
             {
-                naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score);
+                Naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score);
             });
 
             // pressKeyText.gameObject.SetActive(true);

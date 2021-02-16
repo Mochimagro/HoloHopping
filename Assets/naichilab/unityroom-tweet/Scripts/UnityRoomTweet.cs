@@ -1,8 +1,8 @@
 ﻿using System.Runtime.InteropServices;
-using naichilab.Scripts.Internal;
+using Naichilab.Scripts.Internal;
 using UnityEngine;
 
-namespace naichilab
+namespace Naichilab
 {
     public static class UnityRoomTweet
     {

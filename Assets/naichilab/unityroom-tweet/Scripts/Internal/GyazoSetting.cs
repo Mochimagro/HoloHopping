@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace naichilab.Scripts.Internal
+namespace Naichilab.Scripts.Internal
 {
     [CreateAssetMenu(menuName = "GyazoUploader/Create GyazoSetting Asset")]
     public class GyazoSetting : ScriptableObject

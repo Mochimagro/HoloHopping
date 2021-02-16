@@ -1,4 +1,4 @@
-﻿namespace naichilab.Scripts.Internal
+﻿namespace Naichilab.Scripts.Internal
 {
     public interface ITweetData
     {

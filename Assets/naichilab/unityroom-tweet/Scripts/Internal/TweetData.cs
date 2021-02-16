@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace naichilab.Scripts.Internal
+namespace Naichilab.Scripts.Internal
 {
     public class TweetData : ITweetData
     {

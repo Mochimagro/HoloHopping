@@ -23,12 +23,12 @@ public class SampleSceneManager : MonoBehaviour
 
     public void OnResultButton0Pressed()
     {
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 0);
+        Naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 0);
     }
 
     public void OnResultButton1Pressed()
     {
-        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 1);
+        Naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 1);
     }
 
     public void LocalSaveReset()

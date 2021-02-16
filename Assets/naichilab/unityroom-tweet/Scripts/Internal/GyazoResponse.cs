@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace naichilab.Scripts.Internal
+namespace Naichilab.Scripts.Internal
 {
     [Serializable]
     public class GyazoResponse

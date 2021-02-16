@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace naichilab
+namespace Naichilab
 {
     /// <summary>
     /// 数値型スコア

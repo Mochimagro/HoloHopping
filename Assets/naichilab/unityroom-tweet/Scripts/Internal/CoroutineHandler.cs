@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace naichilab.Scripts.Internal
+namespace Naichilab.Scripts.Internal
 {
     public class CoroutineHandler : MonoBehaviour
     {

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace naichilab
+namespace Naichilab
 {
     /// <summary>
     /// １つのリーダーボード情報

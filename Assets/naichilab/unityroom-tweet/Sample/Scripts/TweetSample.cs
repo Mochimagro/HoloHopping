@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace naichilab
+namespace Naichilab
 {
     public class TweetSample : MonoBehaviour
     {
