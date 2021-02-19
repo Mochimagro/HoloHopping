@@ -17,12 +17,21 @@ namespace HoloHopping.Component
     {
         private ItemEntity _entity = null;
 
+        /// <summary>
+        /// 入手したときのイベント
+        /// </summary>
         public IObservable<ItemEntity> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
         private Subject<ItemEntity> _onGetItem = new Subject<ItemEntity>();
 
+        /// <summary>
+        /// 経過時間で消去されるときのイベント
+        /// </summary>
         public IObservable<ItemEntity> OnDeathItem => _onDeathItem;
         private Subject<ItemEntity> _onDeathItem = new Subject<ItemEntity>();
 
+        /// <summary>
+        /// TailParticleが終了したときのイベント
+        /// </summary>
         public IObservable<Unit> OnStopParticle;
 
         [SerializeField] private List<ParticleSystem> _tailPaticles = new List<ParticleSystem>();

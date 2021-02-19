@@ -23,12 +23,36 @@ namespace HoloHopping.Component
 
         [SerializeField] private Arbor.ArborFSM _autoCreateState = null;
         [SerializeField] private Arbor.ArborFSM _specialItemCreater = null;
+
+        [SerializeField] private Data.ItemListData _itemListData = null;
+        private Entity.ItemListEntity ItemListEntity => new Entity.ItemListEntity(_itemListData);
+
         private Model.ScoreModel _scoreModel = null;
 
         public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
         private Subject<Entity.ItemEntity> _onGetItem = new Subject<Entity.ItemEntity>();
 
         private List<ItemComponent> _normalFieldItems = null;
+        private List<Entity.HighScoreItem> _highScoreItem = null;
+        public Entity.ItemEntity GetNormalScoreItem => ItemListEntity.NormalScoreItem;
+
+
+        public Entity.ItemEntity GetScoreItem
+        {
+            get
+            {
+
+                foreach (var target in ItemListEntity.HighScoreItems)
+                {
+                    if (_normalFieldItems.Count < target.BorderStageItemCount)
+                    {
+                        return target.Entity;
+                    }
+                }
+                return GetNormalScoreItem;
+            }
+        }
+
 
         public void Init(Model.ScoreModel scoreModel)
         {
@@ -44,16 +68,18 @@ namespace HoloHopping.Component
         public void GameStartCreate()
         {
             _autoCreateState.SendTrigger(ItemCreaterMessage.GAME_START_CREATE);
-
         }
 
         public ItemComponent CreateItem(Data.ItemData itemData, Vector3 position)
         {
+            return CreateItem(new Entity.ItemEntity(itemData), position);
+        }
 
-            var entity = new Entity.ItemEntity(itemData);
-            var item = Instantiate(entity.Component, position, Quaternion.identity);
+        public ItemComponent CreateItem(Entity.ItemEntity itemEntity, Vector3 position)
+        {
+            var item = Instantiate(itemEntity.Component, position, Quaternion.identity);
 
-            item.Init(entity);
+            item.Init(itemEntity);
 
             item.OnGetItem.Subscribe(e =>
             {

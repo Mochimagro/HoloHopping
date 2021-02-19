@@ -15532,6 +15532,8 @@ GameObject:
   - component: {fileID: 1526271450}
   - component: {fileID: 1526271449}
   - component: {fileID: 1526271448}
+  - component: {fileID: 1526271458}
+  - component: {fileID: 1526271459}
   m_Layer: 0
   m_Name: ItemCreater
   m_TagString: Untagged
@@ -15675,7 +15677,7 @@ MonoBehaviour:
       branchID: 0
   _Result:
     nodeGraph: {fileID: 1526271412}
-    branchIDs: 1915d97e7633ec73
+    branchIDs: 7c322505
     _OutputSlotBase_SerializeVersion:
       _Version: 1
       _IsInitialized: 1
@@ -15694,6 +15696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoCreateState: {fileID: 1526271412}
   _specialItemCreater: {fileID: 1526271434}
+  _itemListData: {fileID: 11400000, guid: 1b23fdb61773a4a4b97f2169928448a1, type: 2}
 --- !u!114 &1526271410
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -15825,10 +15828,10 @@ MonoBehaviour:
         _MemberName: CreateItem
         _Arguments:
         - _Type:
-            _AssemblyTypeName: HoloHopping.Data.ItemData, Assembly-CSharp
-          _Name: itemData
+            _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
+          _Name: itemEntity
           _Attributes: 0
-          _ParameterType: 14
+          _ParameterType: 4096
           _ParameterIndex: 0
           _OutputSlotIndex: 0
         - _Type:
@@ -15861,7 +15864,7 @@ MonoBehaviour:
               name: 
             _Slot:
               nodeGraph: {fileID: 1526271412}
-              branchID: 2128155929
+              branchID: 1986821818
           _QuaternionParameters: []
           _RectParameters: []
           _BoundsParameters: []
@@ -15869,24 +15872,15 @@ MonoBehaviour:
           _GameObjectParameters: []
           _ComponentParameters: []
           _EnumParameters: []
-          _AssetObjectParameters:
-          - _Type: 2
-            _Value: {fileID: 0}
-            _Parameter:
-              _Type: 0
-              _Container: {fileID: 0}
-              _Slot:
-                nodeGraph: {fileID: 0}
-                branchID: 0
-              id: 0
-              name: 
-            _Slot:
-              nodeGraph: {fileID: 1526271412}
-              branchID: 726643700
-          _InputSlotParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters:
+          - nodeGraph: {fileID: 1526271412}
+            branchID: 1356710135
+            _Type:
+              _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
         _OutputSlots:
         - nodeGraph: {fileID: 1526271412}
-          branchIDs: 1f892e6e
+          branchIDs: cddda979
           _OutputSlotBase_SerializeVersion:
             _Version: 1
             _IsInitialized: 1
@@ -16079,7 +16073,7 @@ MonoBehaviour:
     _NodeID: 1655911537
     position:
       serializedVersion: 2
-      x: -780
+      x: -1020
       y: 0
       width: 300
       height: 105
@@ -16090,8 +16084,8 @@ MonoBehaviour:
     _NodeID: 630327709
     position:
       serializedVersion: 2
-      x: -444
-      y: -48
+      x: -636
+      y: 60
       width: 300
       height: 121
     showComment: 0
@@ -16101,7 +16095,7 @@ MonoBehaviour:
     _NodeID: 1752227528
     position:
       serializedVersion: 2
-      x: -780
+      x: -1020
       y: 168
       width: 300
       height: 105
@@ -16112,9 +16106,9 @@ MonoBehaviour:
     _NodeID: 1848543519
     position:
       serializedVersion: 2
-      x: 396
-      y: -144
-      width: 324
+      x: 384
+      y: -24
+      width: 300
       height: 87
     showComment: 0
     nodeComment: 
@@ -16123,9 +16117,9 @@ MonoBehaviour:
     _NodeID: 1944859510
     position:
       serializedVersion: 2
-      x: 468
-      y: -444
-      width: 336
+      x: 588
+      y: -432
+      width: 300
       height: 87
     showComment: 0
     nodeComment: 
@@ -16134,8 +16128,8 @@ MonoBehaviour:
     _NodeID: 919275682
     position:
       serializedVersion: 2
-      x: -492
-      y: -372
+      x: -696
+      y: -564
       width: 300
       height: 105
     showComment: 0
@@ -16146,12 +16140,34 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -36
-      y: -1320
-      width: 324
+      y: -1308
+      width: 300
       height: 87
     showComment: 0
     nodeComment: 
     _Object: {fileID: 1526271456}
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 375271809
+    position:
+      serializedVersion: 2
+      x: -660
+      y: -312
+      width: 300
+      height: 87
+    showComment: 0
+    nodeComment: 
+    _Object: {fileID: 1526271458}
+  - _NodeGraph: {fileID: 1526271412}
+    _NodeID: 471587800
+    position:
+      serializedVersion: 2
+      x: -648
+      y: -420
+      width: 300
+      height: 87
+    showComment: 0
+    nodeComment: 
+    _Object: {fileID: 1526271459}
   _Comments: []
   _Groups: []
   _DataBranchRerouteNodes:
@@ -16168,7 +16184,7 @@ MonoBehaviour:
       nodeComment: 
       link:
         nodeGraph: {fileID: 1526271412}
-        inputBranchID: 1848543519
+        inputBranchID: 2041175501
         outputBranchIDs: 4b5e0d31
         type:
           _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
@@ -16181,15 +16197,15 @@ MonoBehaviour:
       _NodeID: 1111907664
       position:
         serializedVersion: 2
-        x: -180
-        y: -576
+        x: -168
+        y: -648
         width: 32
         height: 32
       showComment: 0
       nodeComment: 
       link:
         nodeGraph: {fileID: 1526271412}
-        inputBranchID: 1015591673
+        inputBranchID: 726598452
         outputBranchIDs: 7145c005
         type:
           _AssemblyTypeName: HoloHopping.Component.ItemComponent, Assembly-CSharp
@@ -16197,7 +16213,91 @@ MonoBehaviour:
           _Version: 1
           _IsInitialized: 1
           _IsVersioning: 1
-      direction: {x: 0.98676103, y: 0.1621812}
+      direction: {x: 0.3280655, y: 0.944655}
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 278955818
+      position:
+        serializedVersion: 2
+        x: -300
+        y: -528
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        nodeGraph: {fileID: 1526271412}
+        inputBranchID: 1111907664
+        outputBranchIDs: 
+        type:
+          _AssemblyTypeName: HoloHopping.Data.ItemData, Assembly-CSharp
+        _RerouteSlot_SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+      direction: {x: 1, y: 0}
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 1400855637
+      position:
+        serializedVersion: 2
+        x: -300
+        y: 48
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        nodeGraph: {fileID: 1526271412}
+        inputBranchID: 86323836
+        outputBranchIDs: ba7e6c76d3dce20a
+        type:
+          _AssemblyTypeName: UnityEngine.Vector3, UnityEngine
+        _RerouteSlot_SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+      direction: {x: 1, y: 0}
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 1497171628
+      position:
+        serializedVersion: 2
+        x: -264
+        y: -300
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        nodeGraph: {fileID: 1526271412}
+        inputBranchID: 1015591673
+        outputBranchIDs: f7c0dd50
+        type:
+          _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
+        _RerouteSlot_SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+      direction: {x: 1, y: 0}
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 1593487619
+      position:
+        serializedVersion: 2
+        x: -192
+        y: -456
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        nodeGraph: {fileID: 1526271412}
+        inputBranchID: 1208223655
+        outputBranchIDs: 7e3cfb1b
+        type:
+          _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
+        _RerouteSlot_SerializeVersion:
+          _Version: 1
+          _IsInitialized: 1
+          _IsVersioning: 1
+      direction: {x: 0.65267205, y: -0.75764054}
   _DataBranchies:
   - branchID: 1559595546
     enabled: 1
@@ -16206,10 +16306,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271410}
     outNodeID: 1655911537
     lineBezier:
-      _StartPosition: {x: -480, y: 95}
-      _StartControl: {x: -430, y: 95}
-      _EndPosition: {x: -464, y: 8}
-      _EndControl: {x: -514, y: 8}
+      _StartPosition: {x: -720, y: 95}
+      _StartControl: {x: -670, y: 95}
+      _EndPosition: {x: -656, y: 116}
+      _EndControl: {x: -706, y: 116}
     showDataValue: 0
   - branchID: 534011718
     enabled: 1
@@ -16218,10 +16318,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271407}
     outNodeID: 1752227528
     lineBezier:
-      _StartPosition: {x: -480, y: 263}
-      _StartControl: {x: -430, y: 263}
-      _EndPosition: {x: -464, y: 26}
-      _EndControl: {x: -514, y: 26}
+      _StartPosition: {x: -720, y: 263}
+      _StartControl: {x: -670, y: 263}
+      _EndPosition: {x: -656, y: 134}
+      _EndControl: {x: -706, y: 134}
     showDataValue: 0
   - branchID: 630327709
     enabled: 1
@@ -16230,10 +16330,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271414}
     outNodeID: 1848543519
     lineBezier:
-      _StartPosition: {x: 720, y: -69}
-      _StartControl: {x: 770, y: -69}
-      _EndPosition: {x: 388, y: 23}
-      _EndControl: {x: 338, y: 23}
+      _StartPosition: {x: 684, y: 51}
+      _StartControl: {x: 734, y: 51}
+      _EndPosition: {x: 364, y: 131}
+      _EndControl: {x: 314, y: 131}
     showDataValue: 0
   - branchID: 1752227528
     enabled: 1
@@ -16242,46 +16342,10 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271418}
     outNodeID: 1944859510
     lineBezier:
-      _StartPosition: {x: 804, y: -369}
-      _StartControl: {x: 854, y: -369}
+      _StartPosition: {x: 888, y: -357}
+      _StartControl: {x: 938, y: -357}
       _EndPosition: {x: 568, y: -277}
       _EndControl: {x: 518, y: -277}
-    showDataValue: 0
-  - branchID: 2128155929
-    enabled: 1
-    inBehaviour: {fileID: 1526271411}
-    inNodeID: 534011718
-    outBehaviour: {fileID: 1526271408}
-    outNodeID: 630327709
-    lineBezier:
-      _StartPosition: {x: -144, y: 63}
-      _StartControl: {x: -94, y: 63}
-      _EndPosition: {x: -56, y: 78}
-      _EndControl: {x: -106, y: 78}
-    showDataValue: 0
-  - branchID: 726643700
-    enabled: 1
-    inBehaviour: {fileID: 1526271411}
-    inNodeID: 534011718
-    outBehaviour: {fileID: 1526271420}
-    outNodeID: 919275682
-    lineBezier:
-      _StartPosition: {x: -192, y: -277}
-      _StartControl: {x: -142, y: -277}
-      _EndPosition: {x: -56, y: 60}
-      _EndControl: {x: -106, y: 60}
-    showDataValue: 0
-  - branchID: 1848543519
-    enabled: 1
-    inBehaviour: {fileID: 1526271412}
-    inNodeID: 2041175501
-    outBehaviour: {fileID: 1526271411}
-    outNodeID: 534011718
-    lineBezier:
-      _StartPosition: {x: 264, y: 95}
-      _StartControl: {x: 314, y: 95}
-      _EndPosition: {x: -147.24904, y: 132.61601}
-      _EndControl: {x: -192.55556, y: 111.46609}
     showDataValue: 0
   - branchID: 822959691
     enabled: 1
@@ -16292,44 +16356,8 @@ MonoBehaviour:
     lineBezier:
       _StartPosition: {x: -132.75096, y: 139.38399}
       _StartControl: {x: -87.44444, y: 160.5339}
-      _EndPosition: {x: -56, y: 161}
-      _EndControl: {x: -106, y: 161}
-    showDataValue: 0
-  - branchID: 1944859510
-    enabled: 1
-    inBehaviour: {fileID: 1526271457}
-    inNodeID: 2137491492
-    outBehaviour: {fileID: 1526271408}
-    outNodeID: 630327709
-    lineBezier:
-      _StartPosition: {x: -144, y: 63}
-      _StartControl: {x: -94, y: 63}
-      _EndPosition: {x: -56, y: -690}
-      _EndControl: {x: -106, y: -690}
-    showDataValue: 0
-  - branchID: 919275682
-    enabled: 1
-    inBehaviour: {fileID: 1526271457}
-    inNodeID: 2137491492
-    outBehaviour: {fileID: 1526271420}
-    outNodeID: 919275682
-    lineBezier:
-      _StartPosition: {x: -192, y: -277}
-      _StartControl: {x: -142, y: -277}
-      _EndPosition: {x: -56, y: -708}
-      _EndControl: {x: -106, y: -708}
-    showDataValue: 0
-  - branchID: 1015591673
-    enabled: 1
-    inBehaviour: {fileID: 1526271412}
-    inNodeID: 1111907664
-    outBehaviour: {fileID: 1526271457}
-    outNodeID: 2137491492
-    lineBezier:
-      _StartPosition: {x: 264, y: -673}
-      _StartControl: {x: 314, y: -673}
-      _EndPosition: {x: -171.89409, y: -561.2974}
-      _EndControl: {x: -221.23215, y: -569.4065}
+      _EndPosition: {x: -56, y: 197}
+      _EndControl: {x: -106, y: 197}
     showDataValue: 0
   - branchID: 96486769
     enabled: 1
@@ -16338,8 +16366,8 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271412}
     outNodeID: 1111907664
     lineBezier:
-      _StartPosition: {x: -156.10591, y: -558.7026}
-      _StartControl: {x: -106.76786, y: -550.5935}
+      _StartPosition: {x: -149.37547, y: -624.44275}
+      _StartControl: {x: -132.9722, y: -577.21}
       _EndPosition: {x: -56, y: -607}
       _EndControl: {x: -106, y: -607}
     showDataValue: 0
@@ -16350,10 +16378,130 @@ MonoBehaviour:
     outBehaviour: {fileID: 1526271456}
     outNodeID: 86323836
     lineBezier:
-      _StartPosition: {x: 288, y: -1245}
-      _StartControl: {x: 338, y: -1245}
+      _StartPosition: {x: 264, y: -1233}
+      _StartControl: {x: 314, y: -1233}
       _EndPosition: {x: -56, y: -1153}
       _EndControl: {x: -106, y: -1153}
+    showDataValue: 0
+  - branchID: 1111907664
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 278955818
+    outBehaviour: {fileID: 1526271420}
+    outNodeID: 919275682
+    lineBezier:
+      _StartPosition: {x: -396, y: -469}
+      _StartControl: {x: -346, y: -469}
+      _EndPosition: {x: -292, y: -512}
+      _EndControl: {x: -342, y: -512}
+    showDataValue: 0
+  - branchID: 86323836
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 1400855637
+    outBehaviour: {fileID: 1526271408}
+    outNodeID: 630327709
+    lineBezier:
+      _StartPosition: {x: -336, y: 171}
+      _StartControl: {x: -286, y: 171}
+      _EndPosition: {x: -292, y: 64}
+      _EndControl: {x: -342, y: 64}
+    showDataValue: 0
+  - branchID: 726598452
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 1111907664
+    outBehaviour: {fileID: 1526271457}
+    outNodeID: 2137491492
+    lineBezier:
+      _StartPosition: {x: 264, y: -673}
+      _StartControl: {x: 314, y: -673}
+      _EndPosition: {x: -154.62453, y: -639.55725}
+      _EndControl: {x: -171.0278, y: -686.79}
+    showDataValue: 0
+  - branchID: 2041175501
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 2041175501
+    outBehaviour: {fileID: 1526271411}
+    outNodeID: 534011718
+    lineBezier:
+      _StartPosition: {x: 264, y: 131}
+      _StartControl: {x: 314, y: 131}
+      _EndPosition: {x: -147.24904, y: 132.61601}
+      _EndControl: {x: -192.55556, y: 111.46609}
+    showDataValue: 0
+  - branchID: 1015591673
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 1497171628
+    outBehaviour: {fileID: 1526271458}
+    outNodeID: 375271809
+    lineBezier:
+      _StartPosition: {x: -360, y: -237}
+      _StartControl: {x: -310, y: -237}
+      _EndPosition: {x: -256, y: -284}
+      _EndControl: {x: -306, y: -284}
+    showDataValue: 0
+  - branchID: 1356710135
+    enabled: 1
+    inBehaviour: {fileID: 1526271411}
+    inNodeID: 534011718
+    outBehaviour: {fileID: 1526271412}
+    outNodeID: 1497171628
+    lineBezier:
+      _StartPosition: {x: -240, y: -284}
+      _StartControl: {x: -190, y: -284}
+      _EndPosition: {x: -56, y: 96}
+      _EndControl: {x: -106, y: 96}
+    showDataValue: 0
+  - branchID: 1986821818
+    enabled: 1
+    inBehaviour: {fileID: 1526271411}
+    inNodeID: 534011718
+    outBehaviour: {fileID: 1526271412}
+    outNodeID: 1400855637
+    lineBezier:
+      _StartPosition: {x: -276, y: 64}
+      _StartControl: {x: -226, y: 64}
+      _EndPosition: {x: -56, y: 114}
+      _EndControl: {x: -106, y: 114}
+    showDataValue: 0
+  - branchID: 1208223655
+    enabled: 1
+    inBehaviour: {fileID: 1526271412}
+    inNodeID: 1593487619
+    outBehaviour: {fileID: 1526271459}
+    outNodeID: 471587800
+    lineBezier:
+      _StartPosition: {x: -348, y: -345}
+      _StartControl: {x: -298, y: -345}
+      _EndPosition: {x: -181.22137, y: -433.93887}
+      _EndControl: {x: -213.85498, y: -396.05685}
+    showDataValue: 0
+  - branchID: 469449854
+    enabled: 1
+    inBehaviour: {fileID: 1526271457}
+    inNodeID: 2137491492
+    outBehaviour: {fileID: 1526271412}
+    outNodeID: 1593487619
+    lineBezier:
+      _StartPosition: {x: -170.77863, y: -446.06113}
+      _StartControl: {x: -138.14502, y: -483.94315}
+      _EndPosition: {x: -56, y: -708}
+      _EndControl: {x: -106, y: -708}
+    showDataValue: 0
+  - branchID: 182639827
+    enabled: 1
+    inBehaviour: {fileID: 1526271457}
+    inNodeID: 2137491492
+    outBehaviour: {fileID: 1526271412}
+    outNodeID: 1400855637
+    lineBezier:
+      _StartPosition: {x: -276, y: 64}
+      _StartControl: {x: -226, y: 64}
+      _EndPosition: {x: -56, y: -690}
+      _EndControl: {x: -106, y: -690}
     showDataValue: 0
   playOnStart: 1
   updateSettings:
@@ -16366,8 +16514,8 @@ MonoBehaviour:
     _NodeID: 1559595546
     position:
       serializedVersion: 2
-      x: -576
-      y: -576
+      x: -648
+      y: -696
       width: 300
       height: 91
     showComment: 0
@@ -16382,9 +16530,9 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -36
-      y: -72
+      y: -36
       width: 300
-      height: 390
+      height: 391
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -16397,8 +16545,8 @@ MonoBehaviour:
     _NodeID: 726643700
     position:
       serializedVersion: 2
-      x: 408
-      y: -36
+      x: 384
+      y: 72
       width: 300
       height: 89
     showComment: 0
@@ -16444,7 +16592,7 @@ MonoBehaviour:
       x: -36
       y: -840
       width: 300
-      height: 753
+      height: 754
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -16488,7 +16636,24 @@ MonoBehaviour:
     _BreakPoint: 0
     name: Init
   _StateLinkRerouteNodes:
-    _Nodes: []
+    _Nodes:
+    - _NodeGraph: {fileID: 1526271412}
+      _NodeID: 1304539646
+      position:
+        serializedVersion: 2
+        x: 312
+        y: 12
+        width: 32
+        height: 32
+      showComment: 0
+      nodeComment: 
+      link:
+        name: 
+        stateID: 534011718
+        transitionTiming: 2
+        lineColorChanged: 1
+        lineColor: {r: 1, g: 1, b: 1, a: 1}
+      direction: {x: -0.007099643, y: -0.99997485}
 --- !u!114 &1526271413
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -16538,7 +16703,7 @@ MonoBehaviour:
       branchID: 0
   _NextState:
     name: 
-    stateID: 534011718
+    stateID: 1304539646
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16657,7 +16822,7 @@ MonoBehaviour:
       branchID: 630327709
   _NextState:
     name: 
-    stateID: 534011718
+    stateID: 1304539646
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16912,7 +17077,7 @@ MonoBehaviour:
     name: DefaultScoreItem
   _Output:
     nodeGraph: {fileID: 1526271412}
-    branchIDs: f4b34f2ba208cb36
+    branchIDs: 505d4642
     _OutputSlotBase_SerializeVersion:
       _Version: 1
       _IsInitialized: 1
@@ -19642,7 +19807,7 @@ MonoBehaviour:
   _ParameterList:
     _IntParameters:
     - _Type: 0
-      _Value: 10
+      _Value: 15
       _Parameter:
         _Type: 0
         _Container: {fileID: 0}
@@ -19900,7 +20065,7 @@ MonoBehaviour:
   _FloatParameters: []
   _FloatListParameters: []
   _GameObjectListParameters: []
-  _IntParameters: 000000000a000000
+  _IntParameters: 000000000f000000
   _IntListParameters: []
   _LongParameters: 
   _LongListParameters: []
@@ -20110,10 +20275,10 @@ MonoBehaviour:
         _MemberName: CreateItem
         _Arguments:
         - _Type:
-            _AssemblyTypeName: HoloHopping.Data.ItemData, Assembly-CSharp
-          _Name: itemData
+            _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
+          _Name: itemEntity
           _Attributes: 0
-          _ParameterType: 14
+          _ParameterType: 4096
           _ParameterIndex: 0
           _OutputSlotIndex: 0
         - _Type:
@@ -20146,7 +20311,7 @@ MonoBehaviour:
               name: 
             _Slot:
               nodeGraph: {fileID: 1526271412}
-              branchID: 1944859510
+              branchID: 182639827
           _QuaternionParameters: []
           _RectParameters: []
           _BoundsParameters: []
@@ -20154,24 +20319,15 @@ MonoBehaviour:
           _GameObjectParameters: []
           _ComponentParameters: []
           _EnumParameters: []
-          _AssetObjectParameters:
-          - _Type: 2
-            _Value: {fileID: 0}
-            _Parameter:
-              _Type: 0
-              _Container: {fileID: 0}
-              _Slot:
-                nodeGraph: {fileID: 0}
-                branchID: 0
-              id: 0
-              name: 
-            _Slot:
-              nodeGraph: {fileID: 1526271412}
-              branchID: 919275682
-          _InputSlotParameters: []
+          _AssetObjectParameters: []
+          _InputSlotParameters:
+          - nodeGraph: {fileID: 1526271412}
+            branchID: 469449854
+            _Type:
+              _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
         _OutputSlots:
         - nodeGraph: {fileID: 1526271412}
-          branchIDs: f9b2883c
+          branchIDs: 34034f2b
           _OutputSlotBase_SerializeVersion:
             _Version: 1
             _IsInitialized: 1
@@ -20340,6 +20496,164 @@ MonoBehaviour:
     _Calls: []
   _OnStateEnd:
     _Calls: []
+--- !u!114 &1526271458
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3fad7a5faa5464e8c5a9b920018bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 375271809
+  _DataSlotFieldLinks: []
+  _Persistent:
+    _TargetType:
+      _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+    _TargetMode: 0
+    _TargetComponent:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 1526271409}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      _OverrideConstraintType:
+        _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+    _TargetGameObject:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetAssetObject:
+      _Type: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetSlot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _MemberType: 2
+    _MemberName: GetScoreItem
+    _OutputValue:
+      nodeGraph: {fileID: 1526271412}
+      branchIDs: f9b2883c
+      _OutputSlotBase_SerializeVersion:
+        _Version: 1
+        _IsInitialized: 1
+        _IsVersioning: 1
+      _Type:
+        _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
+--- !u!114 &1526271459
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526271405}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3fad7a5faa5464e8c5a9b920018bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 1526271412}
+  _NodeID: 471587800
+  _DataSlotFieldLinks: []
+  _Persistent:
+    _TargetType:
+      _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+    _TargetMode: 0
+    _TargetComponent:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 1526271409}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      _OverrideConstraintType:
+        _AssemblyTypeName: HoloHopping.Component.ItemCreaterComponent, Assembly-CSharp
+    _TargetGameObject:
+      _Type: 0
+      _HierarchyType: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetAssetObject:
+      _Type: 0
+      _Value: {fileID: 0}
+      _Parameter:
+        _Type: 0
+        _Container: {fileID: 0}
+        _Slot:
+          nodeGraph: {fileID: 0}
+          branchID: 0
+        id: 0
+        name: 
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+    _TargetSlot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    _MemberType: 2
+    _MemberName: GetNormalScoreItem
+    _OutputValue:
+      nodeGraph: {fileID: 1526271412}
+      branchIDs: a7070448
+      _OutputSlotBase_SerializeVersion:
+        _Version: 1
+        _IsInitialized: 1
+        _IsVersioning: 1
+      _Type:
+        _AssemblyTypeName: HoloHopping.Entity.ItemEntity, Assembly-CSharp
 --- !u!1 &1552550937
 GameObject:
   m_ObjectHideFlags: 0
@@ -30527,7 +30841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41, y: 1781}
+  m_AnchoredPosition: {x: 0, y: 1750}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916148051
