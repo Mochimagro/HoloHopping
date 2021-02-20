@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using Doozy.Engine.UI;
 
 namespace HoloHopping.Component
 {
@@ -15,6 +16,7 @@ namespace HoloHopping.Component
         public const string RESTART_INTERVAL_SPECIAL_ITEM = "RestartIntervalSpecialItem";
         public const string REDUCE_SPECIAL_ITEM_INTERVAL = "ReduceSpecialItemInterval";
         public const string START_SPECIAL_ITEM_INTERVAL = "StarSpecialItemInterval";
+        public const string ALL_CLEAR_STAGE_ITEMS_CREATE = "AllClearStageItemsCreate";
     }
 
 
@@ -32,17 +34,18 @@ namespace HoloHopping.Component
         public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
         private Subject<Entity.ItemEntity> _onGetItem = new Subject<Entity.ItemEntity>();
 
-        private List<ItemComponent> _normalFieldItems = null;
+        private ReactiveCollection<ItemComponent> _normalFieldItems = null;
         private List<Entity.HighScoreItem> _highScoreItem = null;
         public Entity.ItemEntity GetNormalScoreItem => ItemListEntity.NormalScoreItem;
 
+        public IObservable<int> OnClearFieldItems => _normalFieldItems.ObserveCountChanged().Where(count => count <= 0);
 
         public Entity.ItemEntity GetScoreItem
         {
             get
             {
 
-                foreach (var target in ItemListEntity.HighScoreItems)
+                foreach (var target in _highScoreItem)
                 {
                     if (_normalFieldItems.Count < target.BorderStageItemCount)
                     {
@@ -57,8 +60,28 @@ namespace HoloHopping.Component
         public void Init(Model.ScoreModel scoreModel)
         {
             _scoreModel = scoreModel;
-            _normalFieldItems = new List<ItemComponent>();
+            _normalFieldItems = new ReactiveCollection<ItemComponent>();
+            _highScoreItem = ItemListEntity.HighScoreItems;
+
+            OnClearFieldItems.Subscribe(_ =>
+            {
+                AllClearBonus();
+            });
+
         }
+
+        private void AllClearBonus()
+        {
+            var popup = UIPopupManager.GetPopup("AllClearBonus");
+
+            UIPopupManager.ShowPopup(popup, popup.AddToPopupQueue, false);
+
+            _scoreModel.AddScore = 5000;
+
+            _autoCreateState.SendTrigger(ItemCreaterMessage.ALL_CLEAR_STAGE_ITEMS_CREATE);
+
+        }
+
 
         public void StartAutoCreate()
         {
@@ -97,7 +120,6 @@ namespace HoloHopping.Component
         public void AddListItem(ItemComponent item)
         {
             _normalFieldItems.Add(item);
-
 
             item.OnDeathItem.Subscribe(e =>
             {
