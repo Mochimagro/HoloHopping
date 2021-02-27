@@ -17,12 +17,12 @@ namespace HoloHopping.Component
         [Header("Components")]
         [SerializeField] private MainPlayerComponent _mainPlayerComponent = null;
         [SerializeField] private HoppingCharaCreaterComponent _hoppingCharaCreaterComponent = null;
-        [SerializeField] private ItemCreaterComponent _itemCreaterComponent = null;
         [SerializeField] private ItemTextCreaterComponent _itemTextCreaterComponent = null;
         [SerializeField] private SpecialItemEffectComponent _specialItemEffectComponent = null;
         [SerializeField] private EffectCreaterComponent _effectCreaterComponent = null;
 
         [Header("Presenters")]
+        [SerializeField] private ItemCreaterPresenter _itemCreaterPresenter = null;
         [SerializeField] private ScorePresenter _scorePresenter = null;
         [SerializeField] private ReadyLabelPresenter _readyLabelPresenter = null;
         [SerializeField] private BGMPresenter _bgmPresenter = null;
@@ -46,7 +46,7 @@ namespace HoloHopping.Component
 
             _scorePresenter.Init(out _scoreModel);
 
-            _itemCreaterComponent.Init(_scoreModel);
+            _itemCreaterPresenter.Init(_scoreModel);
             _specialItemEffectComponent.Init();
 
             _effectCreaterComponent.Init();
@@ -67,7 +67,7 @@ namespace HoloHopping.Component
 
             _readyLabelPresenter.ShowGoText();
 
-            _itemCreaterComponent.GameStartCreate();
+            _itemCreaterPresenter.GameStartCreate();
 
             _hoppingCharaCreaterComponent.CreateHoppingCharacter();
 
@@ -77,7 +77,7 @@ namespace HoloHopping.Component
         private void Bind()
         {
             // GetItem
-            _itemCreaterComponent.OnGetItem.Subscribe(entity =>
+            _itemCreaterPresenter.OnGetItem.Subscribe(entity =>
             {
                 _specialItemEffectComponent.InvokeEffect(entity.ItemMode);
                 _itemTextCreaterComponent.CreateText(entity);

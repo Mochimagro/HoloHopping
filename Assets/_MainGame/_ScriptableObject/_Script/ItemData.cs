@@ -20,7 +20,7 @@ namespace HoloHopping.Entity
             ItemMode = data.ItemMode;
         }
 
-        public Component.ItemComponent Component { get; private set; }
+        public Component.ItemComponent Component { get; set; }
         public int Score { get; private set; }
         public string GetText { get; set; }
         public Data.ItemMode ItemMode { get; private set; }

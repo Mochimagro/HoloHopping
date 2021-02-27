@@ -42,6 +42,7 @@ namespace HoloHopping.Component
         public void Init(Entity.ItemEntity entity)
         {
             _entity = entity;
+            _entity.Component = this;
         }
 
 
