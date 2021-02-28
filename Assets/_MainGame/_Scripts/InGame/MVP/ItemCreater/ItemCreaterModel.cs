@@ -53,7 +53,7 @@ namespace HoloHopping.Model
 
             item.OnDeathItem.Subscribe(e =>
             {
-                RemoveFieldItem(e.Component);
+                RemoveFieldItem(e.TargetComponent);
             });
 
         }

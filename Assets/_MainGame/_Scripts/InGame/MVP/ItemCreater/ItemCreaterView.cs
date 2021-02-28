@@ -29,8 +29,8 @@ namespace HoloHopping.View
         [SerializeField] private Arbor.ArborFSM _autoCreaterFSM = null;
         [SerializeField] private Arbor.ArborFSM _specialITemCreaterFSM = null;
 
-        public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
-        private Subject<Entity.ItemEntity> _onGetItem = new Subject<Entity.ItemEntity>();
+        public IObservable<Entity.ItemGetEntity> OnGetItem => _onGetItem;
+        private Subject<Entity.ItemGetEntity> _onGetItem = new Subject<Entity.ItemGetEntity>();
 
         public void Init()
         {
@@ -46,7 +46,7 @@ namespace HoloHopping.View
 
             item.OnGetItem.Subscribe(e =>
            {
-               e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPos, Enum.FXType.Item, e.ItemColor);
+               e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPosition, Enum.FXType.Item, e.ItemColor);
                _onGetItem.OnNext(e);
 
            });

@@ -14,14 +14,14 @@ namespace HoloHopping.Component
 
         public void Init()
         {
-            
+
         }
 
-        public void CreateText(Entity .ItemEntity entity)
+        public void CreateText(Entity.ItemGetEntity entity)
         {
             var text = Instantiate(_itemTextComponent, _parentCanvas);
 
-            text.Init(entity,  _targetCamera);
+            text.Init(entity, _targetCamera);
 
         }
     }

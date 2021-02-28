@@ -14,7 +14,7 @@ namespace HoloHopping.Component
 
         private Sequence _seq = null;
 
-        public void Init(Entity.ItemEntity entity, Camera targetCamera)
+        public void Init(Entity.ItemGetEntity entity, Camera targetCamera)
         {
             _text.gameObject.SetActive(true);
 
@@ -22,7 +22,7 @@ namespace HoloHopping.Component
 
             _text.color = entity.ItemColor;
 
-            _text.rectTransform.position = RectTransformUtility.WorldToScreenPoint(targetCamera, entity.GetPos + new Vector3(0, 1.0f, 0));
+            _text.rectTransform.position = RectTransformUtility.WorldToScreenPoint(targetCamera, entity.GetPosition + new Vector3(0, 1.0f, 0));
 
             _seq = DOTween.Sequence();
 

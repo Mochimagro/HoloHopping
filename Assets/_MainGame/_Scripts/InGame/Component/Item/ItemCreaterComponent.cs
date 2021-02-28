@@ -31,8 +31,8 @@ namespace HoloHopping.Component
 
         private Model.ScoreModel _scoreModel = null;
 
-        public IObservable<Entity.ItemEntity> OnGetItem => _onGetItem;
-        private Subject<Entity.ItemEntity> _onGetItem = new Subject<Entity.ItemEntity>();
+        public IObservable<Entity.ItemGetEntity> OnGetItem => _onGetItem;
+        private Subject<Entity.ItemGetEntity> _onGetItem = new Subject<Entity.ItemGetEntity>();
 
         private ReactiveCollection<ItemComponent> _normalFieldItems = null;
         private List<Entity.HighScoreItem> _highScoreItem = null;
@@ -108,7 +108,7 @@ namespace HoloHopping.Component
             {
                 _normalFieldItems.Remove(item);
                 _specialItemCreater.SendTrigger(ItemCreaterMessage.REDUCE_SPECIAL_ITEM_INTERVAL);
-                e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPos, Enum.FXType.Item, e.ItemColor);
+                e.FXCreateEntity = new Entity.FXCreateEntity(e.GetPosition, Enum.FXType.Item, e.ItemColor);
                 _scoreModel.AddScore = e.Score;
                 _onGetItem.OnNext(e);
             });

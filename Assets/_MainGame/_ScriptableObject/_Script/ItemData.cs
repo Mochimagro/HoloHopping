@@ -20,14 +20,10 @@ namespace HoloHopping.Entity
             ItemMode = data.ItemMode;
         }
 
-        public Component.ItemComponent Component { get; set; }
+        public Component.ItemComponent Component { get; private set; }
         public int Score { get; private set; }
-        public string GetText { get; set; }
         public Data.ItemMode ItemMode { get; private set; }
         public Color ItemColor { get; private set; }
-        public Vector3 GetPos { get; set; }
-        public Enum.SEScene SEScene { get; set; }
-        public FXCreateEntity FXCreateEntity { get; set; }
     }
 }
 

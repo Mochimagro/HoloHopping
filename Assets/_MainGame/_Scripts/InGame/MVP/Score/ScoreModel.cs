@@ -6,7 +6,7 @@ using UniRx;
 namespace HoloHopping.Model
 {
 
-    public class ScoreModel 
+    public class ScoreModel
     {
         private IntReactiveProperty _score = new IntReactiveProperty();
 
@@ -19,8 +19,10 @@ namespace HoloHopping.Model
 
         public int AddScore
         {
-            set { _score.Value += value;
-                Debug.Log(_score.Value);
+            set
+            {
+                _score.Value += value;
+                //Debug.Log(_score.Value);
             }
         }
 

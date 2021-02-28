@@ -17,7 +17,7 @@ namespace HoloHopping.Presenter
 
         [SerializeField] private Data.ItemListData _itemListData = null;
 
-        public IObservable<Entity.ItemEntity> OnGetItem => _itemCreaterView.OnGetItem;
+        public IObservable<Entity.ItemGetEntity> OnGetItem => _itemCreaterView.OnGetItem;
 
         public void Init(ScoreModel scoreModel)
         {
@@ -38,7 +38,7 @@ namespace HoloHopping.Presenter
 
                 _itemCreaterView.SendSpecialCreaterFSMTrigger(ArborFSMTrigger.ItemCreaterMessage.REDUCE_SPECIAL_ITEM_INTERVAL);
 
-                _itemCreaterModel.RemoveFieldItem(e.Component);
+                _itemCreaterModel.RemoveFieldItem(e.TargetComponent);
 
             });
 
@@ -57,11 +57,11 @@ namespace HoloHopping.Presenter
 
         public Component.ItemComponent CreateItem(Entity.ItemEntity entity, Vector3 barthPosition)
         {
-            var item = _itemCreaterView.CreateItem(entity, barthPosition);
+            var itemComponent = _itemCreaterView.CreateItem(entity, barthPosition);
 
-            _itemCreaterModel.AddFieldItem(item);
+            _itemCreaterModel.AddFieldItem(itemComponent);
 
-            return item;
+            return itemComponent;
         }
 
         public Component.ItemComponent CreateItem(Vector3 barthPosition)

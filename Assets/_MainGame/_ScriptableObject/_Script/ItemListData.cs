@@ -21,7 +21,7 @@ namespace HoloHopping.Entity
     {
         public ItemListEntity(Data.ItemListData data)
         {
-            _normalItemData = data.NormalItemData;
+            NormalScoreItem = new ItemEntity(data.NormalItemData);
 
             HighScoreItems = new List<HighScoreItem>();
 
@@ -40,9 +40,7 @@ namespace HoloHopping.Entity
             FeverItem = new ItemEntity(data.FeverScoreItem);
 
         }
-
-        Data.ItemData _normalItemData = null;
-        public ItemEntity NormalScoreItem { get { return new ItemEntity(_normalItemData); } }
+        public ItemEntity NormalScoreItem { get; private set; }
         public List<HighScoreItem> HighScoreItems { get; private set; }
         public List<ItemEntity> SpecialItems { get; private set; }
         public ItemEntity FeverItem { get; private set; }

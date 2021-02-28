@@ -4,30 +4,66 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 
+namespace HoloHopping.Entity
+{
+    public class ItemGetEntity
+    {
+        public ItemGetEntity
+            (
+                ItemEntity itemEntity,
+                Component.ItemComponent thisItemComponent,
+                string getText,
+                Vector3 getPosition,
+                Enum.SEScene seScene
+            )
+        {
+            TargetComponent = thisItemComponent;
+            Score = itemEntity.Score;
+            ItemMode = itemEntity.ItemMode;
+            ItemColor = itemEntity.ItemColor;
+
+            GetText = getText;
+            GetPosition = getPosition;
+            SEScene = seScene;
+        }
+
+        public Component.ItemComponent TargetComponent { get; private set; }
+        public int Score { get; private set; }
+        public string GetText { get; private set; }
+        public Data.ItemMode ItemMode { get; private set; }
+        public Color ItemColor { get; private set; }
+        public Vector3 GetPosition { get; private set; }
+        public Enum.SEScene SEScene { get; private set; }
+        public FXCreateEntity FXCreateEntity { get; set; }
+
+    }
+}
+
 namespace HoloHopping.Component
 {
     using Entity;
     public interface IItem
     {
-        IObservable<ItemEntity> OnGetItem { get; }
+        IObservable<ItemGetEntity> OnGetItem { get; }
         //void Init(Entity.IEntity entity);
     }
 
     public class ItemComponent : MonoBehaviour, IItem
     {
         private ItemEntity _entity = null;
+        private ItemGetEntity _itemGetEntity = null;
 
         /// <summary>
         /// 入手したときのイベント
         /// </summary>
-        public IObservable<ItemEntity> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
-        private Subject<ItemEntity> _onGetItem = new Subject<ItemEntity>();
+        public IObservable<ItemGetEntity> OnGetItem => _onGetItem.TakeUntilDestroy(this.gameObject);
+        private Subject<ItemGetEntity> _onGetItem = new Subject<ItemGetEntity>();
 
         /// <summary>
         /// 経過時間で消去されるときのイベント
         /// </summary>
-        public IObservable<ItemEntity> OnDeathItem => _onDeathItem;
-        private Subject<ItemEntity> _onDeathItem = new Subject<ItemEntity>();
+        public IObservable<ItemGetEntity> OnDeathItem => _onDeathItem;
+        private Subject<ItemGetEntity> _onDeathItem = new Subject<ItemGetEntity>();
 
         /// <summary>
         /// TailParticleが終了したときのイベント
@@ -42,7 +78,6 @@ namespace HoloHopping.Component
         public void Init(Entity.ItemEntity entity)
         {
             _entity = entity;
-            _entity.Component = this;
         }
 
 
@@ -61,22 +96,30 @@ namespace HoloHopping.Component
             if (other.CompareTag(TagName.CHARACTER))
             {
                 KillObject();
-                _entity.GetPos = transform.position;
-                _entity.GetText = _entity.ItemMode == Data.ItemMode.Score ? "+" + _entity.Score : _entity.ItemMode.ToString();
-                _entity.SEScene = _entity.ItemMode == Data.ItemMode.Score ? Enum.SEScene.ScoreItem : Enum.SEScene.SpecialItem;
-                _onGetItem.OnNext(_entity);
+
+                _itemGetEntity = new ItemGetEntity
+                    (
+                        _entity,
+                        this,
+                        _entity.ItemMode == Data.ItemMode.Score ? "+" + _entity.Score : _entity.ItemMode.ToString(),
+                        transform.position,
+                        _entity.ItemMode == Data.ItemMode.Score ? Enum.SEScene.ScoreItem : Enum.SEScene.SpecialItem
+                    );
+
+                _onGetItem.OnNext(_itemGetEntity);
 
             }
         }
 
         public void KillObject()
         {
+            _itemGetEntity = new ItemGetEntity(_entity, this, string.Empty, Vector3.zero, default);
 
             _spriteRenderer.color = Color.clear;
             _collider.enabled = false;
             AllStopTailParticle();
 
-            _onDeathItem.OnNext(_entity);
+            _onDeathItem.OnNext(_itemGetEntity);
             _onDeathItem.OnCompleted();
 
             if (_tailPaticles.Count > 0)
