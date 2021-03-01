@@ -18,6 +18,8 @@ namespace HoloHopping.Presenter
         [SerializeField] private Data.ItemListData _itemListData = null;
 
         public IObservable<Entity.ItemGetEntity> OnGetItem => _itemCreaterView.OnGetItem;
+        public IObservable<Component.ItemComponent> OnCreateItem => _onCreateItem;
+        private Subject<Component.ItemComponent> _onCreateItem = new Subject<Component.ItemComponent>();
 
         public void Init(ScoreModel scoreModel)
         {
@@ -55,23 +57,42 @@ namespace HoloHopping.Presenter
 
         }
 
-        public Component.ItemComponent CreateItem(Data.ItemData data, Vector3 barthPosition)
+        public Component.ItemComponent CreateSpecialItem(Vector3 barthPosition)
         {
-            return CreateItem(new Entity.ItemEntity(data), barthPosition);
+            return CreateItem(_itemCreaterModel.GetSpecialItem, barthPosition);
         }
+
+        public Component.ItemComponent CreateStarRushScoreItem(Vector3 barthPosition)
+        {
+            return CreateItem(_itemCreaterModel.GetStarRushItem, barthPosition);
+        }
+
+        public Component.ItemComponent CreateItem(Vector3 barthPosition)
+        {
+            var item = CreateItem(_itemCreaterModel.GetScoreItem, barthPosition);
+
+            _itemCreaterModel.AddFieldItem(item);
+
+            return item;
+        }
+
+        public Component.ItemComponent CreateFieldScoreItem(Vector3 barthPosition)
+        {
+            var item = CreateItem(_itemCreaterModel.NormalScoreItem, barthPosition);
+
+            _itemCreaterModel.AddFieldItem(item);
+
+            return item;
+        }
+
 
         public Component.ItemComponent CreateItem(Entity.ItemEntity entity, Vector3 barthPosition)
         {
             var itemComponent = _itemCreaterView.CreateItem(entity, barthPosition);
 
-            _itemCreaterModel.AddFieldItem(itemComponent);
+            _onCreateItem.OnNext(itemComponent);
 
             return itemComponent;
-        }
-
-        public Component.ItemComponent CreateItem(Vector3 barthPosition)
-        {
-            return CreateItem(_itemCreaterModel.GetScoreItem, barthPosition);
         }
 
         public void GameStartCreate()

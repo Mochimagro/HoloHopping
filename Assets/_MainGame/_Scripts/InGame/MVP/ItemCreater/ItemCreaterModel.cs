@@ -10,6 +10,7 @@ namespace HoloHopping.Model
     {
         private Entity.ItemListEntity _itemListEntity = null;
         private List<Entity.HighScoreItem> _highScoreItem = null;
+        private List<Entity.ItemEntity> _specialItems = null;
         private ReactiveCollection<Component.ItemComponent> _fieldScoreItems = null;
 
         public IObservable<int> OnClearFieldItems => _fieldScoreItems.ObserveCountChanged().Where(count => count <= 0);
@@ -19,6 +20,7 @@ namespace HoloHopping.Model
             _itemListEntity = itemListEntity;
             _fieldScoreItems = new ReactiveCollection<Component.ItemComponent>();
             _highScoreItem = _itemListEntity.HighScoreItems.OrderBy(e => e.BorderStageItemCount).ToList();
+            _specialItems = _itemListEntity.SpecialItems.ToList();
 
             _fieldScoreItems.ObserveCountChanged().Subscribe(value =>
             {
@@ -45,6 +47,19 @@ namespace HoloHopping.Model
                 }
                 return NormalScoreItem;
             }
+        }
+
+        public Entity.ItemEntity GetSpecialItem
+        {
+            get
+            {
+                return _specialItems[UnityEngine.Random.Range(0, _specialItems.Count)];
+            }
+        }
+
+        public Entity.ItemEntity GetStarRushItem
+        {
+            get => _itemListEntity.StarRushItem;
         }
 
         public void AddFieldItem(Component.ItemComponent item)

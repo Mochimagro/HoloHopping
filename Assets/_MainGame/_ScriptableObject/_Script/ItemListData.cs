@@ -38,13 +38,13 @@ namespace HoloHopping.Entity
             }
 
             FeverItem = new ItemEntity(data.FeverScoreItem);
-
+            StarRushItem = new ItemEntity(data.StarRushScoreItem);
         }
         public ItemEntity NormalScoreItem { get; private set; }
         public List<HighScoreItem> HighScoreItems { get; private set; }
         public List<ItemEntity> SpecialItems { get; private set; }
         public ItemEntity FeverItem { get; private set; }
-
+        public ItemEntity StarRushItem { get; private set; }
 
     }
 }
@@ -75,10 +75,12 @@ namespace HoloHopping.Data
 
         [SerializeField] private List<ItemData> _specialItems = new List<ItemData>();
         [SerializeField] private ItemData _feverScoreItem = null;
+        [SerializeField] private ItemData _starRushScoreItem = null;
 
         public ItemData NormalItemData { get => _normalScoreItem; }
         public List<HighScoreItem> HighScoreItems { get => _highScoreItems; }
         public List<ItemData> SpecialItems { get => _specialItems; }
         public ItemData FeverScoreItem { get => _feverScoreItem; }
+        public ItemData StarRushScoreItem { get => _starRushScoreItem; }
     }
 }
