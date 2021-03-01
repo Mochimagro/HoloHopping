@@ -55,6 +55,11 @@ namespace HoloHopping.Presenter
 
         }
 
+        public Component.ItemComponent CreateItem(Data.ItemData data, Vector3 barthPosition)
+        {
+            return CreateItem(new Entity.ItemEntity(data), barthPosition);
+        }
+
         public Component.ItemComponent CreateItem(Entity.ItemEntity entity, Vector3 barthPosition)
         {
             var itemComponent = _itemCreaterView.CreateItem(entity, barthPosition);
