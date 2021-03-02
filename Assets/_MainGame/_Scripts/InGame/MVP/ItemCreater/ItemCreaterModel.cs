@@ -12,6 +12,7 @@ namespace HoloHopping.Model
         private List<Entity.HighScoreItem> _highScoreItem = null;
         private List<Entity.ItemEntity> _specialItems = null;
         private ReactiveCollection<Component.ItemComponent> _fieldScoreItems = null;
+        private List<Component.ItemComponent> _fieldSpecialItems = null;
 
         public IObservable<int> OnClearFieldItems => _fieldScoreItems.ObserveCountChanged().Where(count => count <= 0);
 
@@ -19,6 +20,7 @@ namespace HoloHopping.Model
         {
             _itemListEntity = itemListEntity;
             _fieldScoreItems = new ReactiveCollection<Component.ItemComponent>();
+            _fieldSpecialItems = new List<Component.ItemComponent>();
             _highScoreItem = _itemListEntity.HighScoreItems.OrderBy(e => e.BorderStageItemCount).ToList();
             _specialItems = _itemListEntity.SpecialItems.ToList();
 
@@ -33,6 +35,8 @@ namespace HoloHopping.Model
         public Entity.ItemEntity NormalScoreItem { get => _itemListEntity.NormalScoreItem; }
 
         public List<GameObject> ScoreItemObjects { get => _fieldScoreItems.Select(itemComponent => itemComponent.gameObject).ToList(); }
+
+        public List<GameObject> SpecialItemObjects { get => _fieldSpecialItems.Select(itemComponent => itemComponent.gameObject).ToList(); }
 
         public Entity.ItemEntity GetScoreItem
         {
@@ -62,22 +66,42 @@ namespace HoloHopping.Model
             get => _itemListEntity.StarRushItem;
         }
 
+        public Entity.ItemEntity GetFeverScoreItem
+        {
+            get => _itemListEntity.FeverItem;
+        }
+
         public void AddFieldItem(Component.ItemComponent item)
         {
             _fieldScoreItems.Add(item);
 
             item.OnDeathItem.Subscribe(e =>
             {
-                RemoveFieldItem(e.TargetComponent);
+                RemoveFieldScoreItem(e.TargetComponent);
             });
 
         }
 
-        public void RemoveFieldItem(Component.ItemComponent item)
+        public void AddFieldSpecialItem(Component.ItemComponent item)
+        {
+            _fieldSpecialItems.Add(item);
+
+            item.OnDeathItem.Subscribe(e =>
+            {
+                RemoveFieldSpecialItem(e.TargetComponent);
+            });
+
+        }
+
+        public void RemoveFieldScoreItem(Component.ItemComponent item)
         {
             _fieldScoreItems.Remove(item);
         }
 
+        public void RemoveFieldSpecialItem(Component.ItemComponent item)
+        {
+            _fieldSpecialItems.Remove(item);
+        }
 
     }
 }

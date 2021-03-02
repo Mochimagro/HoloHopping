@@ -40,7 +40,15 @@ namespace HoloHopping.Presenter
 
                 _itemCreaterView.SendSpecialCreaterFSMTrigger(ArborFSMTrigger.ItemCreaterMessage.REDUCE_SPECIAL_ITEM_INTERVAL);
 
-                _itemCreaterModel.RemoveFieldItem(e.TargetComponent);
+                if (e.ItemMode == Data.ItemMode.Score)
+                {
+                    _itemCreaterModel.RemoveFieldScoreItem(e.TargetComponent);
+                }
+                else
+                {
+                    _itemCreaterModel.RemoveFieldSpecialItem(e.TargetComponent);
+                }
+
 
             });
 
@@ -59,12 +67,22 @@ namespace HoloHopping.Presenter
 
         public Component.ItemComponent CreateSpecialItem(Vector3 barthPosition)
         {
-            return CreateItem(_itemCreaterModel.GetSpecialItem, barthPosition);
+            var item = CreateItem(_itemCreaterModel.GetSpecialItem, barthPosition);
+
+            _itemCreaterModel.AddFieldItem(item);
+
+            return item;
+
         }
 
         public Component.ItemComponent CreateStarRushScoreItem(Vector3 barthPosition)
         {
             return CreateItem(_itemCreaterModel.GetStarRushItem, barthPosition);
+        }
+
+        public Component.ItemComponent CreateFeverScoreItem(Vector3 barthPosition)
+        {
+            return CreateItem(_itemCreaterModel.GetFeverScoreItem, barthPosition);
         }
 
         public Component.ItemComponent CreateItem(Vector3 barthPosition)
@@ -98,6 +116,26 @@ namespace HoloHopping.Presenter
         public void GameStartCreate()
         {
             _itemCreaterView.SendNormalCreaterFSMTrigger(ArborFSMTrigger.ItemCreaterMessage.GAME_START_CREATE);
+        }
+
+        public void SendTriggerNormalCreaterFSM(string message)
+        {
+            _itemCreaterView.SendNormalCreaterFSMTrigger(message);
+        }
+
+        public void SendTriggerSpecialCreaterFSM(string message)
+        {
+            _itemCreaterView.SendSpecialCreaterFSMTrigger(message);
+        }
+
+        public void FieldScoreItemsEnable(bool value)
+        {
+            _itemCreaterView.FieldItemEnable(value, _itemCreaterModel.ScoreItemObjects);
+        }
+
+        public void FieldSpecialItemsEnable(bool value)
+        {
+            _itemCreaterView.FieldItemEnable(value, _itemCreaterModel.SpecialItemObjects);
         }
 
     }
